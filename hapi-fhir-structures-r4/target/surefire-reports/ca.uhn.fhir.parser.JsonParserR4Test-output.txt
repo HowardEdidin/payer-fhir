@@ -1,0 +1,264 @@
+11:41:43.843 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:43.877 [main] INFO  ca.uhn.fhir.parser.JsonParserR4Test [JsonParserR4Test.java:291] - {
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "name": [
+          {
+            "given": [
+              "GIVEN"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+11:41:44.118 [main] INFO  ca.uhn.fhir.parser.JsonParserR4Test [JsonParserR4Test.java:129] - {
+  "resourceType": "MedicationDispense",
+  "contained": [
+    {
+      "resourceType": "Medication",
+      "id": "MED"
+    },
+    {
+      "resourceType": "MedicationRequest",
+      "id": "MR",
+      "medicationReference": {
+        "reference": "#MED"
+      }
+    }
+  ],
+  "medicationReference": {
+    "reference": "#MED"
+  },
+  "authorizingPrescription": [
+    {
+      "reference": "#MR"
+    }
+  ]
+}
+11:41:44.119 [main] INFO  ca.uhn.fhir.parser.JsonParserR4Test [JsonParserR4Test.java:69] - {
+  "resourceType": "MedicationDispense",
+  "contained": [
+    {
+      "resourceType": "Medication",
+      "id": "1"
+    },
+    {
+      "resourceType": "MedicationRequest",
+      "id": "2",
+      "medicationReference": {
+        "reference": "#1"
+      }
+    }
+  ],
+  "medicationReference": {
+    "reference": "#1"
+  },
+  "authorizingPrescription": [
+    {
+      "reference": "#2"
+    }
+  ]
+}
+11:41:44.120 [main] INFO  ca.uhn.fhir.parser.JsonParserR4Test [JsonParserR4Test.java:239] - {
+  "resourceType": "Bundle",
+  "id": "BUNDLEID",
+  "meta": {
+    "profile": [
+      "http://FOO"
+    ]
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "PATIENTID",
+        "meta": {
+          "profile": [
+            "http://BAR"
+          ]
+        },
+        "name": [
+          {
+            "given": [
+              "GIVEN"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+11:41:44.122 [main] INFO  ca.uhn.fhir.parser.JsonParserR4Test [JsonParserR4Test.java:96] - {
+  "resourceType": "MedicationDispense",
+  "contained": [
+    {
+      "resourceType": "Medication",
+      "id": "MED"
+    },
+    {
+      "resourceType": "MedicationRequest",
+      "id": "MR",
+      "medicationReference": {
+        "reference": "#MED"
+      }
+    }
+  ],
+  "medicationReference": {
+    "reference": "#MED"
+  },
+  "authorizingPrescription": [
+    {
+      "reference": "#MR"
+    }
+  ]
+}
+11:41:44.128 [main] INFO  ca.uhn.fhir.parser.JsonParserR4Test [JsonParserR4Test.java:166] - {
+  "resourceType": "Observation",
+  "contained": [
+    {
+      "resourceType": "Patient",
+      "id": "1",
+      "name": [
+        {
+          "family": "FAM"
+        }
+      ]
+    },
+    {
+      "resourceType": "Encounter",
+      "id": "2",
+      "status": "arrived"
+    }
+  ],
+  "subject": {
+    "reference": "#1"
+  },
+  "encounter": {
+    "reference": "#2"
+  }
+}
+11:41:44.130 [main] INFO  ca.uhn.fhir.parser.JsonParserR4Test [JsonParserR4Test.java:216] - {
+  "resourceType": "MedicationRequest",
+  "contained": [
+    {
+      "resourceType": "Practitioner",
+      "id": "1",
+      "active": true
+    }
+  ],
+  "requester": {
+    "reference": "#1"
+  }
+}
+11:41:44.133 [main] INFO  ca.uhn.fhir.parser.JsonParserR4Test [JsonParserR4Test.java:221] - {
+  "resourceType": "MedicationRequest",
+  "contained": [
+    {
+      "resourceType": "Medication",
+      "id": "2",
+      "status": "active"
+    },
+    {
+      "resourceType": "Practitioner",
+      "id": "1",
+      "active": true
+    }
+  ],
+  "medicationReference": {
+    "reference": "#2"
+  },
+  "requester": {
+    "reference": "#1"
+  }
+}
+11:41:44.135 [main] INFO  ca.uhn.fhir.parser.JsonParserR4Test [JsonParserR4Test.java:195] - {
+  "resourceType": "Observation",
+  "contained": [
+    {
+      "resourceType": "Encounter",
+      "id": "1",
+      "status": "arrived"
+    },
+    {
+      "resourceType": "Patient",
+      "id": "2",
+      "name": [
+        {
+          "family": "FAM"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "#2"
+  },
+  "encounter": {
+    "reference": "#1"
+  }
+}
+11:41:44.140 [main] INFO  ca.uhn.fhir.parser.JsonParserR4Test [JsonParserR4Test.java:144] - {"resourceType":"Patient","text":{"div":"<div xmlns=\"http://www.w3.org/1999/xhtml\">Copy &copy; 1999</div>"}}
+11:41:44.151 [main] INFO  ca.uhn.fhir.parser.JsonParserR4Test [JsonParserR4Test.java:265] - {
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "PATIENTID",
+        "meta": {
+          "profile": [
+            "http://BAR"
+          ]
+        },
+        "name": [
+          {
+            "given": [
+              "GIVEN"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+11:41:44.187 [main] INFO  ca.uhn.fhir.parser.JsonParserR4Test [JsonParserR4Test.java:357] - {
+  "resourceType": "Patient",
+  "extension": [
+    {
+      "url": "https://purl.org/elab/fhir/network/StructureDefinition/1/BirthWeight",
+      "_valueDecimal": {
+        "extension": [
+          {
+            "url": "http://www.hl7.org/fhir/extension-data-absent-reason.html",
+            "valueCoding": {
+              "system": "http://hl7.org/fhir/ValueSet/birthweight",
+              "code": "Underweight",
+              "userSelected": false
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "https://purl.org/elab/fhir/network/StructureDefinition/1/EuroPrevallStudySubjects",
+      "value": "1"
+    }
+  ],
+  "gender": "female"
+}
+11:41:44.189 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:44.288 [main] INFO  ca.uhn.fhir.parser.JsonParserR4Test [JsonParserR4Test.java:49] - {
+  "resourceType": "QuestionnaireResponse",
+  "questionnaire": "Questionnaire/123/_history/456"
+}
+11:41:44.288 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.parser.JsonParserR4Test.ourCtx
+11:41:44.288 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.parser.JsonParserR4Test.$jacocoData
+11:41:44.288 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: English (Canada)
+11:41:44.289 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] - Tests are using WINDOWS line endings and ISO-8851-1
+11:41:44.289 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT-05:00

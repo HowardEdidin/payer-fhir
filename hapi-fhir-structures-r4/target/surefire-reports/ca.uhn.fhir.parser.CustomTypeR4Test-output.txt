@@ -1,0 +1,165 @@
+11:41:30.225 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:30.338 [main] INFO  ca.uhn.fhir.parser.CustomTypeR4Test [CustomTypeR4Test.java:286] - <Patient xmlns="http://hl7.org/fhir">
+   <meta>
+      <profile value="http://example.com/foo"/>
+   </meta>
+   <extension url="http://example.com/BloodPressure">
+      <valueQuantity>
+         <value value="110"/>
+         <system value="http://unitsofmeasure.org"/>
+         <code value="mmHg"/>
+      </valueQuantity>
+   </extension>
+   <extension url="http://example.com/Cholesterol">
+      <valueQuantity>
+         <value value="2"/>
+         <system value="http://unitsofmeasure.org"/>
+         <code value="mmol/l"/>
+      </valueQuantity>
+   </extension>
+   <extension url="http://example.com/Glucose">
+      <valueQuantity>
+         <value value="95"/>
+         <system value="http://unitsofmeasure.org"/>
+         <code value="mg/dl"/>
+      </valueQuantity>
+   </extension>
+   <extension url="http://example.com/HbA1c">
+      <valueQuantity>
+         <value value="48"/>
+         <system value="http://unitsofmeasure.org"/>
+         <code value="mmol/mol"/>
+      </valueQuantity>
+   </extension>
+   <extension url="http://example.com/Insuline">
+      <valueQuantity>
+         <value value="125"/>
+         <system value="http://unitsofmeasure.org"/>
+         <code value="pmol/l"/>
+      </valueQuantity>
+   </extension>
+   <extension url="http://example.com/Weight">
+      <valueString value="185 cm"/>
+   </extension>
+   <modifierExtension url="http://example.com/diabetes2">
+      <valueDateTime value="2010-01-02"/>
+   </modifierExtension>
+   <modifierExtension url="http://example.com/diabetes2">
+      <valueDateTime value="2014-01-26T11:11:11"/>
+   </modifierExtension>
+   <identifier>
+      <system value="urn:system"/>
+      <value value="1234"/>
+   </identifier>
+   <name>
+      <family value="Rossi"/>
+      <given value="Mario"/>
+   </name>
+</Patient>
+11:41:30.344 [main] INFO  ca.uhn.fhir.parser.CustomTypeR4Test [CustomTypeR4Test.java:65] - <Patient xmlns="http://hl7.org/fhir">
+   <extension url="http://example.com/extension#foo">
+      <valueDateTime value="2011-01-01T00:00:00Z"/>
+   </extension>
+</Patient>
+11:41:30.366 [main] INFO  ca.uhn.fhir.parser.CustomTypeR4Test [CustomTypeR4Test.java:94] - <Patient xmlns="http://hl7.org/fhir">
+   <extension url="http://example.com/extension#foo">
+      <valueDateTime value="2011-01-01T00:00:00Z"/>
+   </extension>
+</Patient>
+11:41:30.367 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:30.488 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:31.575 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'medication' found while parsing
+11:41:31.575 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:31.712 [main] INFO  ca.uhn.fhir.parser.CustomTypeR4Test [CustomTypeR4Test.java:235] - <Patient xmlns="http://hl7.org/fhir">
+   <meta>
+      <profile value="http://foo/profile1"/>
+      <profile value="http://foo/profile2"/>
+      <security>
+         <system value="SEC_S1"/>
+         <code value="SEC_C1"/>
+         <display value="SED_D1"/>
+      </security>
+      <security>
+         <system value="SEC_S2"/>
+         <code value="SEC_C2"/>
+         <display value="SED_D2"/>
+      </security>
+      <tag>
+         <system value="TAG_S1"/>
+         <code value="TAG_C1"/>
+         <display value="TAG_D1"/>
+      </tag>
+      <tag>
+         <system value="TAG_S2"/>
+         <code value="TAG_C2"/>
+         <display value="TAG_D2"/>
+      </tag>
+   </meta>
+</Patient>
+11:41:31.716 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:31.778 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:31.856 [main] INFO  ca.uhn.fhir.parser.CustomTypeR4Test [CustomTypeR4Test.java:328] - <Patient xmlns="http://hl7.org/fhir">
+   <meta>
+      <profile value="http://example.com/foo"/>
+      <profile value="http://example.com/bar"/>
+   </meta>
+   <extension url="http://example.com/BloodPressure">
+      <valueQuantity>
+         <value value="110"/>
+         <system value="http://unitsofmeasure.org"/>
+         <code value="mmHg"/>
+      </valueQuantity>
+   </extension>
+   <extension url="http://example.com/Cholesterol">
+      <valueQuantity>
+         <value value="2"/>
+         <system value="http://unitsofmeasure.org"/>
+         <code value="mmol/l"/>
+      </valueQuantity>
+   </extension>
+   <extension url="http://example.com/Glucose">
+      <valueQuantity>
+         <value value="95"/>
+         <system value="http://unitsofmeasure.org"/>
+         <code value="mg/dl"/>
+      </valueQuantity>
+   </extension>
+   <extension url="http://example.com/HbA1c">
+      <valueQuantity>
+         <value value="48"/>
+         <system value="http://unitsofmeasure.org"/>
+         <code value="mmol/mol"/>
+      </valueQuantity>
+   </extension>
+   <extension url="http://example.com/Insuline">
+      <valueQuantity>
+         <value value="125"/>
+         <system value="http://unitsofmeasure.org"/>
+         <code value="pmol/l"/>
+      </valueQuantity>
+   </extension>
+   <extension url="http://example.com/Weight">
+      <valueString value="185 cm"/>
+   </extension>
+   <modifierExtension url="http://example.com/diabetes2">
+      <valueDateTime value="2010-01-02"/>
+   </modifierExtension>
+   <modifierExtension url="http://example.com/diabetes2">
+      <valueDateTime value="2014-01-26T11:11:11"/>
+   </modifierExtension>
+   <identifier>
+      <system value="urn:system"/>
+      <value value="1234"/>
+   </identifier>
+   <name>
+      <family value="Rossi"/>
+      <given value="Mario"/>
+   </name>
+</Patient>
+11:41:31.879 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:31.924 [main] INFO  ca.uhn.fhir.parser.CustomTypeR4Test [CustomTypeR4Test.java:114] - <CustomResource xmlns="http://hl7.org/fhir"><meta><profile value="http://hl7.org/fhir/profiles/custom-resource"/></meta><baseValueCustomDate><date value="2016-05-13"/></baseValueCustomDate></CustomResource>
+11:41:31.925 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.parser.CustomTypeR4Test.ourCtx
+11:41:31.930 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.parser.CustomTypeR4Test.$jacocoData
+11:41:31.930 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: Deutsch (Deutschland)
+11:41:31.930 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] - Tests are using WINDOWS line endings and ISO-8851-1
+11:41:31.930 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT-05:00

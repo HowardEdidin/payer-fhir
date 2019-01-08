@@ -1,0 +1,4 @@
+/Users/kumarelubandi/WorkSpace/payer-fhir/hapi-fhir-server/src/test/java/ca/uhn/fhir/rest/server/IncomingRequestAddressStrategyTest.java
+/Users/kumarelubandi/WorkSpace/payer-fhir/hapi-fhir-server/src/test/java/ca/uhn/fhir/rest/server/interceptor/auth/VerdictTest.java
+/Users/kumarelubandi/WorkSpace/payer-fhir/hapi-fhir-server/src/test/java/ca/uhn/fhir/rest/server/SimpleBundleProviderTest.java
+/Users/kumarelubandi/WorkSpace/payer-fhir/hapi-fhir-server/src/test/java/ca/uhn/fhir/rest/server/interceptor/auth/RuleImplOpTest.java

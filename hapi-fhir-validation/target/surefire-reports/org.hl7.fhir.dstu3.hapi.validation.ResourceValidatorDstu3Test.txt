@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.hl7.fhir.dstu3.hapi.validation.ResourceValidatorDstu3Test
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 61.884 s - in org.hl7.fhir.dstu3.hapi.validation.ResourceValidatorDstu3Test

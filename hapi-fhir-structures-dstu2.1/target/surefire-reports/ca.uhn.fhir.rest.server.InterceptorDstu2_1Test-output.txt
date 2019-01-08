@@ -1,0 +1,317 @@
+16:42:12.137 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:12.640 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+16:42:12.641 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in DSTU2_1 mode
+16:42:12.657 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1435] - Added 1 resource provider(s). Total 1
+16:42:12.658 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.InterceptorDstu2_1Test$DummyPatientResourceProvider
+16:42:12.658 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.dstu2016may.hapi.rest.server.ServerProfileProvider
+16:42:12.659 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.dstu2016may.hapi.rest.server.ServerConformanceProvider
+16:42:12.665 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+16:42:12.666 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+16:42:12.668 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@5de06c37{HTTP/1.1,[http/1.1]}{0.0.0.0:50725}
+16:42:12.669 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @22764ms
+############ Logging method invocation #1 on mock/spy ########
+iServerInterceptor.incomingRequestPreProcessed(
+    null,
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:67)
+   has returned: "false" (java.lang.Boolean)
+
+############ Logging method invocation #2 on mock/spy ########
+iServerInterceptor.incomingRequestPostProcessed(
+    null,
+    null,
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:68)
+   has returned: "false" (java.lang.Boolean)
+
+############ Logging method invocation #3 on mock/spy ########
+iServerInterceptor.outgoingResponse(
+    null,
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:69)
+   has returned: "false" (java.lang.Boolean)
+
+############ Logging method invocation #4 on mock/spy ########
+iServerInterceptor.outgoingResponse(
+    null,
+    null,
+    null,
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:70)
+   has returned: "false" (java.lang.Boolean)
+
+############ Logging method invocation #1 on mock/spy ########
+iServerInterceptor.incomingRequestPreProcessed(
+    null,
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:71)
+   has returned: "false" (java.lang.Boolean)
+
+############ Logging method invocation #2 on mock/spy ########
+iServerInterceptor.incomingRequestPostProcessed(
+    null,
+    null,
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:72)
+   has returned: "false" (java.lang.Boolean)
+
+############ Logging method invocation #3 on mock/spy ########
+iServerInterceptor.outgoingResponse(
+    null,
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:73)
+   has returned: "false" (java.lang.Boolean)
+
+############ Logging method invocation #4 on mock/spy ########
+iServerInterceptor.outgoingResponse(
+    null,
+    null,
+    null,
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:74)
+   has returned: "false" (java.lang.Boolean)
+
+16:42:12.726 [main] INFO  c.u.f.r.s.InterceptorDstu2_1Test [InterceptorDstu2_1Test.java:98] - Starting call
+############ Logging method invocation #5 on mock/spy ########
+   stubbed: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:67)
+iServerInterceptor.incomingRequestPreProcessed(
+    Request(POST //localhost:50725/Patient/$validate)@648964e8,
+    HTTP/1.1 200 
+Date: Mon, 03 Dec 2018 11:12:12 GMT
+
+
+);
+   invoked: -> at ca.uhn.fhir.rest.server.RestfulServer.handleRequest(RestfulServer.java:890)
+   has returned: "true" (java.lang.Boolean)
+
+############ Logging method invocation #5 on mock/spy ########
+   stubbed: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:71)
+iServerInterceptor.incomingRequestPreProcessed(
+    Request(POST //localhost:50725/Patient/$validate)@648964e8,
+    HTTP/1.1 200 
+Date: Mon, 03 Dec 2018 11:12:12 GMT
+
+
+);
+   invoked: -> at ca.uhn.fhir.rest.server.RestfulServer.handleRequest(RestfulServer.java:890)
+   has returned: "true" (java.lang.Boolean)
+
+############ Logging method invocation #6 on mock/spy ########
+   stubbed: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:68)
+iServerInterceptor.incomingRequestPostProcessed(
+    ca.uhn.fhir.rest.server.servlet.ServletRequestDetails@7cd1de46,
+    Request(POST //localhost:50725/Patient/$validate)@648964e8,
+    HTTP/1.1 200 
+Date: Mon, 03 Dec 2018 11:12:12 GMT
+
+
+);
+   invoked: -> at ca.uhn.fhir.rest.server.RestfulServer.handleRequest(RestfulServer.java:955)
+   has returned: "true" (java.lang.Boolean)
+
+############ Logging method invocation #6 on mock/spy ########
+   stubbed: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:72)
+iServerInterceptor.incomingRequestPostProcessed(
+    ca.uhn.fhir.rest.server.servlet.ServletRequestDetails@7cd1de46,
+    Request(POST //localhost:50725/Patient/$validate)@648964e8,
+    HTTP/1.1 200 
+Date: Mon, 03 Dec 2018 11:12:12 GMT
+
+
+);
+   invoked: -> at ca.uhn.fhir.rest.server.RestfulServer.handleRequest(RestfulServer.java:955)
+   has returned: "true" (java.lang.Boolean)
+
+############ Logging method invocation #7 on mock/spy ########
+iServerInterceptor.incomingRequestPreHandled(
+    EXTENDED_OPERATION_TYPE,
+    IServerInterceptor.ActionRequestDetails[id=<null>,resourceType=Patient,resource=org.hl7.fhir.dstu2016may.model.Observation@ca7bd57]
+);
+   invoked: -> at ca.uhn.fhir.rest.server.method.BaseMethodBinding.invokeServerMethod(BaseMethodBinding.java:251)
+   has returned: "null"
+
+############ Logging method invocation #7 on mock/spy ########
+iServerInterceptor.incomingRequestPreHandled(
+    EXTENDED_OPERATION_TYPE,
+    IServerInterceptor.ActionRequestDetails[id=<null>,resourceType=Patient,resource=org.hl7.fhir.dstu2016may.model.Observation@ca7bd57]
+);
+   invoked: -> at ca.uhn.fhir.rest.server.method.BaseMethodBinding.invokeServerMethod(BaseMethodBinding.java:251)
+   has returned: "null"
+
+############ Logging method invocation #8 on mock/spy ########
+   stubbed: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:73)
+iServerInterceptor.outgoingResponse(
+    ca.uhn.fhir.rest.server.servlet.ServletRequestDetails@7cd1de46,
+    org.hl7.fhir.dstu2016may.model.OperationOutcome@3a0f6c
+);
+   invoked: -> at ca.uhn.fhir.rest.server.method.BaseResourceReturningMethodBinding.invokeServer(BaseResourceReturningMethodBinding.java:396)
+   has returned: "true" (java.lang.Boolean)
+
+############ Logging method invocation #9 on mock/spy ########
+   stubbed: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:74)
+iServerInterceptor.outgoingResponse(
+    ca.uhn.fhir.rest.server.servlet.ServletRequestDetails@7cd1de46,
+    ca.uhn.fhir.rest.api.server.ResponseDetails@1a97e587,
+    Request(POST //localhost:50725/Patient/$validate)@648964e8,
+    HTTP/1.1 200 
+Date: Mon, 03 Dec 2018 11:12:12 GMT
+
+
+);
+   invoked: -> at ca.uhn.fhir.rest.server.method.BaseResourceReturningMethodBinding.invokeServer(BaseResourceReturningMethodBinding.java:401)
+   has returned: "true" (java.lang.Boolean)
+
+############ Logging method invocation #8 on mock/spy ########
+   stubbed: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:69)
+iServerInterceptor.outgoingResponse(
+    ca.uhn.fhir.rest.server.servlet.ServletRequestDetails@7cd1de46,
+    org.hl7.fhir.dstu2016may.model.OperationOutcome@3a0f6c
+);
+   invoked: -> at ca.uhn.fhir.rest.server.method.BaseResourceReturningMethodBinding.invokeServer(BaseResourceReturningMethodBinding.java:396)
+   has returned: "true" (java.lang.Boolean)
+
+############ Logging method invocation #9 on mock/spy ########
+   stubbed: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:70)
+iServerInterceptor.outgoingResponse(
+    ca.uhn.fhir.rest.server.servlet.ServletRequestDetails@7cd1de46,
+    ca.uhn.fhir.rest.api.server.ResponseDetails@1a97e587,
+    Request(POST //localhost:50725/Patient/$validate)@648964e8,
+    HTTP/1.1 200 
+Date: Mon, 03 Dec 2018 11:12:12 GMT
+
+
+);
+   invoked: -> at ca.uhn.fhir.rest.server.method.BaseResourceReturningMethodBinding.invokeServer(BaseResourceReturningMethodBinding.java:401)
+   has returned: "true" (java.lang.Boolean)
+
+############ Logging method invocation #10 on mock/spy ########
+iServerInterceptor.processingCompletedNormally(
+    ca.uhn.fhir.rest.server.servlet.ServletRequestDetails@7cd1de46
+);
+   invoked: -> at ca.uhn.fhir.rest.server.RestfulServer.handleRequest(RestfulServer.java:975)
+   has returned: "null"
+
+############ Logging method invocation #10 on mock/spy ########
+iServerInterceptor.processingCompletedNormally(
+    ca.uhn.fhir.rest.server.servlet.ServletRequestDetails@7cd1de46
+);
+   invoked: -> at ca.uhn.fhir.rest.server.RestfulServer.handleRequest(RestfulServer.java:975)
+   has returned: "null"
+
+############ Logging method invocation #11 on mock/spy ########
+iServerInterceptor.incomingRequestPreProcessed(
+    null,
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:106)
+   has returned: "false" (java.lang.Boolean)
+
+############ Logging method invocation #11 on mock/spy ########
+iServerInterceptor.incomingRequestPreProcessed(
+    null,
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:107)
+   has returned: "false" (java.lang.Boolean)
+
+############ Logging method invocation #12 on mock/spy ########
+iServerInterceptor.incomingRequestPostProcessed(
+    null,
+    null,
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:108)
+   has returned: "false" (java.lang.Boolean)
+
+############ Logging method invocation #12 on mock/spy ########
+iServerInterceptor.incomingRequestPostProcessed(
+    null,
+    null,
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:109)
+   has returned: "false" (java.lang.Boolean)
+
+############ Logging method invocation #13 on mock/spy ########
+iServerInterceptor.incomingRequestPreHandled(
+    null,
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:112)
+   has returned: "null"
+
+############ Logging method invocation #13 on mock/spy ########
+iServerInterceptor.incomingRequestPreHandled(
+    null,
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:113)
+   has returned: "null"
+
+############ Logging method invocation #14 on mock/spy ########
+iServerInterceptor.outgoingResponse(
+    null,
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:114)
+   has returned: "false" (java.lang.Boolean)
+
+############ Logging method invocation #15 on mock/spy ########
+iServerInterceptor.outgoingResponse(
+    null,
+    null,
+    null,
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:115)
+   has returned: "false" (java.lang.Boolean)
+
+############ Logging method invocation #14 on mock/spy ########
+iServerInterceptor.outgoingResponse(
+    null,
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:116)
+   has returned: "false" (java.lang.Boolean)
+
+############ Logging method invocation #15 on mock/spy ########
+iServerInterceptor.outgoingResponse(
+    null,
+    null,
+    null,
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:117)
+   has returned: "false" (java.lang.Boolean)
+
+############ Logging method invocation #16 on mock/spy ########
+iServerInterceptor.processingCompletedNormally(
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:122)
+   has returned: "null"
+
+############ Logging method invocation #16 on mock/spy ########
+iServerInterceptor.processingCompletedNormally(
+    null
+);
+   invoked: -> at ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.testValidate(InterceptorDstu2_1Test.java:123)
+   has returned: "null"
+
+16:42:13.613 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@5de06c37{HTTP/1.1,[http/1.1]}{0.0.0.0:50725}
+16:42:13.624 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.apache.http.impl.client.CloseableHttpClient ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.ourClient
+16:42:13.624 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.ourCtx
+16:42:13.625 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.eclipse.jetty.server.Server ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.ourServer
+16:42:13.625 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.rest.server.RestfulServer ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.ourServlet
+16:42:13.625 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.server.InterceptorDstu2_1Test.$jacocoData
+16:42:13.625 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: Deutsch (Deutschland)
+16:42:13.625 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:118] - Tests are using UNIX line endings and UTF-8
+16:42:13.625 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT-05:00

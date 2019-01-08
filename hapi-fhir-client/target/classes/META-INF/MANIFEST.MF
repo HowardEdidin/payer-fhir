@@ -1,0 +1,47 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1543835390668
+Build-Jdk: 1.8.0_192
+Built-By: kumarelubandi
+Bundle-Description: An open-source implementation of the FHIR specificat
+ ion in Java.
+Bundle-DocURL: http://www.uhn.ca
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: HAPI FHIR - Client Framework
+Bundle-SymbolicName: ca.uhn.hapi.fhir.hapi-fhir-client
+Bundle-Vendor: University Health Network
+Bundle-Version: 3.6.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: ca.uhn.fhir.rest.client.interceptor;version="3.6.0";uses
+ :="ca.uhn.fhir.rest.client.api,org.slf4j",ca.uhn.fhir.rest.client.metho
+ d;version="3.6.0";uses:="ca.uhn.fhir.context,ca.uhn.fhir.model.api,ca.u
+ hn.fhir.model.valueset,ca.uhn.fhir.parser,ca.uhn.fhir.rest.annotation,c
+ a.uhn.fhir.rest.api,ca.uhn.fhir.rest.client.api,ca.uhn.fhir.rest.param,
+ ca.uhn.fhir.rest.server.exceptions,org.hl7.fhir.instance.model.api",ca.
+ uhn.fhir.rest.client.apache;version="3.6.0";uses:="ca.uhn.fhir.context,
+ ca.uhn.fhir.rest.api,ca.uhn.fhir.rest.client.api,ca.uhn.fhir.util,org.a
+ pache.http,org.apache.http.client,org.apache.http.client.methods,org.hl
+ 7.fhir.instance.model.api"
+Fragment-Host: ca.uhn.hapi.fhir.hapi-fhir-base
+Import-Package: ca.uhn.fhir.context;version="[3.6,4)",ca.uhn.fhir.i18n;v
+ ersion="[3.6,4)",ca.uhn.fhir.model.api;version="[3.6,4)",ca.uhn.fhir.mo
+ del.api.annotation;version="[3.6,4)",ca.uhn.fhir.model.base.composite;v
+ ersion="[3.6,4)",ca.uhn.fhir.model.base.resource;version="[3.6,4)",ca.u
+ hn.fhir.model.primitive;version="[3.6,4)",ca.uhn.fhir.model.valueset;ve
+ rsion="[3.6,4)",ca.uhn.fhir.parser;version="[3.6,4)",ca.uhn.fhir.rest.a
+ nnotation;version="[3.6,4)",ca.uhn.fhir.rest.api;version="[3.6,4)",ca.u
+ hn.fhir.rest.client.api;version="[3.6,4)",ca.uhn.fhir.rest.client.excep
+ tions;version="[3.6,4)",ca.uhn.fhir.rest.gclient;version="[3.6,4)",ca.u
+ hn.fhir.rest.param;version="[3.6,4)",ca.uhn.fhir.rest.param.binder;vers
+ ion="[3.6,4)",ca.uhn.fhir.rest.server.exceptions;version="[3.6,4)",ca.u
+ hn.fhir.util;version="[3.6,4)",org.apache.commons.codec.binary;version=
+ "[1.11,2)",org.apache.commons.io;version="[1.4,2)",org.apache.commons.l
+ ang3;version="[3.8,4)",org.apache.commons.lang3.builder;version="[3.8,4
+ )",org.apache.http,org.apache.http.auth,org.apache.http.client,org.apac
+ he.http.client.config,org.apache.http.client.entity,org.apache.http.cli
+ ent.methods,org.apache.http.conn,org.apache.http.entity,org.apache.http
+ .impl.auth,org.apache.http.impl.client,org.apache.http.impl.conn,org.ap
+ ache.http.message,org.apache.http.protocol,org.hl7.fhir.instance.model.
+ api;version="[3.6,4)",org.slf4j;version="[1.7,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.5.0.201709291849

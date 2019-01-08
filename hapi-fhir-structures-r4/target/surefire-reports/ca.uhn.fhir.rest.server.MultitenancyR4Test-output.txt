@@ -1,0 +1,23 @@
+11:41:32.887 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:33.403 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+11:41:33.405 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in R4 mode
+11:41:33.423 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1435] - Added 1 resource provider(s). Total 1
+11:41:33.424 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.MultitenancyR4Test$DummyPatientResourceProvider
+11:41:33.425 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerProfileProvider
+11:41:33.429 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerCapabilityStatementProvider
+11:41:33.444 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+11:41:33.444 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+11:41:33.445 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@51b2d271{HTTP/1.1,[http/1.1]}{0.0.0.0:50570}
+11:41:33.446 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @21186ms
+11:41:33.491 [qtp1102488945-32] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: This is the base URL of a multitenant FHIR server. Unable to handle this request, as it does not contain a tenant ID.
+11:41:33.502 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@51b2d271{HTTP/1.1,[http/1.1]}{0.0.0.0:50570}
+11:41:33.514 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.apache.http.impl.client.CloseableHttpClient ca.uhn.fhir.rest.server.MultitenancyR4Test.ourClient
+11:41:33.514 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.server.MultitenancyR4Test.ourCtx
+11:41:33.515 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.rest.param.TokenAndListParam ca.uhn.fhir.rest.server.MultitenancyR4Test.ourIdentifiers
+11:41:33.515 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static java.lang.String ca.uhn.fhir.rest.server.MultitenancyR4Test.ourLastMethod
+11:41:33.515 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.eclipse.jetty.server.Server ca.uhn.fhir.rest.server.MultitenancyR4Test.ourServer
+11:41:33.515 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static java.lang.String ca.uhn.fhir.rest.server.MultitenancyR4Test.ourLastTenantId
+11:41:33.516 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.server.MultitenancyR4Test.$jacocoData
+11:41:33.517 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: 中文 (台灣)
+11:41:33.517 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:118] - Tests are using UNIX line endings and UTF-8
+11:41:33.517 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+03:30

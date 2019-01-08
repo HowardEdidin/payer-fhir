@@ -1,0 +1,4 @@
+ca/uhn/fhir/rest/server/interceptor/auth/RuleImplOpTest.class
+ca/uhn/fhir/rest/server/SimpleBundleProviderTest.class
+ca/uhn/fhir/rest/server/IncomingRequestAddressStrategyTest.class
+ca/uhn/fhir/rest/server/interceptor/auth/VerdictTest.class

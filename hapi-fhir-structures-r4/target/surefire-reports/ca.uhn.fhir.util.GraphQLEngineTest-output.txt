@@ -1,0 +1,7 @@
+11:41:32.071 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:32.422 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-resources.xml
+11:41:37.127 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-types.xml
+11:41:37.432 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-others.xml
+11:41:38.052 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/extension/extension-definitions.xml
+11:41:39.008 [main] INFO  ca.uhn.fhir.util.GraphQLEngineTest [GraphQLEngineTest.java:44] - AppInfo: null / Context: http://foo.com/Patient/PATA / Reference: Patient/123
+11:41:39.010 [main] INFO  ca.uhn.fhir.util.GraphQLEngineTest [GraphQLEngineTest.java:44] - AppInfo: null / Context: http://foo.com/Patient/PATA / Reference: Patient/123

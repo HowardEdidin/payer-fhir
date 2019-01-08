@@ -1,0 +1,90 @@
+11:41:32.214 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:32.570 [main] INFO  c.u.f.r.client.TransactionClientTest [TransactionClientTest.java:84] - <Bundle xmlns="http://hl7.org/fhir">
+   <id value="45d583b4-1aa1-44a7-a9d0-d497a427f78f"/>
+   <meta>
+      <lastUpdated value="2019-01-07T09:41:32.323+03:30"/>
+   </meta>
+   <type value="transaction"/>
+   <total value="2"/>
+   <link>
+      <relation value="fhir-base"/>
+   </link>
+   <link>
+      <relation value="self"/>
+   </link>
+   <entry>
+      <resource>
+         <Patient xmlns="http://hl7.org/fhir">
+            <id value="testPersistWithSimpleLinkP01"/>
+            <identifier>
+               <system value="urn:system"/>
+               <value value="testPersistWithSimpleLinkP01"/>
+            </identifier>
+            <name>
+               <family value="Tester"/>
+               <given value="Joe"/>
+            </name>
+         </Patient>
+      </resource>
+      <request>
+         <method value="PUT"/>
+         <url value="Patient/testPersistWithSimpleLinkP01"/>
+      </request>
+   </entry>
+   <entry>
+      <resource>
+         <Observation xmlns="http://hl7.org/fhir">
+            <code>
+               <coding>
+                  <system value="urn:system"/>
+                  <code value="testPersistWithSimpleLinkO01"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="Patient/testPersistWithSimpleLinkP01"/>
+            </subject>
+         </Observation>
+      </resource>
+      <request>
+         <method value="POST"/>
+      </request>
+   </entry>
+</Bundle>
+11:41:32.570 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:32.835 [main] INFO  c.u.f.r.client.TransactionClientTest [TransactionClientTest.java:123] - <Bundle xmlns="http://hl7.org/fhir">
+   <entry>
+      <fullUrl value="http://foo/Patient/testPersistWithSimpleLinkP01"/>
+      <resource>
+         <Patient xmlns="http://hl7.org/fhir">
+            <id value="testPersistWithSimpleLinkP01"/>
+            <identifier>
+               <system value="urn:system"/>
+               <value value="testPersistWithSimpleLinkP01"/>
+            </identifier>
+            <name>
+               <family value="Tester"/>
+               <given value="Joe"/>
+            </name>
+         </Patient>
+      </resource>
+   </entry>
+   <entry>
+      <resource>
+         <Observation xmlns="http://hl7.org/fhir">
+            <code>
+               <coding>
+                  <system value="urn:system"/>
+                  <code value="testPersistWithSimpleLinkO01"/>
+               </coding>
+            </code>
+            <subject>
+               <reference value="Patient/testPersistWithSimpleLinkP01"/>
+            </subject>
+         </Observation>
+      </resource>
+   </entry>
+</Bundle>
+11:41:32.836 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.client.TransactionClientTest.$jacocoData
+11:41:32.864 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: 中文 (台灣)
+11:41:32.874 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] - Tests are using WINDOWS line endings and ISO-8851-1
+11:41:32.875 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+00:00

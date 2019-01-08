@@ -1,0 +1,8 @@
+11:41:15.423 [main] INFO  ca.uhn.fhir.util.VersionUtil [VersionUtil.java:48] - HAPI FHIR version is: 3.6.0-SNAPSHOT
+11:41:15.459 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:18.197 [main] INFO  ca.uhn.fhir.util.XmlUtil [DependencyLogImpl.java:75] - FHIR XML procesing will use StAX implementation 'Woodstox XML-processor' version '4.4.1'
+11:41:25.619 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.client.NonGenericClientR4Test.ourCtx
+11:41:25.619 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.client.NonGenericClientR4Test.$jacocoData
+11:41:25.626 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: English (Canada)
+11:41:25.627 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:118] - Tests are using UNIX line endings and UTF-8
+11:41:25.627 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+08:00

@@ -1,0 +1,7 @@
+2018-12-03 16:44:03.486 [main] INFO  ca.uhn.fhir.util.VersionUtil [VersionUtil.java:48] HAPI FHIR version is: 3.6.0-SNAPSHOT
+2018-12-03 16:44:03.558 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] Creating new FHIR context for FHIR version [DSTU2_HL7ORG]
+2018-12-03 16:44:03.577 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] Creating new FHIR context for FHIR version [DSTU2]
+2018-12-03 16:44:03.579 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] Creating new FHIR context for FHIR version [DSTU2]
+2018-12-03 16:44:03.713 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] Creating new FHIR context for FHIR version [DSTU2]
+2018-12-03 16:44:03.714 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] Creating new FHIR context for FHIR version [DSTU2_HL7ORG]
+2018-12-03 16:44:07.506 [main] INFO  ca.uhn.fhir.util.XmlUtil [DependencyLogImpl.java:75] FHIR XML procesing will use StAX implementation 'Woodstox XML-processor' version '4.4.1'

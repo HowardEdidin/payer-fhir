@@ -1,0 +1,62 @@
+16:42:12.151 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:12.355 [main] INFO  c.u.f.p.EmptyElementWithExtensionDstu3Test [EmptyElementWithExtensionDstu3Test.java:50] - <Observation xmlns="http://hl7.org/fhir">
+   <code>
+      <coding>
+         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor">
+            <valueString value="UNK"/>
+         </extension>
+      </coding>
+   </code>
+</Observation>
+16:42:12.358 [main] INFO  c.u.f.p.EmptyElementWithExtensionDstu3Test [EmptyElementWithExtensionDstu3Test.java:64] - {
+  "resourceType": "Observation",
+  "_status": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor",
+        "valueString": "UNK"
+      }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "3141-9"
+      }
+    ]
+  }
+}
+16:42:12.359 [main] INFO  c.u.f.p.EmptyElementWithExtensionDstu3Test [EmptyElementWithExtensionDstu3Test.java:37] - {
+  "resourceType": "Observation",
+  "code": {
+    "coding": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor",
+            "valueString": "UNK"
+          }
+        ]
+      }
+    ]
+  }
+}
+16:42:12.360 [main] INFO  c.u.f.p.EmptyElementWithExtensionDstu3Test [EmptyElementWithExtensionDstu3Test.java:78] - <Observation xmlns="http://hl7.org/fhir">
+   <status>
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor">
+         <valueString value="UNK"/>
+      </extension>
+   </status>
+   <code>
+      <coding>
+         <system value="http://loinc.org"/>
+         <code value="3141-9"/>
+      </coding>
+   </code>
+</Observation>
+16:42:12.361 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.parser.EmptyElementWithExtensionDstu3Test.ctx
+16:42:12.361 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.parser.EmptyElementWithExtensionDstu3Test.$jacocoData
+16:42:12.361 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: 中文 (台灣)
+16:42:12.361 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] - Tests are using WINDOWS line endings and ISO-8851-1
+16:42:12.362 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT-05:00

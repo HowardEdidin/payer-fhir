@@ -1,0 +1,25 @@
+16:42:05.527 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:06.032 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+16:42:06.034 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in DSTU2_1 mode
+16:42:06.177 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1435] - Added 1 resource provider(s). Total 1
+16:42:06.177 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.ServerExceptionDstu2_1Test$DummyPatientResourceProvider
+16:42:06.177 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.dstu2016may.hapi.rest.server.ServerProfileProvider
+16:42:06.178 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.dstu2016may.hapi.rest.server.ServerConformanceProvider
+16:42:06.196 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+16:42:06.196 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+16:42:06.198 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@36058d09{HTTP/1.1,[http/1.1]}{0.0.0.0:50705}
+16:42:06.198 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @16293ms
+16:42:06.207 [qtp1422106392-36] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.ResourceNotFoundException: SOME MESSAGE
+16:42:06.210 [main] INFO  c.u.f.r.s.ServerExceptionDstu2_1Test [ServerExceptionDstu2_1Test.java:59] - HTTP/1.1 404 Not Found
+16:42:06.210 [main] INFO  c.u.f.r.s.ServerExceptionDstu2_1Test [ServerExceptionDstu2_1Test.java:60] - <OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="SOME MESSAGE"/></issue></OperationOutcome>
+16:42:06.219 [main] INFO  c.u.f.r.s.ServerExceptionDstu2_1Test [ServerExceptionDstu2_1Test.java:83] - HTTP/1.1 401 Unauthorized
+16:42:06.220 [main] INFO  c.u.f.r.s.ServerExceptionDstu2_1Test [ServerExceptionDstu2_1Test.java:84] - Client unauthorized
+16:42:06.223 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@36058d09{HTTP/1.1,[http/1.1]}{0.0.0.0:50705}
+16:42:06.234 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.apache.http.impl.client.CloseableHttpClient ca.uhn.fhir.rest.server.ServerExceptionDstu2_1Test.ourClient
+16:42:06.234 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.server.ServerExceptionDstu2_1Test.ourCtx
+16:42:06.234 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.eclipse.jetty.server.Server ca.uhn.fhir.rest.server.ServerExceptionDstu2_1Test.ourServer
+16:42:06.234 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: public static ca.uhn.fhir.rest.server.exceptions.BaseServerResponseException ca.uhn.fhir.rest.server.ServerExceptionDstu2_1Test.ourException
+16:42:06.234 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.server.ServerExceptionDstu2_1Test.$jacocoData
+16:42:06.235 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: English (Canada)
+16:42:06.235 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:118] - Tests are using UNIX line endings and UTF-8
+16:42:06.235 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT-05:00

@@ -1,0 +1,30 @@
+11:41:44.636 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+ 
+
+ Generic Client params
+{}
+ca.uhn.fhir.rest.client.impl.GenericClient$OutcomeResponseHandler@671e7767
+ca.uhn.fhir.rest.client.method.HttpPostClientInvocation@1b3d816c
+ 
+
+ Generic Client params
+{}
+ca.uhn.fhir.rest.client.impl.GenericClient$OutcomeResponseHandler@53c867bf
+ca.uhn.fhir.rest.client.method.HttpPostClientInvocation@1c2a8bf
+ 
+
+ Generic Client params
+{}
+ca.uhn.fhir.rest.client.impl.GenericClient$OutcomeResponseHandler@deeb390
+ca.uhn.fhir.rest.client.method.HttpPostClientInvocation@39f45c14
+ 
+
+ Generic Client params
+{}
+ca.uhn.fhir.rest.client.impl.GenericClient$OutcomeResponseHandler@32a17f77
+ca.uhn.fhir.rest.client.method.HttpPostClientInvocation@1b0a0748
+11:41:44.676 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.client.ClientMimetypeR4Test.ourCtx
+11:41:44.676 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.client.ClientMimetypeR4Test.$jacocoData
+11:41:44.676 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: Deutsch (Deutschland)
+11:41:44.676 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] - Tests are using WINDOWS line endings and ISO-8851-1
+11:41:44.676 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+03:30

@@ -1,0 +1,47 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1543835639578
+Build-Jdk: 1.8.0_192
+Built-By: kumarelubandi
+Bundle-Description: An open-source implementation of the FHIR specificat
+ ion in Java.
+Bundle-DocURL: http://www.uhn.ca
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: HAPI FHIR - Converter
+Bundle-SymbolicName: ca.uhn.hapi.fhir.hapi-fhir-converter
+Bundle-Vendor: University Health Network
+Bundle-Version: 3.6.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.hl7.fhir.convertors;version="3.6.0";uses:="org.fhir.
+ ucum,org.hl7.fhir.dstu2016may.model,org.hl7.fhir.dstu3.context,org.hl7.
+ fhir.dstu3.model,org.hl7.fhir.exceptions,org.hl7.fhir.instance.model,or
+ g.hl7.fhir.r4.model,org.w3c.dom",ca.uhn.hapi.converters.server;version=
+ "3.6.0";uses:="ca.uhn.fhir.rest.api.server,ca.uhn.fhir.rest.server.exce
+ ptions,ca.uhn.fhir.rest.server.interceptor,javax.servlet.http"
+Import-Package: ca.uhn.fhir.rest.server.exceptions;resolution:=optional;
+ version="[3.6,4)",ca.uhn.fhir.rest.server.interceptor;resolution:=optio
+ nal,javax.servlet.http;resolution:=optional;version="[3.1,4)",ca.uhn.fh
+ ir.context;version="[3.6,4)",ca.uhn.fhir.model.api;version="[3.6,4)",ca
+ .uhn.fhir.parser;version="[3.6,4)",ca.uhn.fhir.rest.api.server;version=
+ "[3.6,4)",javax.xml.parsers,org.apache.commons.codec.binary;version="[1
+ .11,2)",org.apache.commons.lang3;version="[3.8,4)",org.fhir.ucum;versio
+ n="[3.6,4)";resolution:=optional,org.hl7.fhir.convertors;version="[3.6,
+ 4)",org.hl7.fhir.dstu2016may.model;version="[3.6,4)";resolution:=option
+ al,org.hl7.fhir.dstu2016may.utils;version="[3.6,4)";resolution:=optiona
+ l,org.hl7.fhir.dstu3.conformance;version="[3.6,4)";resolution:=optional
+ ,org.hl7.fhir.dstu3.context;version="[3.6,4)";resolution:=optional,org.
+ hl7.fhir.dstu3.formats;version="[3.6,4)";resolution:=optional,org.hl7.f
+ hir.dstu3.model;version="[3.6,4)";resolution:=optional,org.hl7.fhir.dst
+ u3.terminologies;version="[3.6,4)";resolution:=optional,org.hl7.fhir.ds
+ tu3.utils;version="[3.6,4)";resolution:=optional,org.hl7.fhir.exception
+ s;version="[3.6,4)";resolution:=optional,org.hl7.fhir.instance.model;ve
+ rsion="[3.6,4)";resolution:=optional,org.hl7.fhir.instance.model.api;ve
+ rsion="[3.6,4)",org.hl7.fhir.instance.utils;version="[3.6,4)";resolutio
+ n:=optional,org.hl7.fhir.r4.conformance;version="[3.6,4)";resolution:=o
+ ptional,org.hl7.fhir.r4.model;version="[3.6,4)";resolution:=optional,or
+ g.hl7.fhir.r4.terminologies;version="[3.6,4)";resolution:=optional,org.
+ hl7.fhir.utilities;version="[3.6,4)";resolution:=optional,org.hl7.fhir.
+ utilities.xhtml;version="[3.6,4)";resolution:=optional,org.hl7.fhir.uti
+ lities.xml;version="[3.6,4)";resolution:=optional,org.w3c.dom
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.5.0.201709291849

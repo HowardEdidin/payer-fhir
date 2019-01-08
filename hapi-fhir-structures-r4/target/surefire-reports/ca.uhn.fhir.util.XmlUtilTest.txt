@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ca.uhn.fhir.util.XmlUtilTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in ca.uhn.fhir.util.XmlUtilTest

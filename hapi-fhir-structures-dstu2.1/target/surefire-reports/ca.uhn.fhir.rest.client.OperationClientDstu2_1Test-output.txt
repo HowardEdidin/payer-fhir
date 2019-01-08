@@ -1,0 +1,9 @@
+16:42:13.162 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:14.112 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:14.297 [main] INFO  c.u.f.r.c.OperationClientDstu2_1Test [OperationClientDstu2_1Test.java:98] - <Parameters xmlns="http://hl7.org/fhir"><parameter><name value="valstr"/><valueString value="str"/></parameter><parameter><name value="valtok"/><valueString value="sys2|val2"/></parameter></Parameters>
+16:42:14.298 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:14.347 [main] INFO  c.u.f.r.c.OperationClientDstu2_1Test [OperationClientDstu2_1Test.java:133] - <Parameters xmlns="http://hl7.org/fhir"><parameter><name value="valstr"/><valueString value="str"/></parameter><parameter><name value="valtok"/><valueString value="sys|val"/></parameter></Parameters>
+16:42:14.349 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.client.OperationClientDstu2_1Test.$jacocoData
+16:42:14.349 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: English (Canada)
+16:42:14.349 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] - Tests are using WINDOWS line endings and ISO-8851-1
+16:42:14.349 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT-05:00

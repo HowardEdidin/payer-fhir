@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ca.uhn.fhir.rest.server.UnclassifiedServerExceptionDstu2_1Test
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.543 s - in ca.uhn.fhir.rest.server.UnclassifiedServerExceptionDstu2_1Test

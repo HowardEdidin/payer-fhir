@@ -1,0 +1,24 @@
+16:42:12.505 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:13.010 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+16:42:13.012 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in DSTU2_1 mode
+16:42:13.024 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1435] - Added 1 resource provider(s). Total 1
+16:42:13.026 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.SearchDstu2_1Test$DummyPatientResourceProvider
+16:42:13.050 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.dstu2016may.hapi.rest.server.ServerProfileProvider
+16:42:13.051 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.dstu2016may.hapi.rest.server.ServerConformanceProvider
+16:42:13.062 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+16:42:13.062 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+16:42:13.064 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@1852994e{HTTP/1.1,[http/1.1]}{0.0.0.0:50727}
+16:42:13.065 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @23161ms
+16:42:13.080 [main] INFO  c.u.f.rest.server.SearchDstu2_1Test [SearchDstu2_1Test.java:57] - <Bundle xmlns="http://hl7.org/fhir"><id value="ca7f5bc4-97ef-4990-9308-f1095c19e4a1"/><meta><lastUpdated value="2018-12-03T06:12:13.074-05:00"/></meta><type value="searchset"/><total value="1"/><link><relation value="self"/><url value="http://localhost:50727/Patient?identifier=foo%7Cbar"/></link><entry><fullUrl value="http://localhost:50727/Patient/1"/><resource><Patient xmlns="http://hl7.org/fhir"><id value="1"/><name><family value="FAMILY"/></name></Patient></resource></entry></Bundle>
+16:42:13.090 [qtp114413557-23] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: Invalid search parameter "identifier.chain". Parameter contains a chain (.chain) and chains are not supported for this parameter (chaining is only allowed on reference parameters)
+16:42:13.098 [main] INFO  c.u.f.rest.server.SearchDstu2_1Test [SearchDstu2_1Test.java:76] - <OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="Invalid search parameter &quot;identifier.chain&quot;. Parameter contains a chain (.chain) and chains are not supported for this parameter (chaining is only allowed on reference parameters)"/></issue></OperationOutcome>
+16:42:13.107 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@1852994e{HTTP/1.1,[http/1.1]}{0.0.0.0:50727}
+16:42:13.121 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.apache.http.impl.client.CloseableHttpClient ca.uhn.fhir.rest.server.SearchDstu2_1Test.ourClient
+16:42:13.122 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.server.SearchDstu2_1Test.ourCtx
+16:42:13.124 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.eclipse.jetty.server.Server ca.uhn.fhir.rest.server.SearchDstu2_1Test.ourServer
+16:42:13.124 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static java.lang.String ca.uhn.fhir.rest.server.SearchDstu2_1Test.ourLastMethod
+16:42:13.124 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.rest.param.TokenAndListParam ca.uhn.fhir.rest.server.SearchDstu2_1Test.ourIdentifiers
+16:42:13.124 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.server.SearchDstu2_1Test.$jacocoData
+16:42:13.150 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: 中文 (台灣)
+16:42:13.150 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] - Tests are using WINDOWS line endings and ISO-8851-1
+16:42:13.150 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT-05:00

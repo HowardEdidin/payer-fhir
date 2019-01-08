@@ -1,0 +1,20 @@
+2018-12-03 16:45:22.783 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] Creating new FHIR context for FHIR version [DSTU3]
+2018-12-03 16:45:24.150 [main] INFO  o.h.f.r.v.SchemaValidationR4Test [SchemaValidationR4Test.java:51] <OperationOutcome xmlns="http://hl7.org/fhir">
+   <issue>
+      <severity value="fatal"/>
+      <code value="processing"/>
+      <diagnostics value="Externe Entity: Lesen des externen Dokuments &quot;passwd&quot; nicht erfolgreich, da &quot;file&quot;-Zugriff wegen der von der Eigenschaft &quot;accessExternalDTD&quot; festgelegten Einschränkung nicht zulässig ist."/>
+      <location value="Line[4] Col[167]"/>
+   </issue>
+   <issue>
+      <severity value="fatal"/>
+      <code value="processing"/>
+      <diagnostics value="Externe Entity: Lesen des externen Dokuments &quot;passwd&quot; nicht erfolgreich, da &quot;file&quot;-Zugriff wegen der von der Eigenschaft &quot;accessExternalDTD&quot; festgelegten Einschränkung nicht zulässig ist."/>
+      <location value="Line[4] Col[167]"/>
+   </issue>
+</OperationOutcome>
+2018-12-03 16:45:24.153 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static ca.uhn.fhir.context.FhirContext org.hl7.fhir.r4.validation.SchemaValidationR4Test.ourCtx
+2018-12-03 16:45:24.153 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static transient boolean[] org.hl7.fhir.r4.validation.SchemaValidationR4Test.$jacocoData
+2018-12-03 16:45:24.154 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] Tests are running in locale: English (Canada)
+2018-12-03 16:45:24.154 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] Tests are using WINDOWS line endings and ISO-8851-1
+2018-12-03 16:45:24.154 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] Tests are using time zone: GMT+08:00

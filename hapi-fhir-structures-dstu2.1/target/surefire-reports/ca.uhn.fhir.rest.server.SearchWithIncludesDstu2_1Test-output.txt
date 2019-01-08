@@ -1,0 +1,76 @@
+16:41:53.321 [main] INFO  ca.uhn.fhir.util.VersionUtil [VersionUtil.java:48] - HAPI FHIR version is: 3.6.0-SNAPSHOT
+16:41:53.325 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:41:54.051 [main] INFO  org.eclipse.jetty.util.log [Log.java:193] - Logging initialized @4147ms to org.eclipse.jetty.util.log.Slf4jLog
+16:41:54.621 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+16:41:54.761 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in DSTU2_1 mode
+16:41:59.217 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1435] - Added 1 resource provider(s). Total 1
+16:41:59.218 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.SearchWithIncludesDstu2_1Test$DummyPatientResourceProvider
+16:41:59.398 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.dstu2016may.hapi.rest.server.ServerProfileProvider
+16:41:59.445 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.dstu2016may.hapi.rest.server.ServerConformanceProvider
+16:41:59.642 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+16:41:59.721 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+16:41:59.860 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@5780bed1{HTTP/1.1,[http/1.1]}{0.0.0.0:50692}
+16:41:59.861 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @9956ms
+16:42:01.606 [qtp413946856-18] INFO  c.u.f.r.s.SearchWithIncludesDstu2_1Test [SearchWithIncludesDstu2_1Test.java:106] - Includes: [ca.uhn.fhir.model.api.Include@46c2b91[value=Patient:organization,recurse=false], ca.uhn.fhir.model.api.Include@554b42d[value=Organization:partof,recurse=false]]
+16:42:02.115 [qtp413946856-18] INFO  ca.uhn.fhir.util.XmlUtil [DependencyLogImpl.java:75] - FHIR XML procesing will use StAX implementation 'Woodstox XML-processor' version '4.4.1'
+16:42:02.286 [main] INFO  c.u.f.r.s.SearchWithIncludesDstu2_1Test [SearchWithIncludesDstu2_1Test.java:50] - <Bundle xmlns="http://hl7.org/fhir">
+   <id value="a0229d34-f37e-4353-a5f4-1d61c712d513"/>
+   <meta>
+      <lastUpdated value="2018-12-03T16:42:01.625+05:30"/>
+   </meta>
+   <type value="searchset"/>
+   <total value="1"/>
+   <link>
+      <relation value="self"/>
+      <url value="http://localhost:50692/Patient?_include=Patient%3Aorganization&amp;_include=Organization%3Apartof&amp;_pretty=true"/>
+   </link>
+   <entry>
+      <fullUrl value="http://localhost:50692/Patient/FOO"/>
+      <resource>
+         <Patient xmlns="http://hl7.org/fhir">
+            <id value="FOO"/>
+            <contained>
+               <Organization xmlns="http://hl7.org/fhir">
+                  <id value="1"/>
+                  <name value="child"/>
+                  <partOf>
+                     <reference value="#2"/>
+                  </partOf>
+               </Organization>
+            </contained>
+            <contained>
+               <Organization xmlns="http://hl7.org/fhir">
+                  <id value="2"/>
+                  <name value="parent"/>
+                  <partOf>
+                     <reference value="Organization/GP"/>
+                  </partOf>
+               </Organization>
+            </contained>
+            <managingOrganization>
+               <reference value="#1"/>
+            </managingOrganization>
+         </Patient>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="http://localhost:50692/Organization/GP"/>
+      <resource>
+         <Organization xmlns="http://hl7.org/fhir">
+            <id value="GP"/>
+            <name value="grandparent"/>
+         </Organization>
+      </resource>
+      <search>
+         <mode value="include"/>
+      </search>
+   </entry>
+</Bundle>
+16:42:02.303 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@5780bed1{HTTP/1.1,[http/1.1]}{0.0.0.0:50692}
+16:42:02.308 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.apache.http.impl.client.CloseableHttpClient ca.uhn.fhir.rest.server.SearchWithIncludesDstu2_1Test.ourClient
+16:42:02.308 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.server.SearchWithIncludesDstu2_1Test.ourCtx
+16:42:02.309 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.eclipse.jetty.server.Server ca.uhn.fhir.rest.server.SearchWithIncludesDstu2_1Test.ourServer
+16:42:02.309 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.server.SearchWithIncludesDstu2_1Test.$jacocoData
+16:42:02.323 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: Deutsch (Deutschland)
+16:42:02.323 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] - Tests are using WINDOWS line endings and ISO-8851-1
+16:42:02.323 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+03:30

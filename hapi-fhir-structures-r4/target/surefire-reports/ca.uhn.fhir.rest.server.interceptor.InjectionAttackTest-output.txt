@@ -1,0 +1,662 @@
+11:41:45.263 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:45.772 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+11:41:45.774 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in R4 mode
+11:41:45.786 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1435] - Added 1 resource provider(s). Total 1
+11:41:45.786 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.interceptor.InjectionAttackTest$DummyPatientResourceProvider
+11:41:45.788 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerProfileProvider
+11:41:45.790 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerCapabilityStatementProvider
+11:41:45.793 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+11:41:45.793 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+11:41:45.794 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@2d091823{HTTP/1.1,[http/1.1]}{0.0.0.0:50638}
+11:41:45.795 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @33535ms
+11:41:45.809 [main] INFO  c.u.f.r.s.i.InjectionAttackTest [InjectionAttackTest.java:189] - <Bundle xmlns="http://hl7.org/fhir"><id value="a69cd6ff-d7f2-4aaf-8827-14457da72488"/><meta><lastUpdated value="2019-01-07T01:11:45.804-05:00"/></meta><type value="searchset"/><total value="0"/><link><relation value="self"/><url value="http://localhost:50638/Patient?identifier%3A%26lt%3Bscript%3E=123"/></link></Bundle>
+11:41:45.813 [qtp1362727575-104] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: Invalid request: The FHIR endpoint on this server does not know how to handle GET operation[Patient] with parameters [[a&lt;script>]]
+11:41:45.864 [main] INFO  c.u.f.r.s.i.InjectionAttackTest [InjectionAttackTest.java:78] - <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+       <style>
+.httpStatusDiv {  font-size: 1.2em;  font-weight: bold;}.hlQuot { color: #88F; }
+.hlQuot a { text-decoration: underline; text-decoration-color: #CCC; }
+.hlQuot a:HOVER { text-decoration: underline; text-decoration-color: #008; }
+.hlQuot .uuid, .hlQuot .dateTime {
+  user-select: all;
+  -moz-user-select: all;
+  -webkit-user-select: all;
+  -ms-user-select: element;
+}
+.hlAttr {
+  color: #888;
+}
+.hlTagName {
+  color: #006699;
+}
+.hlControl {
+  color: #660000;
+}
+.hlText {
+  color: #000000;
+}
+.hlUrlBase {
+}.headersDiv {
+  padding: 10px;  margin-left: 10px;  border: 1px solid #CCC;  border-radius: 10px;}.headersRow {
+}.headerName {
+  color: #888;
+  font-family: monospace;
+}.headerValue {
+  color: #88F;
+  font-family: monospace;
+}.responseBodyTable {  width: 100%;
+  margin-left: 0px;
+  margin-top: -10px;
+  position: relative;
+}.responseBodyTableFirstColumn {}.responseBodyTableSecondColumn {  position: absolute;
+  margin-left: 70px;
+  vertical-align: top;
+  left: 0px;
+  right: 0px;
+}.responseBodyTableSecondColumn PRE {  margin: 0px;}.sizeInfo {  margin-top: 20px;  font-size: 0.8em;}.lineAnchor A {  text-decoration: none;  padding-left: 20px;}.lineAnchor {  display: block;  padding-right: 20px;}.selectedLine {  background-color: #EEF;  font-weight: bold;}H1 {  font-size: 1.1em;  color: #666;}BODY {
+  font-family: Arial;
+}       </style>
+	</head>
+
+	<body><p>This result is being rendered in HTML for easy viewing. You may access this content as <a href="?a%26lt%3Bscript%3E=123&_format=json">Raw JSON</a> or <a href="?a%26lt%3Bscript%3E=123&_format=xml">Raw XML</a>,  or view this content in <a href="?a%26lt%3Bscript%3E=123&_format=html/json">HTML JSON</a> or <a href="?a%26lt%3Bscript%3E=123&_format=html/xml">HTML XML</a>. Response generated in 3ms.</p>
+<div class="httpStatusDiv">HTTP 400 Bad Request</div>
+
+<h1>Response Headers</h1><div class="headersDiv"><div class="headersRow"><span class="headerName">Date: </span><span class="headerValue">Mon, 07 Jan 2019 06:11:45 GMT</span></div><div class="headersRow"><span class="headerName">X-Powered-By: </span><span class="headerValue">HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.5.0/R4)</span></div><div class="headersRow"><span class="headerName">Content-Type: </span><span class="headerValue">application/fhir+xml;charset=utf-8</span></div></div><h1>Response Body</h1><div class="responseBodyTable"><div class="responseBodyTableSecondColumn"><pre><div id="line1"><span class='hlControl'>&lt;</span><span class='hlTagName'>OperationOutcome</span><span class='hlAttr'> xmlns=<span class='hlQuot'>&quot;http://hl7.org/fhir&quot;</span></span><span class='hlControl'>&gt;</span></div><div id="line2" onclick="updateHighlightedLineTo('#L2');">   <span class='hlControl'>&lt;</span><span class='hlTagName'>issue</span><span class='hlControl'>&gt;</span></div><div id="line3" onclick="updateHighlightedLineTo('#L3');">      <span class='hlControl'>&lt;</span><span class='hlTagName'>severity</span><span class='hlAttr'> value=<span class='hlQuot'>&quot;error&quot;</span>/</span><span class='hlControl'>&gt;</span></div><div id="line4" onclick="updateHighlightedLineTo('#L4');">      <span class='hlControl'>&lt;</span><span class='hlTagName'>code</span><span class='hlAttr'> value=<span class='hlQuot'>&quot;processing&quot;</span>/</span><span class='hlControl'>&gt;</span></div><div id="line5" onclick="updateHighlightedLineTo('#L5');">      <span class='hlControl'>&lt;</span><span class='hlTagName'>diagnostics</span><span class='hlAttr'> value=<span class='hlQuot'>&quot;Invalid request: The FHIR endpoint on this server does not know how to handle GET operation[Patient] with parameters [[a&amp;amp;lt;script&gt;]]&quot;</span>/</span><span class='hlControl'>&gt;</span></div><div id="line6" onclick="updateHighlightedLineTo('#L6');">   <span class='hlControl'>&lt;</span><span class='hlTagName'>/issue</span><span class='hlControl'>&gt;</span></div><div id="line7" onclick="updateHighlightedLineTo('#L7');"><span class='hlControl'>&lt;</span><span class='hlTagName'>/OperationOutcome</span><span class='hlControl'>&gt;</span></div></pre></div><div class="responseBodyTableFirstColumn"><pre><div class="lineAnchor" id="anchor1"><a href="#L1" name="L1" id="L1">1</a></div><div class="lineAnchor" id="anchor2"><a href="#L2" name="L2" id="L2">2</a></div><div class="lineAnchor" id="anchor3"><a href="#L3" name="L3" id="L3">3</a></div><div class="lineAnchor" id="anchor4"><a href="#L4" name="L4" id="L4">4</a></div><div class="lineAnchor" id="anchor5"><a href="#L5" name="L5" id="L5">5</a></div><div class="lineAnchor" id="anchor6"><a href="#L6" name="L6" id="L6">6</a></div><div class="lineAnchor" id="anchor7"><a href="#L7" name="L7" id="L7">7</a></div></div></td></div>
+<script type="text/javascript">
+var selectedLines = new Array();
+function updateHighlightedLine() {
+	updateHighlightedLineTo(window.location.hash);
+}
+
+function updateHighlightedLineTo(theNewHash) {
+	
+	for (var next in selectedLines) {
+		document.getElementById('line' + selectedLines[next]).className = '';
+		document.getElementById('anchor' + selectedLines[next]).className = 'lineAnchor';
+	}
+	selectedLines = new Array();
+	
+	var line = -1;
+	if (theNewHash && theNewHash.match('L[0-9]+-L[0-9]+')) {
+		var dashIndex = theNewHash.indexOf('-');
+		var start = parseInt(theNewHash.substring(2, dashIndex));
+		var end = parseInt(theNewHash.substring(dashIndex+2));
+		for (var i = start; i <= end; i++) {
+			selectedLines.push(i);
+		}
+	} else if (theNewHash && theNewHash.match('L[0-9]+')) {
+		var line = parseInt(theNewHash.substring(2));
+		selectedLines.push(line);
+	}
+
+
+	for (var next in selectedLines) {
+		// Prevent us from scrolling to the selected line
+		document.getElementById('L' + selectedLines[next]).name = '';
+		// Select the line number column
+		document.getElementById('line' + selectedLines[next]).className = 'selectedLine';
+		// Select the response body column
+		document.getElementById('anchor' + selectedLines[next]).className = 'lineAnchor selectedLine';
+	}
+		
+	selectedLine = line;
+}
+
+function updateHyperlinksAndStyles() {
+    /* adds hyperlinks and CSS styles to dates and UUIDs (e.g. to enable user-select: all) */
+    const logicalReferenceRegex = /^[A-Z][A-Za-z]+\/[0-9]+$/;
+    const dateTimeRegex = /^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?$/; // from the spec - https://www.hl7.org/fhir/datatypes.html#datetime
+    const uuidRegex = /^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/;
+
+    const allQuotes = document.querySelectorAll(".hlQuot");
+    for (var i = 0; i < allQuotes.length; i++) {
+        const quote = allQuotes[i];
+        const text = quote.textContent.substr(1, quote.textContent.length - 2 /* remove quotes */);
+
+        const absHyperlink = text.startsWith("http://") || text.startsWith("https://");
+        const relHyperlink = text.match(logicalReferenceRegex);
+        const uuid = text.match(uuidRegex);
+        const dateTime = text.match(dateTimeRegex);
+
+        if (absHyperlink || relHyperlink) {
+            const link = document.createElement("a");
+            const href = absHyperlink ? text : "http://localhost:50638/" + text;
+            link.setAttribute("href", href);
+            link.textContent = '"' + text + '"';
+            quote.textContent = "";
+            quote.appendChild(link);
+        }
+
+        if (uuid || dateTime) {
+            const span = document.createElement("span");
+            span.setAttribute("class", uuid ? "uuid" : "dateTime");
+            span.textContent = text;
+            quote.textContent = "";
+            quote.appendChild(document.createTextNode('"'));
+            quote.appendChild(span);
+            quote.appendChild(document.createTextNode('"'));
+        }
+    }
+}
+
+(function() {
+    'use strict';
+
+    /* bail out if user is testing a version of this script via Greasemonkey or Tampermonkey */
+    if (window.HAPI_ResponseHighlighter_userscript) {
+        console.log("HAPI ResponseHighlighter: userscript detected - not executing embedded script");
+        return;
+    }
+
+    console.time("updateHighlightedLine");
+    updateHighlightedLine();
+    console.timeEnd("updateHighlightedLine");
+    window.onhashchange = updateHighlightedLine;
+
+    console.time("updateHyperlinksAndStyles");
+    updateHyperlinksAndStyles();
+    console.timeEnd("updateHyperlinksAndStyles");
+
+    window.addEventListener("load", function(event) {
+      // https://developer.mozilla.org/en-US/docs/Web/API/Navigation_timing_API
+      var now = new Date().getTime();
+      var page_load_time = now - performance.timing.navigationStart;
+      console.log("User-perceived page loading time: " + page_load_time + "ms");
+    });
+
+})();
+</script>
+<div class="sizeInfo">Wrote 0,3 KB (8,7 KB total including HTML) in estimated 3ms</div></body></html>
+11:41:45.867 [qtp1362727575-110] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: Invalid request: The FHIR endpoint on this server does not know how to handle GET operation[Patient] with parameters [[a&lt;script>]]
+11:41:45.879 [main] INFO  c.u.f.r.s.i.InjectionAttackTest [InjectionAttackTest.java:90] - <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+       <style>
+.httpStatusDiv {  font-size: 1.2em;  font-weight: bold;}.hlQuot { color: #88F; }
+.hlQuot a { text-decoration: underline; text-decoration-color: #CCC; }
+.hlQuot a:HOVER { text-decoration: underline; text-decoration-color: #008; }
+.hlQuot .uuid, .hlQuot .dateTime {
+  user-select: all;
+  -moz-user-select: all;
+  -webkit-user-select: all;
+  -ms-user-select: element;
+}
+.hlAttr {
+  color: #888;
+}
+.hlTagName {
+  color: #006699;
+}
+.hlControl {
+  color: #660000;
+}
+.hlText {
+  color: #000000;
+}
+.hlUrlBase {
+}.headersDiv {
+  padding: 10px;  margin-left: 10px;  border: 1px solid #CCC;  border-radius: 10px;}.headersRow {
+}.headerName {
+  color: #888;
+  font-family: monospace;
+}.headerValue {
+  color: #88F;
+  font-family: monospace;
+}.responseBodyTable {  width: 100%;
+  margin-left: 0px;
+  margin-top: -10px;
+  position: relative;
+}.responseBodyTableFirstColumn {}.responseBodyTableSecondColumn {  position: absolute;
+  margin-left: 70px;
+  vertical-align: top;
+  left: 0px;
+  right: 0px;
+}.responseBodyTableSecondColumn PRE {  margin: 0px;}.sizeInfo {  margin-top: 20px;  font-size: 0.8em;}.lineAnchor A {  text-decoration: none;  padding-left: 20px;}.lineAnchor {  display: block;  padding-right: 20px;}.selectedLine {  background-color: #EEF;  font-weight: bold;}H1 {  font-size: 1.1em;  color: #666;}BODY {
+  font-family: Arial;
+}       </style>
+	</head>
+
+	<body><p>This result is being rendered in HTML for easy viewing. You may access this content as <a href="?a%26lt%3Bscript%3E=123&_format=json">Raw JSON</a> or <a href="?a%26lt%3Bscript%3E=123&_format=xml">Raw XML</a>,  or view this content in <a href="?a%26lt%3Bscript%3E=123&_format=html/json">HTML JSON</a> or <a href="?a%26lt%3Bscript%3E=123&_format=html/xml">HTML XML</a>. Response generated in 2ms.</p>
+<div class="httpStatusDiv">HTTP 400 Bad Request</div>
+
+<h1>Response Headers</h1><div class="headersDiv"><div class="headersRow"><span class="headerName">Date: </span><span class="headerValue">Mon, 07 Jan 2019 06:11:45 GMT</span></div><div class="headersRow"><span class="headerName">X-Powered-By: </span><span class="headerValue">HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.5.0/R4)</span></div><div class="headersRow"><span class="headerName">Content-Type: </span><span class="headerValue">application/fhir+json;charset=utf-8</span></div></div><h1>Response Body</h1><div class="responseBodyTable"><div class="responseBodyTableSecondColumn"><pre><div id="line1"><span class='hlControl'>&lt;</span><span class='hlTagName'>OperationOutcome</span><span class='hlAttr'> xmlns=<span class='hlQuot'>&quot;http://hl7.org/fhir&quot;</span></span><span class='hlControl'>&gt;</span></div><div id="line2" onclick="updateHighlightedLineTo('#L2');">   <span class='hlControl'>&lt;</span><span class='hlTagName'>issue</span><span class='hlControl'>&gt;</span></div><div id="line3" onclick="updateHighlightedLineTo('#L3');">      <span class='hlControl'>&lt;</span><span class='hlTagName'>severity</span><span class='hlAttr'> value=<span class='hlQuot'>&quot;error&quot;</span>/</span><span class='hlControl'>&gt;</span></div><div id="line4" onclick="updateHighlightedLineTo('#L4');">      <span class='hlControl'>&lt;</span><span class='hlTagName'>code</span><span class='hlAttr'> value=<span class='hlQuot'>&quot;processing&quot;</span>/</span><span class='hlControl'>&gt;</span></div><div id="line5" onclick="updateHighlightedLineTo('#L5');">      <span class='hlControl'>&lt;</span><span class='hlTagName'>diagnostics</span><span class='hlAttr'> value=<span class='hlQuot'>&quot;Invalid request: The FHIR endpoint on this server does not know how to handle GET operation[Patient] with parameters [[a&amp;amp;lt;script&gt;]]&quot;</span>/</span><span class='hlControl'>&gt;</span></div><div id="line6" onclick="updateHighlightedLineTo('#L6');">   <span class='hlControl'>&lt;</span><span class='hlTagName'>/issue</span><span class='hlControl'>&gt;</span></div><div id="line7" onclick="updateHighlightedLineTo('#L7');"><span class='hlControl'>&lt;</span><span class='hlTagName'>/OperationOutcome</span><span class='hlControl'>&gt;</span></div></pre></div><div class="responseBodyTableFirstColumn"><pre><div class="lineAnchor" id="anchor1"><a href="#L1" name="L1" id="L1">1</a></div><div class="lineAnchor" id="anchor2"><a href="#L2" name="L2" id="L2">2</a></div><div class="lineAnchor" id="anchor3"><a href="#L3" name="L3" id="L3">3</a></div><div class="lineAnchor" id="anchor4"><a href="#L4" name="L4" id="L4">4</a></div><div class="lineAnchor" id="anchor5"><a href="#L5" name="L5" id="L5">5</a></div><div class="lineAnchor" id="anchor6"><a href="#L6" name="L6" id="L6">6</a></div><div class="lineAnchor" id="anchor7"><a href="#L7" name="L7" id="L7">7</a></div></div></td></div>
+<script type="text/javascript">
+var selectedLines = new Array();
+function updateHighlightedLine() {
+	updateHighlightedLineTo(window.location.hash);
+}
+
+function updateHighlightedLineTo(theNewHash) {
+	
+	for (var next in selectedLines) {
+		document.getElementById('line' + selectedLines[next]).className = '';
+		document.getElementById('anchor' + selectedLines[next]).className = 'lineAnchor';
+	}
+	selectedLines = new Array();
+	
+	var line = -1;
+	if (theNewHash && theNewHash.match('L[0-9]+-L[0-9]+')) {
+		var dashIndex = theNewHash.indexOf('-');
+		var start = parseInt(theNewHash.substring(2, dashIndex));
+		var end = parseInt(theNewHash.substring(dashIndex+2));
+		for (var i = start; i <= end; i++) {
+			selectedLines.push(i);
+		}
+	} else if (theNewHash && theNewHash.match('L[0-9]+')) {
+		var line = parseInt(theNewHash.substring(2));
+		selectedLines.push(line);
+	}
+
+
+	for (var next in selectedLines) {
+		// Prevent us from scrolling to the selected line
+		document.getElementById('L' + selectedLines[next]).name = '';
+		// Select the line number column
+		document.getElementById('line' + selectedLines[next]).className = 'selectedLine';
+		// Select the response body column
+		document.getElementById('anchor' + selectedLines[next]).className = 'lineAnchor selectedLine';
+	}
+		
+	selectedLine = line;
+}
+
+function updateHyperlinksAndStyles() {
+    /* adds hyperlinks and CSS styles to dates and UUIDs (e.g. to enable user-select: all) */
+    const logicalReferenceRegex = /^[A-Z][A-Za-z]+\/[0-9]+$/;
+    const dateTimeRegex = /^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?$/; // from the spec - https://www.hl7.org/fhir/datatypes.html#datetime
+    const uuidRegex = /^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/;
+
+    const allQuotes = document.querySelectorAll(".hlQuot");
+    for (var i = 0; i < allQuotes.length; i++) {
+        const quote = allQuotes[i];
+        const text = quote.textContent.substr(1, quote.textContent.length - 2 /* remove quotes */);
+
+        const absHyperlink = text.startsWith("http://") || text.startsWith("https://");
+        const relHyperlink = text.match(logicalReferenceRegex);
+        const uuid = text.match(uuidRegex);
+        const dateTime = text.match(dateTimeRegex);
+
+        if (absHyperlink || relHyperlink) {
+            const link = document.createElement("a");
+            const href = absHyperlink ? text : "http://localhost:50638/" + text;
+            link.setAttribute("href", href);
+            link.textContent = '"' + text + '"';
+            quote.textContent = "";
+            quote.appendChild(link);
+        }
+
+        if (uuid || dateTime) {
+            const span = document.createElement("span");
+            span.setAttribute("class", uuid ? "uuid" : "dateTime");
+            span.textContent = text;
+            quote.textContent = "";
+            quote.appendChild(document.createTextNode('"'));
+            quote.appendChild(span);
+            quote.appendChild(document.createTextNode('"'));
+        }
+    }
+}
+
+(function() {
+    'use strict';
+
+    /* bail out if user is testing a version of this script via Greasemonkey or Tampermonkey */
+    if (window.HAPI_ResponseHighlighter_userscript) {
+        console.log("HAPI ResponseHighlighter: userscript detected - not executing embedded script");
+        return;
+    }
+
+    console.time("updateHighlightedLine");
+    updateHighlightedLine();
+    console.timeEnd("updateHighlightedLine");
+    window.onhashchange = updateHighlightedLine;
+
+    console.time("updateHyperlinksAndStyles");
+    updateHyperlinksAndStyles();
+    console.timeEnd("updateHyperlinksAndStyles");
+
+    window.addEventListener("load", function(event) {
+      // https://developer.mozilla.org/en-US/docs/Web/API/Navigation_timing_API
+      var now = new Date().getTime();
+      var page_load_time = now - performance.timing.navigationStart;
+      console.log("User-perceived page loading time: " + page_load_time + "ms");
+    });
+
+})();
+</script>
+<div class="sizeInfo">Wrote 0,3 KB (8,7 KB total including HTML) in estimated 2ms</div></body></html>
+11:41:45.881 [qtp1362727575-109] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: Invalid request: The FHIR endpoint on this server does not know how to handle GET operation[Patient] with parameters [[a&lt;script>]]
+11:41:45.882 [main] INFO  c.u.f.r.s.i.InjectionAttackTest [InjectionAttackTest.java:102] - <OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="Invalid request: The FHIR endpoint on this server does not know how to handle GET operation[Patient] with parameters [[a&amp;lt;script>]]"/></issue></OperationOutcome>
+11:41:45.884 [qtp1362727575-110] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: Invalid request: The FHIR endpoint on this server does not know how to handle GET operation[Patient] with parameters [[a&lt;script>]]
+11:41:45.886 [main] INFO  c.u.f.r.s.i.InjectionAttackTest [InjectionAttackTest.java:114] - {"resourceType":"OperationOutcome","issue":[{"severity":"error","code":"processing","diagnostics":"Invalid request: The FHIR endpoint on this server does not know how to handle GET operation[Patient] with parameters [[a&lt;script>]]"}]}
+11:41:45.887 [qtp1362727575-109] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.ResourceNotFoundException: Unknown resource type 'AA&lt;script>' - Server knows how to handle: [StructureDefinition, Patient, OperationDefinition]
+11:41:45.889 [main] INFO  c.u.f.r.s.i.InjectionAttackTest [InjectionAttackTest.java:134] - <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+       <style>
+.httpStatusDiv {  font-size: 1.2em;  font-weight: bold;}.hlQuot { color: #88F; }
+.hlQuot a { text-decoration: underline; text-decoration-color: #CCC; }
+.hlQuot a:HOVER { text-decoration: underline; text-decoration-color: #008; }
+.hlQuot .uuid, .hlQuot .dateTime {
+  user-select: all;
+  -moz-user-select: all;
+  -webkit-user-select: all;
+  -ms-user-select: element;
+}
+.hlAttr {
+  color: #888;
+}
+.hlTagName {
+  color: #006699;
+}
+.hlControl {
+  color: #660000;
+}
+.hlText {
+  color: #000000;
+}
+.hlUrlBase {
+}.headersDiv {
+  padding: 10px;  margin-left: 10px;  border: 1px solid #CCC;  border-radius: 10px;}.headersRow {
+}.headerName {
+  color: #888;
+  font-family: monospace;
+}.headerValue {
+  color: #88F;
+  font-family: monospace;
+}.responseBodyTable {  width: 100%;
+  margin-left: 0px;
+  margin-top: -10px;
+  position: relative;
+}.responseBodyTableFirstColumn {}.responseBodyTableSecondColumn {  position: absolute;
+  margin-left: 70px;
+  vertical-align: top;
+  left: 0px;
+  right: 0px;
+}.responseBodyTableSecondColumn PRE {  margin: 0px;}.sizeInfo {  margin-top: 20px;  font-size: 0.8em;}.lineAnchor A {  text-decoration: none;  padding-left: 20px;}.lineAnchor {  display: block;  padding-right: 20px;}.selectedLine {  background-color: #EEF;  font-weight: bold;}H1 {  font-size: 1.1em;  color: #666;}BODY {
+  font-family: Arial;
+}       </style>
+	</head>
+
+	<body><p>This result is being rendered in HTML for easy viewing. You may access this content as <a href="?_format=json">Raw JSON</a> or <a href="?_format=xml">Raw XML</a>,  or view this content in <a href="?_format=html/json">HTML JSON</a> or <a href="?_format=html/xml">HTML XML</a>. Response generated in 1ms.</p>
+<div class="httpStatusDiv">HTTP 404 Not Found</div>
+
+<h1>Response Headers</h1><div class="headersDiv"><div class="headersRow"><span class="headerName">Date: </span><span class="headerValue">Mon, 07 Jan 2019 06:11:45 GMT</span></div><div class="headersRow"><span class="headerName">X-Powered-By: </span><span class="headerValue">HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.5.0/R4)</span></div><div class="headersRow"><span class="headerName">Content-Type: </span><span class="headerValue">application/fhir+xml;charset=utf-8</span></div></div><h1>Response Body</h1><div class="responseBodyTable"><div class="responseBodyTableSecondColumn"><pre><div id="line1"><span class='hlControl'>&lt;</span><span class='hlTagName'>OperationOutcome</span><span class='hlAttr'> xmlns=<span class='hlQuot'>&quot;http://hl7.org/fhir&quot;</span></span><span class='hlControl'>&gt;</span></div><div id="line2" onclick="updateHighlightedLineTo('#L2');">   <span class='hlControl'>&lt;</span><span class='hlTagName'>issue</span><span class='hlControl'>&gt;</span></div><div id="line3" onclick="updateHighlightedLineTo('#L3');">      <span class='hlControl'>&lt;</span><span class='hlTagName'>severity</span><span class='hlAttr'> value=<span class='hlQuot'>&quot;error&quot;</span>/</span><span class='hlControl'>&gt;</span></div><div id="line4" onclick="updateHighlightedLineTo('#L4');">      <span class='hlControl'>&lt;</span><span class='hlTagName'>code</span><span class='hlAttr'> value=<span class='hlQuot'>&quot;processing&quot;</span>/</span><span class='hlControl'>&gt;</span></div><div id="line5" onclick="updateHighlightedLineTo('#L5');">      <span class='hlControl'>&lt;</span><span class='hlTagName'>diagnostics</span><span class='hlAttr'> value=<span class='hlQuot'>&quot;Unknown resource type 'AA&amp;amp;lt;script&gt;' - Server knows how to handle: [StructureDefinition, Patient, OperationDefinition]&quot;</span>/</span><span class='hlControl'>&gt;</span></div><div id="line6" onclick="updateHighlightedLineTo('#L6');">   <span class='hlControl'>&lt;</span><span class='hlTagName'>/issue</span><span class='hlControl'>&gt;</span></div><div id="line7" onclick="updateHighlightedLineTo('#L7');"><span class='hlControl'>&lt;</span><span class='hlTagName'>/OperationOutcome</span><span class='hlControl'>&gt;</span></div></pre></div><div class="responseBodyTableFirstColumn"><pre><div class="lineAnchor" id="anchor1"><a href="#L1" name="L1" id="L1">1</a></div><div class="lineAnchor" id="anchor2"><a href="#L2" name="L2" id="L2">2</a></div><div class="lineAnchor" id="anchor3"><a href="#L3" name="L3" id="L3">3</a></div><div class="lineAnchor" id="anchor4"><a href="#L4" name="L4" id="L4">4</a></div><div class="lineAnchor" id="anchor5"><a href="#L5" name="L5" id="L5">5</a></div><div class="lineAnchor" id="anchor6"><a href="#L6" name="L6" id="L6">6</a></div><div class="lineAnchor" id="anchor7"><a href="#L7" name="L7" id="L7">7</a></div></div></td></div>
+<script type="text/javascript">
+var selectedLines = new Array();
+function updateHighlightedLine() {
+	updateHighlightedLineTo(window.location.hash);
+}
+
+function updateHighlightedLineTo(theNewHash) {
+	
+	for (var next in selectedLines) {
+		document.getElementById('line' + selectedLines[next]).className = '';
+		document.getElementById('anchor' + selectedLines[next]).className = 'lineAnchor';
+	}
+	selectedLines = new Array();
+	
+	var line = -1;
+	if (theNewHash && theNewHash.match('L[0-9]+-L[0-9]+')) {
+		var dashIndex = theNewHash.indexOf('-');
+		var start = parseInt(theNewHash.substring(2, dashIndex));
+		var end = parseInt(theNewHash.substring(dashIndex+2));
+		for (var i = start; i <= end; i++) {
+			selectedLines.push(i);
+		}
+	} else if (theNewHash && theNewHash.match('L[0-9]+')) {
+		var line = parseInt(theNewHash.substring(2));
+		selectedLines.push(line);
+	}
+
+
+	for (var next in selectedLines) {
+		// Prevent us from scrolling to the selected line
+		document.getElementById('L' + selectedLines[next]).name = '';
+		// Select the line number column
+		document.getElementById('line' + selectedLines[next]).className = 'selectedLine';
+		// Select the response body column
+		document.getElementById('anchor' + selectedLines[next]).className = 'lineAnchor selectedLine';
+	}
+		
+	selectedLine = line;
+}
+
+function updateHyperlinksAndStyles() {
+    /* adds hyperlinks and CSS styles to dates and UUIDs (e.g. to enable user-select: all) */
+    const logicalReferenceRegex = /^[A-Z][A-Za-z]+\/[0-9]+$/;
+    const dateTimeRegex = /^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?$/; // from the spec - https://www.hl7.org/fhir/datatypes.html#datetime
+    const uuidRegex = /^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/;
+
+    const allQuotes = document.querySelectorAll(".hlQuot");
+    for (var i = 0; i < allQuotes.length; i++) {
+        const quote = allQuotes[i];
+        const text = quote.textContent.substr(1, quote.textContent.length - 2 /* remove quotes */);
+
+        const absHyperlink = text.startsWith("http://") || text.startsWith("https://");
+        const relHyperlink = text.match(logicalReferenceRegex);
+        const uuid = text.match(uuidRegex);
+        const dateTime = text.match(dateTimeRegex);
+
+        if (absHyperlink || relHyperlink) {
+            const link = document.createElement("a");
+            const href = absHyperlink ? text : "http://localhost:50638/" + text;
+            link.setAttribute("href", href);
+            link.textContent = '"' + text + '"';
+            quote.textContent = "";
+            quote.appendChild(link);
+        }
+
+        if (uuid || dateTime) {
+            const span = document.createElement("span");
+            span.setAttribute("class", uuid ? "uuid" : "dateTime");
+            span.textContent = text;
+            quote.textContent = "";
+            quote.appendChild(document.createTextNode('"'));
+            quote.appendChild(span);
+            quote.appendChild(document.createTextNode('"'));
+        }
+    }
+}
+
+(function() {
+    'use strict';
+
+    /* bail out if user is testing a version of this script via Greasemonkey or Tampermonkey */
+    if (window.HAPI_ResponseHighlighter_userscript) {
+        console.log("HAPI ResponseHighlighter: userscript detected - not executing embedded script");
+        return;
+    }
+
+    console.time("updateHighlightedLine");
+    updateHighlightedLine();
+    console.timeEnd("updateHighlightedLine");
+    window.onhashchange = updateHighlightedLine;
+
+    console.time("updateHyperlinksAndStyles");
+    updateHyperlinksAndStyles();
+    console.timeEnd("updateHyperlinksAndStyles");
+
+    window.addEventListener("load", function(event) {
+      // https://developer.mozilla.org/en-US/docs/Web/API/Navigation_timing_API
+      var now = new Date().getTime();
+      var page_load_time = now - performance.timing.navigationStart;
+      console.log("User-perceived page loading time: " + page_load_time + "ms");
+    });
+
+})();
+</script>
+<div class="sizeInfo">Wrote 0,3 KB (8,6 KB total including HTML) in estimated 1ms</div></body></html>
+11:41:45.890 [qtp1362727575-110] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.ResourceNotFoundException: Unknown resource type 'AA&lt;script>' - Server knows how to handle: [StructureDefinition, Patient, OperationDefinition]
+11:41:45.894 [main] INFO  c.u.f.r.s.i.InjectionAttackTest [InjectionAttackTest.java:146] - <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+       <style>
+.httpStatusDiv {  font-size: 1.2em;  font-weight: bold;}.hlQuot { color: #88F; }
+.hlQuot a { text-decoration: underline; text-decoration-color: #CCC; }
+.hlQuot a:HOVER { text-decoration: underline; text-decoration-color: #008; }
+.hlQuot .uuid, .hlQuot .dateTime {
+  user-select: all;
+  -moz-user-select: all;
+  -webkit-user-select: all;
+  -ms-user-select: element;
+}
+.hlAttr {
+  color: #888;
+}
+.hlTagName {
+  color: #006699;
+}
+.hlControl {
+  color: #660000;
+}
+.hlText {
+  color: #000000;
+}
+.hlUrlBase {
+}.headersDiv {
+  padding: 10px;  margin-left: 10px;  border: 1px solid #CCC;  border-radius: 10px;}.headersRow {
+}.headerName {
+  color: #888;
+  font-family: monospace;
+}.headerValue {
+  color: #88F;
+  font-family: monospace;
+}.responseBodyTable {  width: 100%;
+  margin-left: 0px;
+  margin-top: -10px;
+  position: relative;
+}.responseBodyTableFirstColumn {}.responseBodyTableSecondColumn {  position: absolute;
+  margin-left: 70px;
+  vertical-align: top;
+  left: 0px;
+  right: 0px;
+}.responseBodyTableSecondColumn PRE {  margin: 0px;}.sizeInfo {  margin-top: 20px;  font-size: 0.8em;}.lineAnchor A {  text-decoration: none;  padding-left: 20px;}.lineAnchor {  display: block;  padding-right: 20px;}.selectedLine {  background-color: #EEF;  font-weight: bold;}H1 {  font-size: 1.1em;  color: #666;}BODY {
+  font-family: Arial;
+}       </style>
+	</head>
+
+	<body><p>This result is being rendered in HTML for easy viewing. You may access this content as <a href="?_format=json">Raw JSON</a> or <a href="?_format=xml">Raw XML</a>,  or view this content in <a href="?_format=html/json">HTML JSON</a> or <a href="?_format=html/xml">HTML XML</a>. Response generated in 1ms.</p>
+<div class="httpStatusDiv">HTTP 404 Not Found</div>
+
+<h1>Response Headers</h1><div class="headersDiv"><div class="headersRow"><span class="headerName">Date: </span><span class="headerValue">Mon, 07 Jan 2019 06:11:45 GMT</span></div><div class="headersRow"><span class="headerName">X-Powered-By: </span><span class="headerValue">HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.5.0/R4)</span></div><div class="headersRow"><span class="headerName">Content-Type: </span><span class="headerValue">application/fhir+json;charset=utf-8</span></div></div><h1>Response Body</h1><div class="responseBodyTable"><div class="responseBodyTableSecondColumn"><pre><div id="line1"><span class='hlControl'>&lt;</span><span class='hlTagName'>OperationOutcome</span><span class='hlAttr'> xmlns=<span class='hlQuot'>&quot;http://hl7.org/fhir&quot;</span></span><span class='hlControl'>&gt;</span></div><div id="line2" onclick="updateHighlightedLineTo('#L2');">   <span class='hlControl'>&lt;</span><span class='hlTagName'>issue</span><span class='hlControl'>&gt;</span></div><div id="line3" onclick="updateHighlightedLineTo('#L3');">      <span class='hlControl'>&lt;</span><span class='hlTagName'>severity</span><span class='hlAttr'> value=<span class='hlQuot'>&quot;error&quot;</span>/</span><span class='hlControl'>&gt;</span></div><div id="line4" onclick="updateHighlightedLineTo('#L4');">      <span class='hlControl'>&lt;</span><span class='hlTagName'>code</span><span class='hlAttr'> value=<span class='hlQuot'>&quot;processing&quot;</span>/</span><span class='hlControl'>&gt;</span></div><div id="line5" onclick="updateHighlightedLineTo('#L5');">      <span class='hlControl'>&lt;</span><span class='hlTagName'>diagnostics</span><span class='hlAttr'> value=<span class='hlQuot'>&quot;Unknown resource type 'AA&amp;amp;lt;script&gt;' - Server knows how to handle: [StructureDefinition, Patient, OperationDefinition]&quot;</span>/</span><span class='hlControl'>&gt;</span></div><div id="line6" onclick="updateHighlightedLineTo('#L6');">   <span class='hlControl'>&lt;</span><span class='hlTagName'>/issue</span><span class='hlControl'>&gt;</span></div><div id="line7" onclick="updateHighlightedLineTo('#L7');"><span class='hlControl'>&lt;</span><span class='hlTagName'>/OperationOutcome</span><span class='hlControl'>&gt;</span></div></pre></div><div class="responseBodyTableFirstColumn"><pre><div class="lineAnchor" id="anchor1"><a href="#L1" name="L1" id="L1">1</a></div><div class="lineAnchor" id="anchor2"><a href="#L2" name="L2" id="L2">2</a></div><div class="lineAnchor" id="anchor3"><a href="#L3" name="L3" id="L3">3</a></div><div class="lineAnchor" id="anchor4"><a href="#L4" name="L4" id="L4">4</a></div><div class="lineAnchor" id="anchor5"><a href="#L5" name="L5" id="L5">5</a></div><div class="lineAnchor" id="anchor6"><a href="#L6" name="L6" id="L6">6</a></div><div class="lineAnchor" id="anchor7"><a href="#L7" name="L7" id="L7">7</a></div></div></td></div>
+<script type="text/javascript">
+var selectedLines = new Array();
+function updateHighlightedLine() {
+	updateHighlightedLineTo(window.location.hash);
+}
+
+function updateHighlightedLineTo(theNewHash) {
+	
+	for (var next in selectedLines) {
+		document.getElementById('line' + selectedLines[next]).className = '';
+		document.getElementById('anchor' + selectedLines[next]).className = 'lineAnchor';
+	}
+	selectedLines = new Array();
+	
+	var line = -1;
+	if (theNewHash && theNewHash.match('L[0-9]+-L[0-9]+')) {
+		var dashIndex = theNewHash.indexOf('-');
+		var start = parseInt(theNewHash.substring(2, dashIndex));
+		var end = parseInt(theNewHash.substring(dashIndex+2));
+		for (var i = start; i <= end; i++) {
+			selectedLines.push(i);
+		}
+	} else if (theNewHash && theNewHash.match('L[0-9]+')) {
+		var line = parseInt(theNewHash.substring(2));
+		selectedLines.push(line);
+	}
+
+
+	for (var next in selectedLines) {
+		// Prevent us from scrolling to the selected line
+		document.getElementById('L' + selectedLines[next]).name = '';
+		// Select the line number column
+		document.getElementById('line' + selectedLines[next]).className = 'selectedLine';
+		// Select the response body column
+		document.getElementById('anchor' + selectedLines[next]).className = 'lineAnchor selectedLine';
+	}
+		
+	selectedLine = line;
+}
+
+function updateHyperlinksAndStyles() {
+    /* adds hyperlinks and CSS styles to dates and UUIDs (e.g. to enable user-select: all) */
+    const logicalReferenceRegex = /^[A-Z][A-Za-z]+\/[0-9]+$/;
+    const dateTimeRegex = /^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?$/; // from the spec - https://www.hl7.org/fhir/datatypes.html#datetime
+    const uuidRegex = /^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/;
+
+    const allQuotes = document.querySelectorAll(".hlQuot");
+    for (var i = 0; i < allQuotes.length; i++) {
+        const quote = allQuotes[i];
+        const text = quote.textContent.substr(1, quote.textContent.length - 2 /* remove quotes */);
+
+        const absHyperlink = text.startsWith("http://") || text.startsWith("https://");
+        const relHyperlink = text.match(logicalReferenceRegex);
+        const uuid = text.match(uuidRegex);
+        const dateTime = text.match(dateTimeRegex);
+
+        if (absHyperlink || relHyperlink) {
+            const link = document.createElement("a");
+            const href = absHyperlink ? text : "http://localhost:50638/" + text;
+            link.setAttribute("href", href);
+            link.textContent = '"' + text + '"';
+            quote.textContent = "";
+            quote.appendChild(link);
+        }
+
+        if (uuid || dateTime) {
+            const span = document.createElement("span");
+            span.setAttribute("class", uuid ? "uuid" : "dateTime");
+            span.textContent = text;
+            quote.textContent = "";
+            quote.appendChild(document.createTextNode('"'));
+            quote.appendChild(span);
+            quote.appendChild(document.createTextNode('"'));
+        }
+    }
+}
+
+(function() {
+    'use strict';
+
+    /* bail out if user is testing a version of this script via Greasemonkey or Tampermonkey */
+    if (window.HAPI_ResponseHighlighter_userscript) {
+        console.log("HAPI ResponseHighlighter: userscript detected - not executing embedded script");
+        return;
+    }
+
+    console.time("updateHighlightedLine");
+    updateHighlightedLine();
+    console.timeEnd("updateHighlightedLine");
+    window.onhashchange = updateHighlightedLine;
+
+    console.time("updateHyperlinksAndStyles");
+    updateHyperlinksAndStyles();
+    console.timeEnd("updateHyperlinksAndStyles");
+
+    window.addEventListener("load", function(event) {
+      // https://developer.mozilla.org/en-US/docs/Web/API/Navigation_timing_API
+      var now = new Date().getTime();
+      var page_load_time = now - performance.timing.navigationStart;
+      console.log("User-perceived page loading time: " + page_load_time + "ms");
+    });
+
+})();
+</script>
+<div class="sizeInfo">Wrote 0,3 KB (8,6 KB total including HTML) in estimated 1ms</div></body></html>
+11:41:45.896 [qtp1362727575-109] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.ResourceNotFoundException: Unknown resource type 'AA&lt;script>' - Server knows how to handle: [StructureDefinition, Patient, OperationDefinition]
+11:41:45.897 [main] INFO  c.u.f.r.s.i.InjectionAttackTest [InjectionAttackTest.java:158] - <OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="Unknown resource type 'AA&amp;lt;script>' - Server knows how to handle: [StructureDefinition, Patient, OperationDefinition]"/></issue></OperationOutcome>
+11:41:45.898 [qtp1362727575-110] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.ResourceNotFoundException: Unknown resource type 'AA&lt;script>' - Server knows how to handle: [StructureDefinition, Patient, OperationDefinition]
+11:41:45.900 [main] INFO  c.u.f.r.s.i.InjectionAttackTest [InjectionAttackTest.java:170] - {"resourceType":"OperationOutcome","issue":[{"severity":"error","code":"processing","diagnostics":"Unknown resource type 'AA&lt;script>' - Server knows how to handle: [StructureDefinition, Patient, OperationDefinition]"}]}
+11:41:45.906 [main] INFO  c.u.f.r.s.i.InjectionAttackTest [InjectionAttackTest.java:58] - <Patient xmlns="http://hl7.org/fhir"><id value="123"/><active value="true"/></Patient>
+11:41:45.910 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@2d091823{HTTP/1.1,[http/1.1]}{0.0.0.0:50638}
+11:41:45.911 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.apache.http.impl.client.CloseableHttpClient ca.uhn.fhir.rest.server.interceptor.InjectionAttackTest.ourClient
+11:41:45.911 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.server.interceptor.InjectionAttackTest.ourCtx
+11:41:45.911 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.eclipse.jetty.server.Server ca.uhn.fhir.rest.server.interceptor.InjectionAttackTest.ourServer
+11:41:45.911 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.rest.server.RestfulServer ca.uhn.fhir.rest.server.interceptor.InjectionAttackTest.ourServlet
+11:41:45.911 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.server.interceptor.InjectionAttackTest.$jacocoData
+11:41:45.911 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: 中文 (台灣)
+11:41:45.912 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] - Tests are using WINDOWS line endings and ISO-8851-1
+11:41:45.912 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT-05:00

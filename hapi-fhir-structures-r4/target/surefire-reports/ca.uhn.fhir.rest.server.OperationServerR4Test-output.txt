@@ -1,0 +1,306 @@
+11:41:43.370 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:43.876 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+11:41:43.878 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in R4 mode
+11:41:43.892 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1435] - Added 1 resource provider(s). Total 1
+11:41:43.893 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.OperationServerR4Test$PatientProvider
+11:41:43.904 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1442] - Added 1 plain provider(s). Total 1
+11:41:43.905 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.OperationServerR4Test$PlainProvider
+11:41:43.905 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerProfileProvider
+11:41:43.908 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerCapabilityStatementProvider
+11:41:43.916 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+11:41:43.916 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+11:41:43.918 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@3ba15182{HTTP/1.1,[http/1.1]}{0.0.0.0:50617}
+11:41:43.919 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @31659ms
+11:41:43.989 [main] INFO  c.u.f.r.server.OperationServerR4Test [OperationServerR4Test.java:100] - <OperationDefinition xmlns="http://hl7.org/fhir">
+   <id value="Patient--OP_TYPE"/>
+   <name value="OP_TYPE"/>
+   <status value="active"/>
+   <kind value="operation"/>
+   <affectsState value="false"/>
+   <code value="OP_TYPE"/>
+   <resource value="Patient"/>
+   <system value="false"/>
+   <type value="true"/>
+   <instance value="false"/>
+   <parameter>
+      <name value="PARAM1"/>
+      <use value="in"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type value="string"/>
+   </parameter>
+   <parameter>
+      <name value="PARAM2"/>
+      <use value="in"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type value="Patient"/>
+   </parameter>
+   <parameter>
+      <name value="PARAM3"/>
+      <use value="in"/>
+      <min value="2"/>
+      <max value="5"/>
+      <type value="string"/>
+   </parameter>
+   <parameter>
+      <name value="PARAM4"/>
+      <use value="in"/>
+      <min value="1"/>
+      <max value="*"/>
+      <type value="string"/>
+   </parameter>
+</OperationDefinition>
+11:41:43.997 [qtp196892103-82] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: Invalid request: The FHIR endpoint on this server does not know how to handle POST operation[Patient/$OP_INSTANCE] with parameters [[]]
+11:41:43.999 [main] INFO  c.u.f.r.server.OperationServerR4Test [OperationServerR4Test.java:264] - <OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="Invalid request: The FHIR endpoint on this server does not know how to handle POST operation[Patient/$OP_INSTANCE] with parameters [[]]"/></issue></OperationOutcome>
+11:41:44.015 [qtp196892103-80] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: Request has parameter PARAM1 of type IntegerType but method expects type StringType
+11:41:44.017 [main] INFO  c.u.f.r.server.OperationServerR4Test [OperationServerR4Test.java:548] - HTTP/1.1 400 Bad Request
+11:41:44.017 [main] INFO  c.u.f.r.server.OperationServerR4Test [OperationServerR4Test.java:549] - <OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="Request has parameter PARAM1 of type IntegerType but method expects type StringType"/></issue></OperationOutcome>
+11:41:44.019 [qtp196892103-82] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.MethodNotAllowedException: Can not invoke operation $OP_TYPE using HTTP GET because parameter PARAM2 is not a primitive datatype
+11:41:44.022 [main] INFO  c.u.f.r.c.i.LoggingInterceptor [LoggingInterceptor.java:78] - Client request: GET http://localhost:50617/metadata?_pretty=true HTTP/1.1
+11:41:44.028 [main] INFO  c.u.f.r.c.i.LoggingInterceptor [LoggingInterceptor.java:123] - Client response: HTTP 200 OK in 4ms
+11:41:44.029 [main] INFO  c.u.f.r.c.i.LoggingInterceptor [LoggingInterceptor.java:156] - Client response body:
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+   <status value="active"/>
+   <date value="2019-01-07T01:11:43-05:00"/>
+   <publisher value="Not provided"/>
+   <kind value="instance"/>
+   <software>
+      <name value="HAPI FHIR Server"/>
+      <version value="3.6.0-SNAPSHOT"/>
+   </software>
+   <implementation>
+      <description value="HAPI FHIR"/>
+      <url value="http://localhost:50617/"/>
+   </implementation>
+   <fhirVersion value="3.5.0"/>
+   <format value="application/fhir+xml"/>
+   <format value="application/fhir+json"/>
+   <rest>
+      <mode value="server"/>
+      <resource>
+         <type value="OperationDefinition"/>
+         <profile value="http://hl7.org/fhir/StructureDefinition/OperationDefinition"/>
+         <interaction>
+            <code value="read"/>
+         </interaction>
+      </resource>
+      <resource>
+         <type value="Patient"/>
+         <profile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+         <interaction>
+            <code value="read"/>
+         </interaction>
+      </resource>
+      <resource>
+         <type value="StructureDefinition"/>
+         <profile value="http://hl7.org/fhir/StructureDefinition/StructureDefinition"/>
+         <interaction>
+            <code value="read"/>
+         </interaction>
+         <interaction>
+            <code value="search-type"/>
+         </interaction>
+      </resource>
+      <operation>
+         <name value="OP_SERVER_WITH_RAW_STRING"/>
+         <definition value="OperationDefinition/-s-OP_SERVER_WITH_RAW_STRING"/>
+      </operation>
+      <operation>
+         <name value="OP_SERVER"/>
+         <definition value="OperationDefinition/-s-OP_SERVER"/>
+      </operation>
+      <operation>
+         <name value="OP_SERVER_LIST_PARAM"/>
+         <definition value="OperationDefinition/-s-OP_SERVER_LIST_PARAM"/>
+      </operation>
+      <operation>
+         <name value="OP_INSTANCE_BUNDLE_PROVIDER"/>
+         <definition value="OperationDefinition/-s-OP_INSTANCE_BUNDLE_PROVIDER"/>
+      </operation>
+      <operation>
+         <name value="OP_INSTANCE"/>
+         <definition value="OperationDefinition/Patient-i-OP_INSTANCE"/>
+      </operation>
+      <operation>
+         <name value="OP_INSTANCE_OR_TYPE"/>
+         <definition value="OperationDefinition/Patient-i-OP_INSTANCE_OR_TYPE"/>
+      </operation>
+      <operation>
+         <name value="OP_TYPE"/>
+         <definition value="OperationDefinition/Patient--OP_TYPE"/>
+      </operation>
+      <operation>
+         <name value="OP_PROFILE_DT"/>
+         <definition value="OperationDefinition/Patient--OP_PROFILE_DT"/>
+      </operation>
+      <operation>
+         <name value="OP_PROFILE_DT2"/>
+         <definition value="OperationDefinition/Patient--OP_PROFILE_DT2"/>
+      </operation>
+      <operation>
+         <name value="OP_TYPE_ONLY_STRING"/>
+         <definition value="OperationDefinition/Patient--OP_TYPE_ONLY_STRING"/>
+      </operation>
+      <operation>
+         <name value="OP_TYPE_RET_BUNDLE"/>
+         <definition value="OperationDefinition/Patient--OP_TYPE_RET_BUNDLE"/>
+      </operation>
+      <operation>
+         <name value="everything"/>
+         <definition value="OperationDefinition/Patient-i-everything"/>
+      </operation>
+   </rest>
+</CapabilityStatement>
+11:41:44.033 [main] INFO  c.u.f.r.server.OperationServerR4Test [OperationServerR4Test.java:80] - <CapabilityStatement xmlns="http://hl7.org/fhir">
+   <status value="active"/>
+   <date value="2019-01-07T01:11:43-05:00"/>
+   <publisher value="Not provided"/>
+   <kind value="instance"/>
+   <software>
+      <name value="HAPI FHIR Server"/>
+      <version value="3.6.0-SNAPSHOT"/>
+   </software>
+   <implementation>
+      <description value="HAPI FHIR"/>
+      <url value="http://localhost:50617/"/>
+   </implementation>
+   <fhirVersion value="3.5.0"/>
+   <format value="application/fhir+xml"/>
+   <format value="application/fhir+json"/>
+   <rest>
+      <mode value="server"/>
+      <resource>
+         <type value="OperationDefinition"/>
+         <profile value="http://hl7.org/fhir/StructureDefinition/OperationDefinition"/>
+         <interaction>
+            <code value="read"/>
+         </interaction>
+      </resource>
+      <resource>
+         <type value="Patient"/>
+         <profile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+         <interaction>
+            <code value="read"/>
+         </interaction>
+      </resource>
+      <resource>
+         <type value="StructureDefinition"/>
+         <profile value="http://hl7.org/fhir/StructureDefinition/StructureDefinition"/>
+         <interaction>
+            <code value="read"/>
+         </interaction>
+         <interaction>
+            <code value="search-type"/>
+         </interaction>
+      </resource>
+      <operation>
+         <name value="OP_SERVER_WITH_RAW_STRING"/>
+         <definition value="OperationDefinition/-s-OP_SERVER_WITH_RAW_STRING"/>
+      </operation>
+      <operation>
+         <name value="OP_SERVER"/>
+         <definition value="OperationDefinition/-s-OP_SERVER"/>
+      </operation>
+      <operation>
+         <name value="OP_SERVER_LIST_PARAM"/>
+         <definition value="OperationDefinition/-s-OP_SERVER_LIST_PARAM"/>
+      </operation>
+      <operation>
+         <name value="OP_INSTANCE_BUNDLE_PROVIDER"/>
+         <definition value="OperationDefinition/-s-OP_INSTANCE_BUNDLE_PROVIDER"/>
+      </operation>
+      <operation>
+         <name value="OP_INSTANCE"/>
+         <definition value="OperationDefinition/Patient-i-OP_INSTANCE"/>
+      </operation>
+      <operation>
+         <name value="OP_INSTANCE_OR_TYPE"/>
+         <definition value="OperationDefinition/Patient-i-OP_INSTANCE_OR_TYPE"/>
+      </operation>
+      <operation>
+         <name value="OP_TYPE"/>
+         <definition value="OperationDefinition/Patient--OP_TYPE"/>
+      </operation>
+      <operation>
+         <name value="OP_PROFILE_DT"/>
+         <definition value="OperationDefinition/Patient--OP_PROFILE_DT"/>
+      </operation>
+      <operation>
+         <name value="OP_PROFILE_DT2"/>
+         <definition value="OperationDefinition/Patient--OP_PROFILE_DT2"/>
+      </operation>
+      <operation>
+         <name value="OP_TYPE_ONLY_STRING"/>
+         <definition value="OperationDefinition/Patient--OP_TYPE_ONLY_STRING"/>
+      </operation>
+      <operation>
+         <name value="OP_TYPE_RET_BUNDLE"/>
+         <definition value="OperationDefinition/Patient--OP_TYPE_RET_BUNDLE"/>
+      </operation>
+      <operation>
+         <name value="everything"/>
+         <definition value="OperationDefinition/Patient-i-everything"/>
+      </operation>
+   </rest>
+</CapabilityStatement>
+11:41:44.040 [main] INFO  c.u.f.r.c.i.LoggingInterceptor [LoggingInterceptor.java:78] - Client request: GET http://localhost:50617/OperationDefinition/Patient--OP_TYPE HTTP/1.1
+11:41:44.043 [main] INFO  c.u.f.r.c.i.LoggingInterceptor [LoggingInterceptor.java:123] - Client response: HTTP 200 OK in 3ms
+11:41:44.043 [main] INFO  c.u.f.r.c.i.LoggingInterceptor [LoggingInterceptor.java:156] - Client response body:
+<OperationDefinition xmlns="http://hl7.org/fhir"><name value="OP_TYPE"/><status value="active"/><kind value="operation"/><affectsState value="false"/><code value="OP_TYPE"/><resource value="Patient"/><system value="false"/><type value="true"/><instance value="false"/><parameter><name value="PARAM1"/><use value="in"/><min value="0"/><max value="1"/><type value="string"/></parameter><parameter><name value="PARAM2"/><use value="in"/><min value="0"/><max value="1"/><type value="Patient"/></parameter><parameter><name value="PARAM3"/><use value="in"/><min value="2"/><max value="5"/><type value="string"/></parameter><parameter><name value="PARAM4"/><use value="in"/><min value="1"/><max value="*"/><type value="string"/></parameter></OperationDefinition>
+11:41:44.052 [qtp196892103-82] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.MethodNotAllowedException: HTTP Method GET is not allowed for this operation. Allowed method(s): POST
+11:41:44.059 [main] INFO  c.u.f.r.server.OperationServerR4Test [OperationServerR4Test.java:418] - <Bundle xmlns="http://hl7.org/fhir">
+   <id value="fd09111b-d5ed-4911-8322-beb3d7368733"/>
+   <meta>
+      <lastUpdated value="2019-01-07T01:11:44.056-05:00"/>
+   </meta>
+   <type value="collection"/>
+   <total value="100"/>
+   <link>
+      <relation value="self"/>
+      <url value="http://localhost:50617/$OP_INSTANCE_BUNDLE_PROVIDER?_pretty=true"/>
+   </link>
+   <link>
+      <relation value="next"/>
+      <url value="http://localhost:50617?_getpages=523659cc-121f-45ed-be07-8713c6e87747&amp;_getpagesoffset=2&amp;_count=2&amp;_pretty=true&amp;_bundletype=collection"/>
+   </link>
+   <entry>
+      <fullUrl value="http://localhost:50617/Patient/0"/>
+      <resource>
+         <Patient xmlns="http://hl7.org/fhir">
+            <id value="0"/>
+            <name>
+               <family value="Patient 0"/>
+            </name>
+         </Patient>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="http://localhost:50617/Patient/1"/>
+      <resource>
+         <Patient xmlns="http://hl7.org/fhir">
+            <id value="1"/>
+            <name>
+               <family value="Patient 1"/>
+            </name>
+         </Patient>
+      </resource>
+   </entry>
+</Bundle>
+11:41:44.079 [qtp196892103-80] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: Request has parameter PARAM1 of type IntegerType but method expects type StringType
+11:41:44.080 [main] INFO  c.u.f.r.server.OperationServerR4Test [OperationServerR4Test.java:225] - <OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="Request has parameter PARAM1 of type IntegerType but method expects type StringType"/></issue></OperationOutcome>
+11:41:44.085 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@3ba15182{HTTP/1.1,[http/1.1]}{0.0.0.0:50617}
+11:41:44.097 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.apache.http.impl.client.CloseableHttpClient ca.uhn.fhir.rest.server.OperationServerR4Test.ourClient
+11:41:44.097 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.server.OperationServerR4Test.ourCtx
+11:41:44.097 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.hl7.fhir.r4.model.IdType ca.uhn.fhir.rest.server.OperationServerR4Test.ourLastId
+11:41:44.097 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static java.lang.String ca.uhn.fhir.rest.server.OperationServerR4Test.ourLastMethod
+11:41:44.097 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.hl7.fhir.r4.model.StringType ca.uhn.fhir.rest.server.OperationServerR4Test.ourLastParam1
+11:41:44.098 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.hl7.fhir.r4.model.Patient ca.uhn.fhir.rest.server.OperationServerR4Test.ourLastParam2
+11:41:44.098 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static java.util.List ca.uhn.fhir.rest.server.OperationServerR4Test.ourLastParam3
+11:41:44.098 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.hl7.fhir.r4.model.MoneyQuantity ca.uhn.fhir.rest.server.OperationServerR4Test.ourLastParamMoney1
+11:41:44.098 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.hl7.fhir.r4.model.UnsignedIntType ca.uhn.fhir.rest.server.OperationServerR4Test.ourLastParamUnsignedInt1
+11:41:44.098 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.eclipse.jetty.server.Server ca.uhn.fhir.rest.server.OperationServerR4Test.ourServer
+11:41:44.098 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.server.OperationServerR4Test.$jacocoData
+11:41:44.098 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: English (Canada)
+11:41:44.098 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:118] - Tests are using UNIX line endings and UTF-8
+11:41:44.099 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+08:00

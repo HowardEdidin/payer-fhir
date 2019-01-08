@@ -1,0 +1,46 @@
+11:41:15.286 [main] INFO  ca.uhn.fhir.util.VersionUtil [VersionUtil.java:48] - HAPI FHIR version is: 3.6.0-SNAPSHOT
+11:41:15.296 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:15.849 [main] INFO  org.eclipse.jetty.util.log [Log.java:193] - Logging initialized @3580ms to org.eclipse.jetty.util.log.Slf4jLog
+11:41:17.424 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+11:41:17.622 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in R4 mode
+11:41:17.652 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1442] - Added 1 plain provider(s). Total 1
+11:41:17.652 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PlainProviderR4Test$GlobalHistoryProvider
+11:41:23.765 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerProfileProvider
+11:41:23.800 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerCapabilityStatementProvider
+11:41:24.002 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+11:41:24.004 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+11:41:24.123 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@34c1915{HTTP/1.1,[http/1.1]}{0.0.0.0:50544}
+11:41:24.123 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @11854ms
+11:41:24.876 [qtp167550865-18] INFO  ca.uhn.fhir.util.XmlUtil [DependencyLogImpl.java:75] - FHIR XML procesing will use StAX implementation 'Woodstox XML-processor' version '4.4.1'
+11:41:25.355 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@34c1915{HTTP/1.1,[http/1.1]}{0.0.0.0:50544}
+11:41:25.889 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+11:41:25.892 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in R4 mode
+11:41:25.892 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1442] - Added 1 plain provider(s). Total 1
+11:41:25.892 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PlainProviderR4Test$GlobalHistoryProvider
+11:41:25.893 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerProfileProvider
+11:41:25.894 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerCapabilityStatementProvider
+11:41:25.895 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+11:41:25.896 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+11:41:25.898 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@3b05353e{HTTP/1.1,[http/1.1]}{0.0.0.0:50547}
+11:41:25.899 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @13630ms
+11:41:25.919 [main] INFO  c.u.f.r.server.PlainProviderR4Test [PlainProviderR4Test.java:81] - Response was:
+<Bundle xmlns="http://hl7.org/fhir"><id value="d5ba8e3e-06aa-413a-890d-f989dd3e16f2"/><meta><lastUpdated value="2019-01-07T11:41:25.912+05:30"/></meta><type value="history"/><total value="3"/><link><relation value="self"/><url value="http://localhost:50547/fhir/context/_history?_count=12&amp;_since=2012-01-02T00%3A01%3A02"/></link><entry><fullUrl value="http://localhost:50547/fhir/context/Patient/1"/><resource><Patient xmlns="http://hl7.org/fhir"><id value="1"/><meta><versionId value="A"/><lastUpdated value="2012-01-01T01:00:01"/></meta><identifier><use value="official"/><system value="urn:hapitest:mrns"/><value value="00001"/></identifier><name><family value="Test"/><given value="PatientOne"/></name><gender value="male"/></Patient></resource></entry><entry><fullUrl value="http://localhost:50547/fhir/context/Patient/1"/><resource><Patient xmlns="http://hl7.org/fhir"><id value="1"/><meta><versionId value="B"/><lastUpdated value="2012-01-01T01:00:03"/></meta><identifier><use value="official"/><system value="urn:hapitest:mrns"/><value value="00001"/></identifier><name><family value="Test"/><given value="PatientOne"/></name><gender value="male"/></Patient></resource></entry><entry><fullUrl value="http://localhost:50547/fhir/context/Organization/1"/><resource><Organization xmlns="http://hl7.org/fhir"><id value="1"/><meta><versionId value="A"/><lastUpdated value="2013-01-01T01:00:01"/></meta><identifier><use value="official"/><system value="urn:hapitest:mrns"/><value value="00001"/></identifier><name value="Test Org"/></Organization></resource></entry></Bundle>
+11:41:25.960 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@3b05353e{HTTP/1.1,[http/1.1]}{0.0.0.0:50547}
+11:41:26.476 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+11:41:26.480 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in R4 mode
+11:41:26.480 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1442] - Added 1 plain provider(s). Total 1
+11:41:26.481 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PlainProviderR4Test$SearchProvider
+11:41:26.485 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerProfileProvider
+11:41:26.487 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerCapabilityStatementProvider
+11:41:26.488 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+11:41:26.488 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+11:41:26.489 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@12c09e41{HTTP/1.1,[http/1.1]}{0.0.0.0:50550}
+11:41:26.490 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @14221ms
+11:41:26.498 [main] INFO  c.u.f.r.server.PlainProviderR4Test [PlainProviderR4Test.java:138] - Response was:
+<Bundle xmlns="http://hl7.org/fhir"><id value="895181c1-7338-40e4-a3a8-1a18d09713ee"/><meta><lastUpdated value="2019-01-07T11:41:26.493+05:30"/></meta><type value="searchset"/><total value="1"/><link><relation value="self"/><url value="http://localhost:50550/fhir/context/Patient?identifier=urn%3Ahapitest%3Amrns%7C00001"/></link><entry><fullUrl value="http://localhost:50550/fhir/context/Patient/1"/><resource><Patient xmlns="http://hl7.org/fhir"><id value="1"/><identifier><use value="official"/><system value="urn:hapitest:mrns"/><value value="00001"/></identifier><name><family value="Test"/><given value="PatientOne"/></name><gender value="male"/></Patient></resource></entry></Bundle>
+11:41:26.501 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@12c09e41{HTTP/1.1,[http/1.1]}{0.0.0.0:50550}
+11:41:26.514 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.server.PlainProviderR4Test.ourCtx
+11:41:26.515 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.server.PlainProviderR4Test.$jacocoData
+11:41:26.529 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: Deutsch (Deutschland)
+11:41:26.529 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:118] - Tests are using UNIX line endings and UTF-8
+11:41:26.530 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT-05:00

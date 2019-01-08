@@ -1,0 +1,43 @@
+16:42:14.868 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:15.374 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+16:42:15.376 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in DSTU2_1 mode
+16:42:15.391 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1435] - Added 1 resource provider(s). Total 1
+16:42:15.391 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.SearchWithGenericListDstu2_1Test$DummyPatientResourceProvider
+16:42:15.393 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.dstu2016may.hapi.rest.server.ServerProfileProvider
+16:42:15.394 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.dstu2016may.hapi.rest.server.ServerConformanceProvider
+16:42:15.402 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+16:42:15.404 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+16:42:15.405 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@1ecfbf15{HTTP/1.1,[http/1.1]}{0.0.0.0:50744}
+16:42:15.405 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @25500ms
+16:42:15.418 [main] INFO  c.u.f.r.s.SearchWithGenericListDstu2_1Test [SearchWithGenericListDstu2_1Test.java:58] - <Bundle xmlns="http://hl7.org/fhir">
+   <id value="81b4af65-d048-45b9-842b-59a970775369"/>
+   <meta>
+      <lastUpdated value="2018-12-03T11:12:15.409+00:00"/>
+   </meta>
+   <type value="searchset"/>
+   <total value="1"/>
+   <link>
+      <relation value="self"/>
+      <url value="http://localhost:50744/Patient?_pretty=true&amp;identifier=foo"/>
+   </link>
+   <entry>
+      <fullUrl value="http://localhost:50744/Patient/1"/>
+      <resource>
+         <Patient xmlns="http://hl7.org/fhir">
+            <id value="1"/>
+            <name>
+               <family value="FAMILY"/>
+            </name>
+         </Patient>
+      </resource>
+   </entry>
+</Bundle>
+16:42:15.421 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@1ecfbf15{HTTP/1.1,[http/1.1]}{0.0.0.0:50744}
+16:42:15.432 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.apache.http.impl.client.CloseableHttpClient ca.uhn.fhir.rest.server.SearchWithGenericListDstu2_1Test.ourClient
+16:42:15.432 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.server.SearchWithGenericListDstu2_1Test.ourCtx
+16:42:15.432 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.eclipse.jetty.server.Server ca.uhn.fhir.rest.server.SearchWithGenericListDstu2_1Test.ourServer
+16:42:15.433 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static java.lang.String ca.uhn.fhir.rest.server.SearchWithGenericListDstu2_1Test.ourLastMethod
+16:42:15.433 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.server.SearchWithGenericListDstu2_1Test.$jacocoData
+16:42:15.433 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: 中文 (台灣)
+16:42:15.433 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:118] - Tests are using UNIX line endings and UTF-8
+16:42:15.433 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+00:00

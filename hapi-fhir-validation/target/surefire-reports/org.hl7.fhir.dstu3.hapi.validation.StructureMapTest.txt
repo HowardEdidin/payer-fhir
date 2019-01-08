@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.hl7.fhir.dstu3.hapi.validation.StructureMapTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.361 s - in org.hl7.fhir.dstu3.hapi.validation.StructureMapTest

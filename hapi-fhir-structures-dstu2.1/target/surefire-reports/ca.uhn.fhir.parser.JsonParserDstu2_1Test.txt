@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ca.uhn.fhir.parser.JsonParserDstu2_1Test
+-------------------------------------------------------------------------------
+Tests run: 68, Failures: 0, Errors: 0, Skipped: 7, Time elapsed: 3.546 s - in ca.uhn.fhir.parser.JsonParserDstu2_1Test

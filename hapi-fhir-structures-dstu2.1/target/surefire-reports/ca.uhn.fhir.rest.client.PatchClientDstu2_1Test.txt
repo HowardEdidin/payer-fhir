@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ca.uhn.fhir.rest.client.PatchClientDstu2_1Test
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 3.309 s - in ca.uhn.fhir.rest.client.PatchClientDstu2_1Test

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1543835508565
+Build-Jdk: 1.8.0_192
+Built-By: kumarelubandi
+Bundle-Description: An open-source implementation of the FHIR specificat
+ ion in Java.
+Bundle-DocURL: http://www.uhn.ca
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: HAPI FHIR - Validation Resources DSTU2.1 (2016May)
+Bundle-SymbolicName: ca.uhn.hapi.fhir.hapi-fhir-validation-resources-dst
+ u2.1
+Bundle-Vendor: University Health Network
+Bundle-Version: 3.6.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Fragment-Host: ca.uhn.hapi.fhir.hapi-fhir-base
+Tool: Bnd-3.5.0.201709291849

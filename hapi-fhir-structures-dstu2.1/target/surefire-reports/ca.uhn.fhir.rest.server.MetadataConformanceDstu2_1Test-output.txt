@@ -1,0 +1,130 @@
+16:42:13.631 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:14.136 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+16:42:14.137 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in DSTU2_1 mode
+16:42:14.154 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1435] - Added 1 resource provider(s). Total 1
+16:42:14.155 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.MetadataConformanceDstu2_1Test$DummyPatientResourceProvider
+16:42:14.156 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.dstu2016may.hapi.rest.server.ServerProfileProvider
+16:42:14.156 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.dstu2016may.hapi.rest.server.ServerConformanceProvider
+16:42:14.163 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+16:42:14.163 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+16:42:14.168 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@3a5df1e3{HTTP/1.1,[http/1.1]}{0.0.0.0:50738}
+16:42:14.168 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @24264ms
+16:42:14.189 [main] INFO  c.u.f.r.s.MetadataConformanceDstu2_1Test [MetadataConformanceDstu2_1Test.java:95] - <Conformance xmlns="http://hl7.org/fhir">
+   <meta>
+      <tag>
+         <system value="http://hl7.org/fhir/v3/ObservationValue"/>
+         <code value="SUBSETTED"/>
+         <display value="Resource encoded in summary mode"/>
+      </tag>
+   </meta>
+   <fhirVersion value="1.4.0"/>
+</Conformance>
+16:42:14.196 [qtp1617640297-90] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.MethodNotAllowedException: /metadata request must use HTTP GET
+16:42:14.200 [qtp1617640297-92] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: Invalid request: The FHIR endpoint on this server does not know how to handle GET operation[Patient/metadata] with parameters [[]]
+16:42:14.206 [main] INFO  c.u.f.r.s.MetadataConformanceDstu2_1Test [MetadataConformanceDstu2_1Test.java:63] - <Conformance xmlns="http://hl7.org/fhir">
+   <meta>
+      <tag>
+         <system value="http://hl7.org/fhir/v3/ObservationValue"/>
+         <code value="SUBSETTED"/>
+         <display value="Resource encoded in summary mode"/>
+      </tag>
+   </meta>
+   <status value="active"/>
+   <date value="2018-12-03T06:12:14-05:00"/>
+   <publisher value="Not provided"/>
+   <kind value="instance"/>
+   <software>
+      <name value="HAPI FHIR Server"/>
+      <version value="3.6.0-SNAPSHOT"/>
+   </software>
+   <implementation>
+      <description value="HAPI FHIR"/>
+      <url value="http://localhost:50738/"/>
+   </implementation>
+   <fhirVersion value="1.4.0"/>
+   <acceptUnknown value="extensions"/>
+   <format value="application/xml+fhir"/>
+   <format value="application/json+fhir"/>
+   <rest>
+      <mode value="server"/>
+      <resource>
+         <type value="OperationDefinition"/>
+      </resource>
+      <resource>
+         <type value="Patient"/>
+      </resource>
+      <resource>
+         <type value="StructureDefinition"/>
+      </resource>
+   </rest>
+</Conformance>
+16:42:14.210 [main] INFO  c.u.f.r.s.MetadataConformanceDstu2_1Test [MetadataConformanceDstu2_1Test.java:77] - <Conformance xmlns="http://hl7.org/fhir">
+   <status value="active"/>
+   <date value="2018-12-03T06:12:14-05:00"/>
+   <publisher value="Not provided"/>
+   <kind value="instance"/>
+   <software>
+      <name value="HAPI FHIR Server"/>
+      <version value="3.6.0-SNAPSHOT"/>
+   </software>
+   <implementation>
+      <description value="HAPI FHIR"/>
+      <url value="http://localhost:50738/"/>
+   </implementation>
+   <fhirVersion value="1.4.0"/>
+   <acceptUnknown value="extensions"/>
+   <format value="application/xml+fhir"/>
+   <format value="application/json+fhir"/>
+   <rest>
+      <mode value="server"/>
+      <resource>
+         <type value="OperationDefinition"/>
+         <profile>
+            <reference value="http://hl7.org/fhir/Profile/OperationDefinition"/>
+         </profile>
+         <interaction>
+            <code value="read"/>
+         </interaction>
+      </resource>
+      <resource>
+         <type value="Patient"/>
+         <profile>
+            <reference value="http://hl7.org/fhir/Profile/Patient"/>
+         </profile>
+         <interaction>
+            <code value="search-type"/>
+         </interaction>
+         <searchParam>
+            <name value="foo"/>
+            <type value="string"/>
+         </searchParam>
+      </resource>
+      <resource>
+         <type value="StructureDefinition"/>
+         <profile>
+            <reference value="http://hl7.org/fhir/Profile/StructureDefinition"/>
+         </profile>
+         <interaction>
+            <code value="read"/>
+         </interaction>
+         <interaction>
+            <code value="search-type"/>
+         </interaction>
+      </resource>
+      <operation>
+         <name value="validate"/>
+         <definition>
+            <reference value="OperationDefinition/Patient--validate"/>
+         </definition>
+      </operation>
+   </rest>
+</Conformance>
+16:42:14.212 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@3a5df1e3{HTTP/1.1,[http/1.1]}{0.0.0.0:50738}
+16:42:14.223 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.apache.http.impl.client.CloseableHttpClient ca.uhn.fhir.rest.server.MetadataConformanceDstu2_1Test.ourClient
+16:42:14.223 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.server.MetadataConformanceDstu2_1Test.ourCtx
+16:42:14.223 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.eclipse.jetty.server.Server ca.uhn.fhir.rest.server.MetadataConformanceDstu2_1Test.ourServer
+16:42:14.224 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.rest.server.RestfulServer ca.uhn.fhir.rest.server.MetadataConformanceDstu2_1Test.ourServlet
+16:42:14.224 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.server.MetadataConformanceDstu2_1Test.$jacocoData
+16:42:14.224 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: 中文 (台灣)
+16:42:14.224 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] - Tests are using WINDOWS line endings and ISO-8851-1
+16:42:14.225 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+00:00

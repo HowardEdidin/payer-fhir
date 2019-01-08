@@ -1,0 +1,219 @@
+16:42:14.468 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:14.974 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+16:42:14.975 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in DSTU2_1 mode
+16:42:14.993 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1435] - Added 1 resource provider(s). Total 1
+16:42:14.993 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.OperationServerWithSearchParamTypesDstu2_1Test$PatientProvider
+16:42:14.997 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.dstu2016may.hapi.rest.server.ServerProfileProvider
+16:42:14.998 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.dstu2016may.hapi.rest.server.ServerConformanceProvider
+16:42:15.003 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+16:42:15.004 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+16:42:15.006 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@7107fb60{HTTP/1.1,[http/1.1]}{0.0.0.0:50741}
+16:42:15.006 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @25101ms
+16:42:15.017 [main] INFO  c.u.f.r.s.OperationServerWithSearchParamTypesDstu2_1Test [OperationServerWithSearchParamTypesDstu2_1Test.java:126] - <Parameters xmlns="http://hl7.org/fhir"><id value="100"/></Parameters>
+16:42:15.021 [main] INFO  c.u.f.r.s.OperationServerWithSearchParamTypesDstu2_1Test [OperationServerWithSearchParamTypesDstu2_1Test.java:113] - <Parameters xmlns="http://hl7.org/fhir"><id value="100"/></Parameters>
+16:42:15.034 [main] INFO  c.u.f.r.s.OperationServerWithSearchParamTypesDstu2_1Test [OperationServerWithSearchParamTypesDstu2_1Test.java:259] - <Parameters xmlns="http://hl7.org/fhir"><id value="100"/></Parameters>
+16:42:15.059 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in DSTU2_1 mode
+16:42:15.060 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1435] - Added 1 resource provider(s). Total 0
+16:42:15.060 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.OperationServerWithSearchParamTypesDstu2_1Test$PatientProvider
+16:42:15.061 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.dstu2016may.hapi.rest.server.ServerProfileProvider
+16:42:15.062 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.dstu2016may.hapi.rest.server.ServerConformanceProvider
+16:42:15.063 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+16:42:15.063 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+16:42:15.244 [main] INFO  c.u.f.r.s.OperationServerWithSearchParamTypesDstu2_1Test [OperationServerWithSearchParamTypesDstu2_1Test.java:157] - <Conformance xmlns="http://hl7.org/fhir">
+   <status value="active"/>
+   <date value="2018-12-03T14:42:15+03:30"/>
+   <publisher value="Not provided"/>
+   <kind value="instance"/>
+   <software>
+      <name value="HAPI FHIR Server"/>
+      <version value="3.6.0-SNAPSHOT"/>
+   </software>
+   <implementation>
+      <description value="HAPI FHIR"/>
+      <url value="http://fhirstorm.dyndns.org:8080/FhirStorm/fhir"/>
+   </implementation>
+   <fhirVersion value="1.4.0"/>
+   <acceptUnknown value="extensions"/>
+   <format value="application/xml+fhir"/>
+   <format value="application/json+fhir"/>
+   <rest>
+      <mode value="server"/>
+      <resource>
+         <type value="OperationDefinition"/>
+         <profile>
+            <reference value="http://hl7.org/fhir/Profile/OperationDefinition"/>
+         </profile>
+         <interaction>
+            <code value="read"/>
+         </interaction>
+      </resource>
+      <resource>
+         <type value="Patient"/>
+         <profile>
+            <reference value="http://hl7.org/fhir/Profile/Patient"/>
+         </profile>
+      </resource>
+      <resource>
+         <type value="StructureDefinition"/>
+         <profile>
+            <reference value="http://hl7.org/fhir/Profile/StructureDefinition"/>
+         </profile>
+         <interaction>
+            <code value="read"/>
+         </interaction>
+         <interaction>
+            <code value="search-type"/>
+         </interaction>
+      </resource>
+      <operation>
+         <name value="andlist"/>
+         <definition>
+            <reference value="OperationDefinition/Patient--andlist"/>
+         </definition>
+      </operation>
+      <operation>
+         <name value="orlist-withnomax"/>
+         <definition>
+            <reference value="OperationDefinition/Patient--orlist-withnomax"/>
+         </definition>
+      </operation>
+      <operation>
+         <name value="andlist-withnomax"/>
+         <definition>
+            <reference value="OperationDefinition/Patient--andlist-withnomax"/>
+         </definition>
+      </operation>
+      <operation>
+         <name value="orlist"/>
+         <definition>
+            <reference value="OperationDefinition/Patient--orlist"/>
+         </definition>
+      </operation>
+      <operation>
+         <name value="nonrepeating"/>
+         <definition>
+            <reference value="OperationDefinition/Patient--nonrepeating"/>
+         </definition>
+      </operation>
+   </rest>
+</Conformance>
+16:42:15.269 [main] INFO  c.u.f.r.s.OperationServerWithSearchParamTypesDstu2_1Test [OperationServerWithSearchParamTypesDstu2_1Test.java:182] - <OperationDefinition xmlns="http://hl7.org/fhir">
+   <name value="andlist"/>
+   <status value="active"/>
+   <kind value="operation"/>
+   <idempotent value="true"/>
+   <code value="andlist"/>
+   <system value="false"/>
+   <type value="Patient"/>
+   <instance value="false"/>
+   <parameter>
+      <name value="valstr"/>
+      <use value="in"/>
+      <min value="0"/>
+      <max value="10"/>
+      <type value="string"/>
+      <searchType value="string"/>
+   </parameter>
+   <parameter>
+      <name value="valtok"/>
+      <use value="in"/>
+      <min value="0"/>
+      <max value="10"/>
+      <type value="string"/>
+      <searchType value="token"/>
+   </parameter>
+</OperationDefinition>
+16:42:15.270 [main] INFO  c.u.f.r.s.OperationServerWithSearchParamTypesDstu2_1Test [OperationServerWithSearchParamTypesDstu2_1Test.java:198] - <OperationDefinition xmlns="http://hl7.org/fhir">
+   <name value="andlist-withnomax"/>
+   <status value="active"/>
+   <kind value="operation"/>
+   <idempotent value="true"/>
+   <code value="andlist-withnomax"/>
+   <system value="false"/>
+   <type value="Patient"/>
+   <instance value="false"/>
+   <parameter>
+      <name value="valstr"/>
+      <use value="in"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type value="string"/>
+      <searchType value="string"/>
+   </parameter>
+   <parameter>
+      <name value="valtok"/>
+      <use value="in"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type value="string"/>
+      <searchType value="token"/>
+   </parameter>
+</OperationDefinition>
+16:42:15.271 [main] INFO  c.u.f.r.s.OperationServerWithSearchParamTypesDstu2_1Test [OperationServerWithSearchParamTypesDstu2_1Test.java:214] - <OperationDefinition xmlns="http://hl7.org/fhir">
+   <name value="orlist"/>
+   <status value="active"/>
+   <kind value="operation"/>
+   <idempotent value="true"/>
+   <code value="orlist"/>
+   <system value="false"/>
+   <type value="Patient"/>
+   <instance value="false"/>
+   <parameter>
+      <name value="valstr"/>
+      <use value="in"/>
+      <min value="0"/>
+      <max value="10"/>
+      <type value="string"/>
+      <searchType value="string"/>
+   </parameter>
+   <parameter>
+      <name value="valtok"/>
+      <use value="in"/>
+      <min value="0"/>
+      <max value="10"/>
+      <type value="string"/>
+      <searchType value="token"/>
+   </parameter>
+</OperationDefinition>
+16:42:15.271 [main] INFO  c.u.f.r.s.OperationServerWithSearchParamTypesDstu2_1Test [OperationServerWithSearchParamTypesDstu2_1Test.java:230] - <OperationDefinition xmlns="http://hl7.org/fhir">
+   <name value="orlist-withnomax"/>
+   <status value="active"/>
+   <kind value="operation"/>
+   <idempotent value="true"/>
+   <code value="orlist-withnomax"/>
+   <system value="false"/>
+   <type value="Patient"/>
+   <instance value="false"/>
+   <parameter>
+      <name value="valstr"/>
+      <use value="in"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type value="string"/>
+      <searchType value="string"/>
+   </parameter>
+   <parameter>
+      <name value="valtok"/>
+      <use value="in"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type value="string"/>
+      <searchType value="token"/>
+   </parameter>
+</OperationDefinition>
+16:42:15.275 [main] INFO  c.u.f.r.s.OperationServerWithSearchParamTypesDstu2_1Test [OperationServerWithSearchParamTypesDstu2_1Test.java:353] - <Parameters xmlns="http://hl7.org/fhir"><id value="100"/></Parameters>
+16:42:15.281 [main] INFO  c.u.f.r.s.OperationServerWithSearchParamTypesDstu2_1Test [OperationServerWithSearchParamTypesDstu2_1Test.java:298] - <Parameters xmlns="http://hl7.org/fhir"><id value="100"/></Parameters>
+16:42:15.284 [main] INFO  c.u.f.r.s.OperationServerWithSearchParamTypesDstu2_1Test [OperationServerWithSearchParamTypesDstu2_1Test.java:278] - <Parameters xmlns="http://hl7.org/fhir"><id value="100"/></Parameters>
+16:42:15.290 [main] INFO  c.u.f.r.s.OperationServerWithSearchParamTypesDstu2_1Test [OperationServerWithSearchParamTypesDstu2_1Test.java:328] - <Parameters xmlns="http://hl7.org/fhir"><id value="100"/></Parameters>
+16:42:15.301 [main] INFO  c.u.f.r.s.OperationServerWithSearchParamTypesDstu2_1Test [OperationServerWithSearchParamTypesDstu2_1Test.java:88] - <Parameters xmlns="http://hl7.org/fhir"><id value="100"/></Parameters>
+16:42:15.303 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@7107fb60{HTTP/1.1,[http/1.1]}{0.0.0.0:50741}
+16:42:15.315 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.apache.http.impl.client.CloseableHttpClient ca.uhn.fhir.rest.server.OperationServerWithSearchParamTypesDstu2_1Test.ourClient
+16:42:15.315 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.server.OperationServerWithSearchParamTypesDstu2_1Test.ourCtx
+16:42:15.316 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static java.lang.String ca.uhn.fhir.rest.server.OperationServerWithSearchParamTypesDstu2_1Test.ourLastMethod
+16:42:15.316 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static java.util.List ca.uhn.fhir.rest.server.OperationServerWithSearchParamTypesDstu2_1Test.ourLastParamValStr
+16:42:15.316 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static java.util.List ca.uhn.fhir.rest.server.OperationServerWithSearchParamTypesDstu2_1Test.ourLastParamValTok
+16:42:15.316 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.eclipse.jetty.server.Server ca.uhn.fhir.rest.server.OperationServerWithSearchParamTypesDstu2_1Test.ourServer
+16:42:15.316 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.server.OperationServerWithSearchParamTypesDstu2_1Test.$jacocoData
+16:42:15.316 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: Deutsch (Deutschland)
+16:42:15.317 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:118] - Tests are using UNIX line endings and UTF-8
+16:42:15.317 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+03:30

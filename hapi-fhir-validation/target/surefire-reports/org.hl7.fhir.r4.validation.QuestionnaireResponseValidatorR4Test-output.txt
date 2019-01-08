@@ -1,0 +1,134 @@
+2018-12-03 16:44:03.598 [main] INFO  ca.uhn.fhir.util.VersionUtil [VersionUtil.java:48] HAPI FHIR version is: 3.6.0-SNAPSHOT
+2018-12-03 16:44:03.608 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] Creating new FHIR context for FHIR version [R4]
+2018-12-03 16:44:07.542 [main] INFO  ca.uhn.fhir.util.XmlUtil [DependencyLogImpl.java:75] FHIR XML procesing will use StAX implementation 'Woodstox XML-processor' version '4.4.1'
+2018-12-03 16:44:16.253 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:401] <Questionnaire xmlns="http://hl7.org/fhir">
+   <item>
+      <linkId value="link1"/>
+      <type value="open-choice"/>
+      <answerValueSet value="http://somevalueset"/>
+      <item>
+         <linkId value="link11"/>
+         <type value="text"/>
+      </item>
+   </item>
+</Questionnaire>
+2018-12-03 16:44:18.130 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:413] <QuestionnaireResponse xmlns="http://hl7.org/fhir">
+   <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">AA</div>
+   </text>
+   <questionnaire value="http://example.com/Questionnaire/q1"/>
+   <status value="in-progress"/>
+   <item>
+      <linkId value="link1"/>
+      <answer>
+         <item>
+            <linkId value="link11"/>
+         </item>
+      </answer>
+   </item>
+</QuestionnaireResponse>
+2018-12-03 16:44:18.285 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-resources.xml
+2018-12-03 16:44:23.853 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-types.xml
+2018-12-03 16:44:24.273 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-others.xml
+2018-12-03 16:44:24.962 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] Loading structure definitions from classpath: /org/hl7/fhir/r4/model/extension/extension-definitions.xml
+2018-12-03 16:44:26.041 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:168] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/r4/model/valueset/valuesets.xml
+2018-12-03 16:44:27.948 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:168] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/r4/model/valueset/v2-tables.xml
+2018-12-03 16:44:28.855 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:168] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/r4/model/valueset/v3-codesystems.xml
+2018-12-03 16:44:29.341 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:417] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:29.408 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:303] ValidationResult{messageCount=2, isSuccessful=false, description='ERROR - No response found for required item link0 - QuestionnaireResponse'}
+2018-12-03 16:44:29.462 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:282] ValidationResult{messageCount=1, isSuccessful=false, description='FATAL - Definition for item link0 does not contain a type - QuestionnaireResponse.item'}
+2018-12-03 16:44:29.473 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:261] ValidationResult{messageCount=3, isSuccessful=false, description='ERROR - No LinkId, so can't be validated - QuestionnaireResponse'}
+2018-12-03 16:44:29.477 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:344] <Questionnaire xmlns="http://hl7.org/fhir">
+   <item>
+      <linkId value="link1"/>
+      <type value="choice"/>
+      <answerValueSet value="http://somevalueset"/>
+      <item>
+         <linkId value="link11"/>
+         <type value="text"/>
+      </item>
+   </item>
+</Questionnaire>
+2018-12-03 16:44:29.478 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:356] <QuestionnaireResponse xmlns="http://hl7.org/fhir">
+   <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">AA</div>
+   </text>
+   <questionnaire value="http://example.com/Questionnaire/q1"/>
+   <status value="in-progress"/>
+   <item>
+      <linkId value="link1"/>
+      <answer>
+         <item>
+            <linkId value="link11"/>
+         </item>
+      </answer>
+   </item>
+</QuestionnaireResponse>
+2018-12-03 16:44:29.490 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:360] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:29.580 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:541] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - The value provided (http://codesystems.com/system::code1) is not in the options value set in the questionnaire - QuestionnaireResponse.item.answer'}
+2018-12-03 16:44:29.596 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:554] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - The value provided (null::code1) is not in the options value set in the questionnaire - QuestionnaireResponse.item.answer'}
+2018-12-03 16:44:29.609 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:565] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - The value provided (null::code1) is not in the options value set in the questionnaire - QuestionnaireResponse.item.answer'}
+2018-12-03 16:44:29.630 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:576] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - The value provided (http://codesystems.com/system::null) is not in the options value set in the questionnaire - QuestionnaireResponse.item.answer'}
+2018-12-03 16:44:29.643 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:586] ValidationResult{messageCount=1, isSuccessful=true, description='INFORMATION - Code http://system/null was not validated because the code system is not present - QuestionnaireResponse.item.answer'}
+2018-12-03 16:44:29.654 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:599] ValidationResult{messageCount=1, isSuccessful=true, description='INFORMATION - Cannot validate integer answer option because no option list is provided - QuestionnaireResponse.item.answer'}
+2018-12-03 16:44:29.666 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:611] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:29.744 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:622] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - No response answer found for required item link0 - QuestionnaireResponse.item'}
+2018-12-03 16:44:29.778 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:719] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:29.788 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:641] ValidationResult{messageCount=2, isSuccessful=false, description='ERROR - LinkId "link1" not found in questionnaire - QuestionnaireResponse'}
+2018-12-03 16:44:29.797 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:659] ValidationResult{messageCount=2, isSuccessful=false, description='ERROR - LinkId "link1" not found in questionnaire - QuestionnaireResponse'}
+2018-12-03 16:44:29.798 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:440] <Questionnaire xmlns="http://hl7.org/fhir">
+   <item>
+      <linkId value="link1"/>
+      <type value="text"/>
+      <item>
+         <linkId value="link11"/>
+         <type value="text"/>
+      </item>
+   </item>
+</Questionnaire>
+2018-12-03 16:44:29.811 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:452] <QuestionnaireResponse xmlns="http://hl7.org/fhir">
+   <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">AA</div>
+   </text>
+   <questionnaire value="http://example.com/Questionnaire/q1"/>
+   <status value="in-progress"/>
+   <item>
+      <linkId value="link1"/>
+      <answer>
+         <item>
+            <linkId value="link11"/>
+         </item>
+      </answer>
+   </item>
+</QuestionnaireResponse>
+2018-12-03 16:44:29.818 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:456] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:29.846 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:229] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - The value provided (http://codesystems.com/system::code1) is not in the options value set in the questionnaire - QuestionnaireResponse.item.answer'}
+2018-12-03 16:44:29.860 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:240] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - The value provided (http://codesystems.com/system2::code3) is not in the options value set in the questionnaire - QuestionnaireResponse.item.answer'}
+2018-12-03 16:44:29.928 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:177] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - Answer value must be of type boolean - QuestionnaireResponse.item.answer.valueString'}
+2018-12-03 16:44:29.937 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:478] ValidationResult{messageCount=1, isSuccessful=true, description='WARNING - No response answer found for required item link0 - QuestionnaireResponse.item'}
+2018-12-03 16:44:29.951 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:485] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - No response answer found for required item link0 - QuestionnaireResponse.item'}
+2018-12-03 16:44:29.968 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:157] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:29.983 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:157] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:29.990 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:157] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:30.020 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:157] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:30.029 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:157] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:30.037 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:157] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:30.058 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:157] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:30.085 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:157] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:30.098 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:157] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:30.113 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:157] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:30.135 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:157] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:30.165 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:157] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:30.172 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:157] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:30.188 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:157] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:30.244 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:157] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:30.257 [main] INFO  o.h.f.r.v.QuestionnaireResponseValidatorR4Test [QuestionnaireResponseValidatorR4Test.java:157] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:44:30.296 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static org.hl7.fhir.r4.hapi.ctx.DefaultProfileValidationSupport org.hl7.fhir.r4.validation.QuestionnaireResponseValidatorR4Test.myDefaultValidationSupport
+2018-12-03 16:44:30.307 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static ca.uhn.fhir.context.FhirContext org.hl7.fhir.r4.validation.QuestionnaireResponseValidatorR4Test.ourCtx
+2018-12-03 16:44:30.307 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static transient boolean[] org.hl7.fhir.r4.validation.QuestionnaireResponseValidatorR4Test.$jacocoData
+2018-12-03 16:44:30.346 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] Tests are running in locale: Deutsch (Deutschland)
+2018-12-03 16:44:30.346 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] Tests are using WINDOWS line endings and ISO-8851-1
+2018-12-03 16:44:30.346 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] Tests are using time zone: GMT+08:00

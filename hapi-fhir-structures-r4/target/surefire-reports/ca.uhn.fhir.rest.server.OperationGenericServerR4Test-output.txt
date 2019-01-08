@@ -1,0 +1,28 @@
+11:41:34.791 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:35.300 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+11:41:35.302 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in R4 mode
+11:41:35.321 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1435] - Added 1 resource provider(s). Total 1
+11:41:35.321 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.OperationGenericServerR4Test$PatientProvider
+11:41:35.332 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1442] - Added 1 plain provider(s). Total 1
+11:41:35.332 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.OperationGenericServerR4Test$PlainProvider
+11:41:35.334 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerProfileProvider
+11:41:35.339 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerCapabilityStatementProvider
+11:41:35.349 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+11:41:35.349 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+11:41:35.351 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@6b164666{HTTP/1.1,[http/1.1]}{0.0.0.0:50578}
+11:41:35.352 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @23075ms
+11:41:35.362 [main] INFO  c.u.f.r.s.OperationGenericServerR4Test [OperationGenericServerR4Test.java:129] - <Parameters xmlns="http://hl7.org/fhir"><parameter><name value="RET1"/><valueString value="RETVAL1"/></parameter></Parameters>
+11:41:35.368 [main] INFO  c.u.f.r.s.OperationGenericServerR4Test [OperationGenericServerR4Test.java:152] - <Parameters xmlns="http://hl7.org/fhir"><parameter><name value="RET1"/><valueString value="RETVAL1"/></parameter></Parameters>
+11:41:35.387 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@6b164666{HTTP/1.1,[http/1.1]}{0.0.0.0:50578}
+11:41:35.400 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.apache.http.impl.client.CloseableHttpClient ca.uhn.fhir.rest.server.OperationGenericServerR4Test.ourClient
+11:41:35.400 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.server.OperationGenericServerR4Test.ourCtx
+11:41:35.400 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.hl7.fhir.r4.model.IdType ca.uhn.fhir.rest.server.OperationGenericServerR4Test.ourLastId
+11:41:35.400 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static java.lang.String ca.uhn.fhir.rest.server.OperationGenericServerR4Test.ourLastMethod
+11:41:35.400 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.hl7.fhir.r4.model.StringType ca.uhn.fhir.rest.server.OperationGenericServerR4Test.ourLastParam1
+11:41:35.400 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.hl7.fhir.r4.model.Patient ca.uhn.fhir.rest.server.OperationGenericServerR4Test.ourLastParam2
+11:41:35.401 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.eclipse.jetty.server.Server ca.uhn.fhir.rest.server.OperationGenericServerR4Test.ourServer
+11:41:35.401 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.hl7.fhir.r4.model.Parameters ca.uhn.fhir.rest.server.OperationGenericServerR4Test.ourLastResourceParam
+11:41:35.401 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.server.OperationGenericServerR4Test.$jacocoData
+11:41:35.409 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: Deutsch (Deutschland)
+11:41:35.409 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] - Tests are using WINDOWS line endings and ISO-8851-1
+11:41:35.409 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+03:30

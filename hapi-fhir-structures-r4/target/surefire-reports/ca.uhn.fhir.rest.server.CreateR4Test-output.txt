@@ -1,0 +1,87 @@
+11:41:25.727 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:26.311 [main] INFO  org.eclipse.jetty.util.log [Log.java:193] - Logging initialized @14051ms to org.eclipse.jetty.util.log.Slf4jLog
+11:41:26.608 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+11:41:26.778 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in R4 mode
+11:41:26.875 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1435] - Added 3 resource provider(s). Total 3
+11:41:26.875 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.CreateR4Test$PatientProviderCreate
+11:41:26.935 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.CreateR4Test$PatientProviderRead
+11:41:26.952 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.CreateR4Test$PatientProviderSearch
+11:41:26.957 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerProfileProvider
+11:41:27.001 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerCapabilityStatementProvider
+11:41:27.335 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+11:41:27.337 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+11:41:27.424 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@f4b9905{HTTP/1.1,[http/1.1]}{0.0.0.0:50548}
+11:41:27.425 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @15165ms
+11:41:29.143 [qtp222578364-18] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'status' found while parsing
+11:41:29.243 [main] INFO  ca.uhn.fhir.rest.server.CreateR4Test [CreateR4Test.java:119] - Response was:
+{"resourceType":"OperationOutcome","issue":[{"diagnostics":"DIAG"}]}
+11:41:29.257 [main] INFO  ca.uhn.fhir.rest.server.CreateR4Test [CreateR4Test.java:138] - Response was:
+{"resourceType":"Patient","id":"1","meta":{"versionId":"1"},"gender":"male"}
+11:41:29.259 [qtp222578364-17] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'status' found while parsing
+11:41:29.261 [main] INFO  ca.uhn.fhir.rest.server.CreateR4Test [CreateR4Test.java:97] - Response was:
+{"resourceType":"Patient","id":"1","meta":{"versionId":"1"}}
+11:41:29.264 [qtp222578364-19] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'status' found while parsing
+11:41:29.266 [main] INFO  ca.uhn.fhir.rest.server.CreateR4Test [CreateR4Test.java:74] - Response was:
+{"resourceType":"Patient","id":"1","meta":{"versionId":"1"}}
+11:41:29.273 [qtp222578364-17] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: Failed to parse request body as XML resource. Error was: com.ctc.wstx.exc.WstxUnexpectedCharException: Unexpected character 'F' (code 70) in prolog; expected '<'
+ at [row,col {unknown-source}]: [1,1]
+11:41:29.281 [main] INFO  ca.uhn.fhir.rest.server.CreateR4Test [CreateR4Test.java:213] - Response was:
+<OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="Failed to parse request body as XML resource. Error was: com.ctc.wstx.exc.WstxUnexpectedCharException: Unexpected character 'F' (code 70) in prolog; expected '&lt;'&#xa; at [row,col {unknown-source}]: [1,1]"/></issue></OperationOutcome>
+11:41:29.328 [main] INFO  ca.uhn.fhir.rest.server.CreateR4Test [CreateR4Test.java:231] - Response was:
+<Bundle xmlns="http://hl7.org/fhir">
+   <id value="24e1d15a-4d63-4b46-85cb-0a9ff5dec78c"/>
+   <meta>
+      <lastUpdated value="2019-01-07T14:11:29.290+08:00"/>
+   </meta>
+   <type value="searchset"/>
+   <total value="2"/>
+   <link>
+      <relation value="self"/>
+      <url value="http://localhost:50548/Patient?_format=xml&amp;_pretty=true"/>
+   </link>
+   <entry>
+      <fullUrl value="http://localhost:50548/Patient/0"/>
+      <resource>
+         <Patient xmlns="http://hl7.org/fhir">
+            <id value="0"/>
+            <meta>
+               <profile value="http://example.com/StructureDefinition/patient_with_extensions"/>
+            </meta>
+            <modifierExtension url="http://example.com/ext/date">
+               <valueDate value="2011-01-01"/>
+            </modifierExtension>
+         </Patient>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="http://localhost:50548/Patient/1"/>
+      <resource>
+         <Patient xmlns="http://hl7.org/fhir">
+            <id value="1"/>
+            <name>
+               <family value="The Family"/>
+            </name>
+         </Patient>
+      </resource>
+   </entry>
+</Bundle>
+11:41:29.346 [qtp222578364-17] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: Failed to parse request body as XML resource. Error was: com.ctc.wstx.exc.WstxUnexpectedCharException: Unexpected character '{' (code 123) in prolog; expected '<'
+ at [row,col {unknown-source}]: [1,1]
+11:41:29.348 [main] INFO  ca.uhn.fhir.rest.server.CreateR4Test [CreateR4Test.java:154] - Response was:
+<OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="Failed to parse request body as XML resource. Error was: com.ctc.wstx.exc.WstxUnexpectedCharException: Unexpected character '{' (code 123) in prolog; expected '&lt;'&#xa; at [row,col {unknown-source}]: [1,1]"/></issue></OperationOutcome>
+11:41:29.350 [qtp222578364-19] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: Failed to parse request body as XML resource. Error was: com.ctc.wstx.exc.WstxUnexpectedCharException: Unexpected character '{' (code 123) in prolog; expected '<'
+ at [row,col {unknown-source}]: [1,1]
+11:41:29.352 [main] INFO  ca.uhn.fhir.rest.server.CreateR4Test [CreateR4Test.java:173] - Response was:
+<OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="Failed to parse request body as XML resource. Error was: com.ctc.wstx.exc.WstxUnexpectedCharException: Unexpected character '{' (code 123) in prolog; expected '&lt;'&#xa; at [row,col {unknown-source}]: [1,1]"/></issue></OperationOutcome>
+11:41:29.354 [qtp222578364-17] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: Failed to parse request body as JSON resource. Error was: Invalid JSON content detected, missing required element: 'resourceType'
+11:41:29.356 [main] INFO  ca.uhn.fhir.rest.server.CreateR4Test [CreateR4Test.java:192] - Response was:
+{"resourceType":"OperationOutcome","issue":[{"severity":"error","code":"processing","diagnostics":"Failed to parse request body as JSON resource. Error was: Invalid JSON content detected, missing required element: 'resourceType'"}]}
+11:41:29.366 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@f4b9905{HTTP/1.1,[http/1.1]}{0.0.0.0:50548}
+11:41:29.384 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: public static org.hl7.fhir.instance.model.api.IBaseOperationOutcome ca.uhn.fhir.rest.server.CreateR4Test.ourReturnOo
+11:41:29.384 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.apache.http.impl.client.CloseableHttpClient ca.uhn.fhir.rest.server.CreateR4Test.ourClient
+11:41:29.385 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.server.CreateR4Test.ourCtx
+11:41:29.385 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.eclipse.jetty.server.Server ca.uhn.fhir.rest.server.CreateR4Test.ourServer
+11:41:29.385 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.server.CreateR4Test.$jacocoData
+11:41:29.393 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: Deutsch (Deutschland)
+11:41:29.394 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] - Tests are using WINDOWS line endings and ISO-8851-1
+11:41:29.394 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+00:00

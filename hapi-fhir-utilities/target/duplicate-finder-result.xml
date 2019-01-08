@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<duplicate-finder-result version="1">
+    <project artifactId="hapi-fhir-utilities" groupId="ca.uhn.hapi.fhir" version="3.6.0-SNAPSHOT" type="bundle"/>
+    <configuration skip="false" quiet="false" checkCompileClasspath="true" checkRuntimeClasspath="false" checkTestClasspath="false" failBuildInCaseOfDifferentContentConflict="true" failBuildInCaseOfEqualContentConflict="true" failBuildInCaseOfConflict="true" printEqualFiles="false" preferLocal="true" includeBootClasspath="false" bootClasspathProperty="sun.boot.class.path" includePomProjects="false" useDefaultResourceIgnoreList="true" useDefaultClassIgnoreList="true" useResultFile="true" resultFileMinClasspathCount="2" resultFile="/Users/kumarelubandi/WorkSpace/hapi-fhir/hapi-fhir-utilities/target/duplicate-finder-result.xml">
+        <ignoredResourcePatterns>
+            <ignoredResourcePattern>changelog.txt</ignoredResourcePattern>
+            <ignoredResourcePattern>javac.bat</ignoredResourcePattern>
+            <ignoredResourcePattern>about.html</ignoredResourcePattern>
+            <ignoredResourcePattern>changelog.xml</ignoredResourcePattern>
+        </ignoredResourcePatterns>
+        <ignoredClassPatterns/>
+        <conflictingDependencies/>
+        <ignoredDependencies>
+            <dependency artifactId="javax.el-api" groupId="javax.el" type="jar"/>
+            <dependency artifactId="javax.mail-api" groupId="javax.mail" type="jar"/>
+            <dependency artifactId="ph-schematron" groupId="com.helger" type="jar"/>
+            <dependency artifactId="commons-logging" groupId="commons-logging" type="jar"/>
+            <dependency artifactId="jscience" groupId="org.jscience" type="jar"/>
+            <dependency artifactId="spring-jcl" groupId="org.springframework" type="jar"/>
+            <dependency artifactId="spring-jcl" groupId="org.springframework" type="jar"/>
+            <dependency artifactId="annotations" groupId="com.google.code.findbugs" type="jar"/>
+            <dependency artifactId="derbyclient" groupId="org.apache.derby" type="jar"/>
+            <dependency artifactId="derbynet" groupId="org.apache.derby" type="jar"/>
+            <dependency artifactId="derbyclient" groupId="org.apache.derby" type="jar"/>
+        </ignoredDependencies>
+    </configuration>
+    <results>
+        <result name="compile" conflictState="no-conflict" failed="false">
+            <conflicts/>
+            <ignoredResourcePatterns>
+                <ignoredResourcePattern>^META-INF/.*</ignoredResourcePattern>
+                <ignoredResourcePattern>^OSGI-INF/.*</ignoredResourcePattern>
+                <ignoredResourcePattern>^licenses/.*</ignoredResourcePattern>
+                <ignoredResourcePattern>.*license(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*notice(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*readme(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*third-party(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*package\.html$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*overview\.html$</ignoredResourcePattern>
+                <ignoredResourcePattern>changelog.txt</ignoredResourcePattern>
+                <ignoredResourcePattern>javac.bat</ignoredResourcePattern>
+                <ignoredResourcePattern>about.html</ignoredResourcePattern>
+                <ignoredResourcePattern>changelog.xml</ignoredResourcePattern>
+            </ignoredResourcePatterns>
+            <ignoredDirectoryPatterns>
+                <ignoredDirectoryPattern>^.git$</ignoredDirectoryPattern>
+                <ignoredDirectoryPattern>^.svn$</ignoredDirectoryPattern>
+                <ignoredDirectoryPattern>^.hg$</ignoredDirectoryPattern>
+                <ignoredDirectoryPattern>^.bzr$</ignoredDirectoryPattern>
+            </ignoredDirectoryPatterns>
+            <ignoredClassPatterns>
+                <ignoredClassPattern>.*\$.*</ignoredClassPattern>
+            </ignoredClassPatterns>
+            <classpathElements type="classes"/>
+            <classpathElements type="resources"/>
+        </result>
+    </results>
+</duplicate-finder-result>

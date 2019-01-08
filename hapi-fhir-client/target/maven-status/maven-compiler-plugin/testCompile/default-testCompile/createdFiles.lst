@@ -1,0 +1,2 @@
+ca/uhn/fhir/rest/client/interceptor/SimpleRequestHeaderInterceptorTest.class
+ca/uhn/fhir/rest/client/apache/ApacheHttpRequestTest.class

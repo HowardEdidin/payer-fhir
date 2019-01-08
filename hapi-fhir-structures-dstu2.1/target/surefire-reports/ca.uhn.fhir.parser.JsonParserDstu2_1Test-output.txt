@@ -1,0 +1,816 @@
+16:42:12.998 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:13.269 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:922] - {
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "MessageHeader",
+        "source": {
+          "extension": [
+            {
+              "url": "http://foo",
+              "valueIdentifier": {
+                "value": "APPID"
+              }
+            }
+          ],
+          "name": "NAME"
+        }
+      }
+    }
+  ]
+}
+16:42:13.271 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:228] - {
+  "resourceType": "Patient",
+  "meta": {
+    "profile": [
+      "http://foo/Profile1",
+      "http://foo/Profile2"
+    ],
+    "security": [
+      {
+        "system": "sec_scheme1",
+        "code": "sec_term1",
+        "display": "sec_label1"
+      },
+      {
+        "system": "sec_scheme2",
+        "code": "sec_term2",
+        "display": "sec_label2"
+      }
+    ],
+    "tag": [
+      {
+        "system": "scheme1",
+        "code": "term1",
+        "display": "label1"
+      },
+      {
+        "system": "scheme2",
+        "code": "term2",
+        "display": "label2"
+      }
+    ]
+  },
+  "name": [
+    {
+      "family": [
+        "FAMILY"
+      ]
+    }
+  ]
+}
+16:42:13.349 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:778] - {
+  "resourceType": "Patient",
+  "text": {
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">VALUE</div>"
+  }
+}
+16:42:13.365 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:1158] - {"resourceType":"QuestionnaireResponse","item":[{"linkId":"value123","_linkId":{"extension":[{"url":"http://123","valueString":"HELLO"}]}}]}
+16:42:13.394 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:468] - {"resourceType":"Patient","id":"123","contact":[{"extension":[{"url":"http://foo.com/contact-eyecolour","valueIdentifier":{"value":"EYE"}}],"name":{"family":["FAMILY"]}}]}
+16:42:13.396 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:13.454 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:877] - {"resourceType":"Patient","meta":{"tag":[{"system":"scheme","code":"term","display":"display"}]},"identifier":[{"system":"sys","value":"val"}]}
+16:42:13.468 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:1872] - <DiagnosticReport xmlns="http://hl7.org/fhir">
+   <contained>
+      <Observation xmlns="http://hl7.org/fhir">
+         <id value="123"/>
+         <meta>
+            <profile value="reportobservation"/>
+         </meta>
+         <identifier>
+            <system value="System"/>
+            <value value="id value"/>
+         </identifier>
+         <status value="final"/>
+         <code>
+            <coding>
+               <code value="name"/>
+            </coding>
+         </code>
+         <valueString value="value test"/>
+      </Observation>
+   </contained>
+   <result>
+      <reference value="#123"/>
+   </result>
+</DiagnosticReport>
+16:42:13.469 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:562] - {
+  "resourceType": "Observation",
+  "id": "1",
+  "meta": {
+    "profile": [
+      "http://profile"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://exturl",
+      "extension": [
+        {
+          "url": "http://subext",
+          "valueString": "sub_ext_value"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "text": "CODE"
+  }
+}
+16:42:13.472 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:1774] - {
+  "resourceType": "Observation",
+  "valueSampledData": {
+    "origin": {
+      "value": 0
+    },
+    "period": 1000,
+    "data": "1 2 3"
+  }
+}
+16:42:13.477 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:1735] - {
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "a361bda0-50e8-4358-9124-fd6fd464a725",
+        "name": [
+          {
+            "family": [
+              "Smith"
+            ],
+            "given": [
+              "John"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1987-04-16"
+      }
+    }
+  ]
+}
+16:42:13.486 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:1071] - {"resourceType":"Observation","valueQuantity":{"value":0.0000000000000001}}
+16:42:13.488 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:307] - {
+  "resourceType": "Patient",
+  "id": "patid",
+  "name": [
+    {
+      "id": "nameid",
+      "given": [
+        null,
+        "V1",
+        null
+      ],
+      "_given": [
+        {
+          "id": "f0",
+          "extension": [
+            {
+              "url": "http://foo",
+              "valueString": "FOOEXT0"
+            }
+          ]
+        },
+        {
+          "id": "f1",
+          "extension": [
+            {
+              "id": "ext1id",
+              "url": "http://foo",
+              "valueString": "FOOEXT1"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://foo",
+              "valueString": "FOOEXT3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+16:42:13.489 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:312] - Exp: {"resourceType":"Patient","id":"patid","name":[{"id":"nameid","given":[null,"V1",null],"_given":[{"id":"f0","extension":[{"url":"http://foo","valueString":"FOOEXT0"}]},{"id":"f1","extension":[{"id":"ext1id","url":"http://foo","valueString":"FOOEXT1"}]},{"extension":[{"url":"http://foo","valueString":"FOOEXT3"}]}]}]}
+16:42:13.489 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:313] - Act: {"resourceType":"Patient","id":"patid","name":[{"id":"nameid","given":[null,"V1",null],"_given":[{"id":"f0","extension":[{"url":"http://foo","valueString":"FOOEXT0"}]},{"id":"f1","extension":[{"id":"ext1id","url":"http://foo","valueString":"FOOEXT1"}]},{"extension":[{"url":"http://foo","valueString":"FOOEXT3"}]}]}]}
+16:42:13.492 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:379] - {
+  "resourceType": "Patient",
+  "contained": [
+    {
+      "resourceType": "Condition",
+      "id": "1"
+    }
+  ],
+  "extension": [
+    {
+      "url": "test",
+      "valueReference": {
+        "reference": "#1"
+      }
+    }
+  ],
+  "birthDate": "2016-04-05"
+}
+16:42:13.492 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:360] - {"resourceType":"Bundle"}
+16:42:13.493 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:364] - <Bundle xmlns="http://hl7.org/fhir"/>
+16:42:13.500 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:1467] - {
+  "resourceType": "Patient",
+  "id": "pat1",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      \n      <p>Patient Donald DUCK @ Acme Healthcare, Inc. MR = 654321</p>\n    \n    </div>"
+  },
+  "identifier": [
+    {
+      "fhir_comments": [
+        "identifier comment 1",
+        "identifier comment 2"
+      ],
+      "use": "usual",
+      "_use": {
+        "fhir_comments": [
+          "use comment 1",
+          "use comment 2"
+        ]
+      },
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/v2/0203",
+            "code": "MR"
+          }
+        ]
+      },
+      "system": "urn:oid:0.1.2.3.4.5.6.7",
+      "value": "654321"
+    }
+  ],
+  "active": true
+}
+16:42:13.504 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:802] - {
+  "resourceType": "Patient",
+  "id": "1",
+  "meta": {
+    "versionId": "1",
+    "tag": [
+      {
+        "system": "http://hl7.org/fhir/v3/ObservationValue",
+        "code": "SUBSETTED",
+        "display": "Resource encoded in summary mode"
+      }
+    ]
+  },
+  "name": [
+    {
+      "family": [
+        "FAMILY"
+      ]
+    }
+  ],
+  "maritalStatus": {
+    "coding": [
+      {
+        "code": "D"
+      }
+    ]
+  }
+}
+16:42:13.505 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:522] - {
+  "resourceType": "Observation",
+  "id": "1",
+  "meta": {
+    "profile": [
+      "http://profile"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://exturl",
+      "valueString": "ext_url_value"
+    }
+  ],
+  "code": {
+    "text": "CODE"
+  }
+}
+16:42:13.548 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'content' found while parsing
+16:42:13.548 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'content' found while parsing
+16:42:13.548 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'content' found while parsing
+16:42:13.550 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:1416] - {
+  "resourceType": "Bundle",
+  "type": "document",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:180f219f-97a8-486d-99d9-ed631fe4fc57",
+      "resource": {
+        "resourceType": "Composition",
+        "meta": {
+          "lastUpdated": "2013-05-28T22:12:21Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: 180f219f-97a8-486d-99d9-ed631fe4fc57</p><p><b>meta</b>: </p><p><b>date</b>: Feb 1, 2013 12:30:02 PM</p><p><b>type</b>: Discharge Summary from Responsible Clinician <span>(Details : {LOINC code '28655-9' = 'Physician attending Discharge summary)</span></p><p><b>status</b>: final</p><p><b>confidentiality</b>: N</p><p><b>author</b>: <a>Doctor Dave. Generated Summary: 23; Adam Careful </a></p><p><b>encounter</b>: <a>http://fhir.healthintersections.com.au/open/Encounter/doc-example</a></p></div>"
+        },
+        "date": "2013-02-01T12:30:02Z",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "28655-9"
+            }
+          ],
+          "text": "Discharge Summary from Responsible Clinician"
+        },
+        "status": "final",
+        "confidentiality": "N",
+        "subject": {
+          "reference": "http://fhir.healthintersections.com.au/open/Patient/d1",
+          "display": "Eve Everywoman"
+        },
+        "author": [
+          {
+            "reference": "Practitioner/example",
+            "display": "Doctor Dave"
+          }
+        ],
+        "encounter": {
+          "reference": "http://fhir.healthintersections.com.au/open/Encounter/doc-example"
+        },
+        "section": [
+          {
+            "title": "Reason for admission"
+          },
+          {
+            "title": "Medications on Discharge"
+          },
+          {
+            "title": "Known allergies"
+          }
+        ]
+      }
+    }
+  ]
+}
+16:42:13.551 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:112] - Resource is missing required element: url
+16:42:13.555 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:897] - {"resourceType":"Bundle","entry":[{"id":"123","resource":{"resourceType":"Condition","verificationStatus":"confirmed"}}]}
+16:42:13.561 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:1168] - <Linkage xmlns="http://hl7.org/fhir"><item><resource><display value="FOO"/></resource></item></Linkage>
+16:42:13.561 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:13.574 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:733] - {
+  "resourceType": "Patient",
+  "managingOrganization": {
+    "reference": "http://foo.com/Organization/2"
+  }
+}
+16:42:13.574 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:738] - {
+  "resourceType": "Patient",
+  "managingOrganization": {
+    "reference": "http://foo.com/Organization/2/_history/1"
+  }
+}
+16:42:13.574 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+output: {"resourceType":"Patient","extension":[{"url":"x1","valueReference":{"reference":"http://my.org/FooBar"}}]}
+16:42:13.719 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:1058] - {"resourceType":"Observation","valueQuantity":{"value":0.000000000000000100}}
+16:42:13.730 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:118] - {"resourceType":"QuestionnaireResponse","id":"123","item":[{"item":[{"linkId":"LINKID"}]}]}
+16:42:13.741 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:13.873 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:1848] - <DiagnosticReport xmlns="http://hl7.org/fhir">
+   <contained>
+      <Observation xmlns="http://hl7.org/fhir">
+         <id value="1"/>
+         <meta>
+            <profile value="reportobservation"/>
+         </meta>
+         <identifier>
+            <system value="System"/>
+            <value value="id value"/>
+         </identifier>
+         <status value="final"/>
+         <code>
+            <coding>
+               <code value="name"/>
+            </coding>
+         </code>
+         <valueString value="value test"/>
+      </Observation>
+   </contained>
+   <result>
+      <reference value="#1"/>
+   </result>
+</DiagnosticReport>
+16:42:13.877 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:487] - {
+  "resourceType": "Conformance",
+  "_acceptUnknown": {
+    "extension": [
+      {
+        "url": "http://foo",
+        "valueString": "AAA"
+      }
+    ]
+  }
+}
+16:42:13.877 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:490] - {"resourceType":"Conformance","_acceptUnknown":{"extension":[{"url":"http://foo","valueString":"AAA"}]}}
+16:42:13.877 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:494] - ---------------
+16:42:13.878 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:501] - {
+  "resourceType": "Conformance",
+  "acceptUnknown": "elements",
+  "_acceptUnknown": {
+    "extension": [
+      {
+        "url": "http://foo",
+        "valueString": "AAA"
+      }
+    ]
+  }
+}
+16:42:13.878 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:504] - {"resourceType":"Conformance","acceptUnknown":"elements","_acceptUnknown":{"extension":[{"url":"http://foo","valueString":"AAA"}]}}
+16:42:13.889 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:938] - {"resourceType":"Patient","extension":[{"url":"urn:foo","valueCode":"home"}],"address":[{"use":"home"}]}
+16:42:13.897 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:13.935 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:639] - {
+  "resourceType": "Patient",
+  "managingOrganization": {
+    "reference": "http://foo.com/Organization/2/_history/1"
+  }
+}
+16:42:13.936 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:13.967 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:657] - {
+  "resourceType": "Patient",
+  "managingOrganization": {
+    "reference": "http://foo.com/Organization/2"
+  }
+}
+16:42:13.970 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:14.003 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:674] - {
+  "resourceType": "AuditEvent",
+  "entity": [
+    {
+      "reference": {
+        "reference": "http://foo.com/Organization/2/_history/1"
+      }
+    }
+  ]
+}
+16:42:14.003 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:679] - {
+  "resourceType": "AuditEvent",
+  "entity": [
+    {
+      "reference": {
+        "reference": "http://foo.com/Organization/2"
+      }
+    }
+  ]
+}
+16:42:14.004 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:684] - {
+  "resourceType": "AuditEvent",
+  "entity": [
+    {
+      "reference": {
+        "reference": "http://foo.com/Organization/2"
+      }
+    }
+  ]
+}
+16:42:14.004 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:689] - {
+  "resourceType": "AuditEvent",
+  "entity": [
+    {
+      "reference": {
+        "reference": "http://foo.com/Organization/2"
+      }
+    }
+  ]
+}
+16:42:14.005 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:14.023 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:708] - {
+  "resourceType": "Patient",
+  "managingOrganization": {
+    "reference": "http://foo.com/Organization/2/_history/1"
+  }
+}
+16:42:14.023 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:713] - {
+  "resourceType": "Patient",
+  "managingOrganization": {
+    "reference": "http://foo.com/Organization/2/_history/1"
+  }
+}
+16:42:14.024 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:718] - {
+  "resourceType": "Patient",
+  "managingOrganization": {
+    "reference": "http://foo.com/Organization/2/_history/1"
+  }
+}
+16:42:14.489 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:1687] - Expected: {"resourceType":"Bundle","total":1,"link":[{"relation":"self","url":"http://localhost:52788/Binary?_pretty=true"}],"entry":[{"fullUrl":"http://foo/fhirBase2/Patient/1/_history/2","resource":{"resourceType":"Patient","id":"1","meta":{"versionId":"2","lastUpdated":"2001-02-22T11:22:33-05:00"},"birthDate":"2012-01-02"},"search":{"mode":"match","score":0.123},"request":{"method":"POST","url":"http://foo/Patient?identifier=value"}}]}
+16:42:14.489 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:1688] - Actual  : {"resourceType":"Bundle","total":1,"link":[{"relation":"self","url":"http://localhost:52788/Binary?_pretty=true"}],"entry":[{"fullUrl":"http://foo/fhirBase2/Patient/1/_history/2","resource":{"resourceType":"Patient","id":"1","meta":{"versionId":"2","lastUpdated":"2001-02-22T11:22:33-05:00"},"birthDate":"2012-01-02"},"search":{"mode":"match","score":0.123},"request":{"method":"POST","url":"http://foo/Patient?identifier=value"}}]}
+16:42:14.490 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:14.511 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:755] - {
+  "resourceType": "Patient",
+  "managingOrganization": {
+    "reference": "http://foo.com/Organization/2"
+  }
+}
+16:42:14.512 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:760] - {
+  "resourceType": "Patient",
+  "managingOrganization": {
+    "reference": "http://foo.com/Organization/2/_history/1"
+  }
+}
+16:42:14.512 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:765] - {
+  "resourceType": "Patient",
+  "managingOrganization": {
+    "reference": "http://foo.com/Organization/2"
+  }
+}
+16:42:14.512 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:14.602 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:1802] - {"resourceType":"Observation","valueQuantity":{"value":0.000000000000000100}}
+16:42:14.605 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:819] - {
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "patient",
+      "valueId": "1"
+    }
+  ]
+}
+16:42:14.606 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:164] - {
+  "resourceType": "Patient",
+  "extension": [
+    {
+      "url": "http://example.com/extensions#someext",
+      "valueDateTime": "2011-01-02T11:13:15"
+    },
+    {
+      "url": "http://example.com#parent",
+      "extension": [
+        {
+          "url": "http://example.com#child",
+          "valueString": "value1"
+        },
+        {
+          "url": "http://example.com#child",
+          "valueString": "value2"
+        }
+      ]
+    }
+  ],
+  "modifierExtension": [
+    {
+      "url": "http://example.com/extensions#modext",
+      "valueDate": "1995-01-02"
+    }
+  ],
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:example",
+      "value": "7000135"
+    }
+  ],
+  "name": [
+    {
+      "family": [
+        "Blah"
+      ],
+      "given": [
+        "Joe",
+        "Shmoe"
+      ],
+      "_given": [
+        {
+          "extension": [
+            {
+              "url": "http://examples.com#givenext",
+              "valueString": "given"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://examples.com#givenext_parent",
+              "extension": [
+                {
+                  "url": "http://examples.com#givenext_child",
+                  "valueString": "CHILD"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+16:42:14.610 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:833] - {
+  "resourceType": "Patient",
+  "id": "1",
+  "meta": {
+    "versionId": "1"
+  },
+  "text": {
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">THE DIV</div>"
+  },
+  "name": [
+    {
+      "family": [
+        "FAMILY"
+      ]
+    }
+  ],
+  "maritalStatus": {
+    "coding": [
+      {
+        "code": "D"
+      }
+    ]
+  },
+  "photo": [
+    {
+      "title": "green"
+    }
+  ]
+}
+16:42:14.611 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:836] - {
+  "resourceType": "Patient",
+  "id": "1",
+  "meta": {
+    "versionId": "1",
+    "tag": [
+      {
+        "system": "http://hl7.org/fhir/v3/ObservationValue",
+        "code": "SUBSETTED",
+        "display": "Resource encoded in summary mode"
+      }
+    ]
+  },
+  "name": [
+    {
+      "family": [
+        "FAMILY"
+      ]
+    }
+  ]
+}
+16:42:14.616 [main] INFO  c.u.f.n.BaseThymeleafNarrativeGenerator [BaseThymeleafNarrativeGenerator.java:136] - Initializing narrative generator
+16:42:16.357 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:1025] - {"resourceType":"Patient","text":{"status":"generated","div":"<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">John <b>SMITH </b></div><table class=\"hapiPropertyTable\"><tbody></tbody></table></div>"},"name":[{"family":["Smith"],"given":["John"]}]}
+16:42:16.358 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:789] - {
+  "resourceType": "Patient",
+  "text": {
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">VALUE</div>"
+  }
+}
+16:42:16.367 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:16.430 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:112] - Resource is missing required element: url
+16:42:16.432 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:1503] - Expected: {"resourceType":"Binary","id":"11","meta":{"versionId":"22"},"contentType":"foo","content":"AQIDBA=="}
+16:42:16.432 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:1504] - Actual  : {"resourceType":"Binary","id":"11","meta":{"versionId":"22"},"contentType":"foo","content":"AQIDBA=="}
+16:42:16.474 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:606] - {
+  "resourceType": "Patient",
+  "contained": [
+    {
+      "resourceType": "Condition",
+      "id": "1",
+      "bodySite": [
+        {
+          "text": "BODY SITE"
+        }
+      ]
+    }
+  ],
+  "extension": [
+    {
+      "url": "testCondition",
+      "valueReference": {
+        "reference": "#1"
+      }
+    }
+  ],
+  "birthDate": "2016-04-14"
+}
+16:42:16.526 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:962] - {
+  "resourceType": "Patient",
+  "name": [
+    {
+      "family": [
+        "FAMILY"
+      ],
+      "given": [
+        "GIVEN"
+      ]
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "LINE1"
+      ]
+    }
+  ]
+}
+16:42:16.527 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:974] - {
+  "resourceType": "Patient",
+  "name": [
+    {
+      "family": [
+        "FAMILY"
+      ],
+      "given": [
+        "GIVEN"
+      ]
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "LINE1"
+      ]
+    }
+  ]
+}
+16:42:16.528 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:986] - {
+  "resourceType": "Patient",
+  "id": "123",
+  "meta": {
+    "profile": [
+      "http://profile"
+    ]
+  },
+  "name": [
+    {
+      "given": [
+        "GIVEN"
+      ]
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "LINE1"
+      ]
+    }
+  ]
+}
+16:42:16.529 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:995] - {
+  "resourceType": "Patient",
+  "name": [
+    {
+      "family": [
+        "FAMILY"
+      ],
+      "given": [
+        "GIVEN"
+      ]
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "LINE1"
+      ]
+    }
+  ]
+}
+16:42:16.530 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:1008] - {
+  "resourceType": "Patient",
+  "id": "123",
+  "name": [
+    {
+      "family": [
+        "FAMILY"
+      ],
+      "given": [
+        "GIVEN"
+      ]
+    }
+  ]
+}
+16:42:16.531 [main] INFO  c.u.f.parser.JsonParserDstu2_1Test [JsonParserDstu2_1Test.java:856] - {
+  "resourceType": "Patient",
+  "id": "1",
+  "meta": {
+    "versionId": "1",
+    "tag": [
+      {
+        "system": "foo",
+        "code": "bar"
+      },
+      {
+        "system": "http://hl7.org/fhir/v3/ObservationValue",
+        "code": "SUBSETTED",
+        "display": "Resource encoded in summary mode"
+      }
+    ]
+  },
+  "name": [
+    {
+      "family": [
+        "FAMILY"
+      ]
+    }
+  ]
+}
+16:42:16.532 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.parser.JsonParserDstu2_1Test.ourCtx
+16:42:16.533 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.parser.JsonParserDstu2_1Test.$jacocoData
+16:42:16.533 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: 中文 (台灣)
+16:42:16.533 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] - Tests are using WINDOWS line endings and ISO-8851-1
+16:42:16.533 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+03:30

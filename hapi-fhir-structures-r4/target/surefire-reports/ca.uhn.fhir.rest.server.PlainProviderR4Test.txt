@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ca.uhn.fhir.rest.server.PlainProviderR4Test
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.792 s - in ca.uhn.fhir.rest.server.PlainProviderR4Test

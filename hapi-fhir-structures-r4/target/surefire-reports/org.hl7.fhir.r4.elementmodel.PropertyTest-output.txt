@@ -1,0 +1,26 @@
+11:41:15.507 [main] INFO  ca.uhn.fhir.util.VersionUtil [VersionUtil.java:48] - HAPI FHIR version is: 3.6.0-SNAPSHOT
+11:41:15.542 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:21.698 [main] INFO  ca.uhn.fhir.util.XmlUtil [DependencyLogImpl.java:75] - FHIR XML procesing will use StAX implementation 'Woodstox XML-processor' version '4.4.1'
+11:41:22.001 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'valueSetReference' found while parsing
+11:41:22.003 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'valueSetReference' found while parsing
+11:41:22.004 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'valueSetReference' found while parsing
+11:41:22.077 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'valueSetReference' found while parsing
+11:41:22.078 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'valueSetReference' found while parsing
+11:41:22.495 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'valueSetReference' found while parsing
+11:41:22.499 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'valueSetReference' found while parsing
+11:41:22.501 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'valueSetReference' found while parsing
+11:41:22.503 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'valueSetReference' found while parsing
+11:41:22.504 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'valueSetReference' found while parsing
+11:41:22.544 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-resources.xml
+11:41:28.235 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-types.xml
+11:41:28.606 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-others.xml
+11:41:29.525 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/extension/extension-definitions.xml
+11:41:30.606 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'valueSetReference' found while parsing
+11:41:30.606 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'valueSetReference' found while parsing
+11:41:30.606 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'valueSetReference' found while parsing
+11:41:30.606 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'valueSetReference' found while parsing
+11:41:30.607 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'valueSetReference' found while parsing
+11:41:30.608 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-resources.xml
+11:41:32.818 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-types.xml
+11:41:32.972 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-others.xml
+11:41:33.186 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] - Loading structure definitions from classpath: /org/hl7/fhir/r4/model/extension/extension-definitions.xml

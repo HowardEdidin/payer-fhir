@@ -1,0 +1,75 @@
+2018-12-03 16:44:30.405 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] Creating new FHIR context for FHIR version [DSTU3]
+2018-12-03 16:44:33.563 [main] INFO  o.h.f.d.h.v.SchematronValidationDstu3QuestionnaireTest [SchematronValidationDstu3QuestionnaireTest.java:72] <Questionnaire xmlns="http://hl7.org/fhir">
+   <status value="active"/>
+   <item>
+      <linkId value="id-1"/>
+      <type value="group"/>
+      <enableWhen>
+         <question value="q1"/>
+         <hasAnswer value="true"/>
+      </enableWhen>
+      <item>
+         <linkId value="id-2"/>
+         <type value="string"/>
+      </item>
+   </item>
+</Questionnaire>
+2018-12-03 16:44:38.509 [main] INFO  com.helger.jaxb.JAXBContextCache [JAXBContextCache.java:64] Creating JAXB context for package org.oclc.purl.dsdl.svrl using ClassLoader sun.misc.Launcher$AppClassLoader@18b4aac2
+2018-12-03 16:44:39.999 [main] INFO  o.h.f.d.h.v.SchematronValidationDstu3QuestionnaireTest [SchematronValidationDstu3QuestionnaireTest.java:118] <OperationOutcome xmlns="http://hl7.org/fhir">
+   <issue>
+      <severity value="information"/>
+      <code value="informational"/>
+      <diagnostics value="No issues detected during validation"/>
+   </issue>
+</OperationOutcome>
+2018-12-03 16:44:40.002 [main] INFO  o.h.f.d.h.v.SchematronValidationDstu3QuestionnaireTest [SchematronValidationDstu3QuestionnaireTest.java:96] <Questionnaire xmlns="http://hl7.org/fhir">
+   <status value="active"/>
+   <item>
+      <linkId value="id-3"/>
+      <type value="group"/>
+      <enableWhen>
+         <question value="q1"/>
+         <hasAnswer value="true"/>
+         <answerString value="a value"/>
+      </enableWhen>
+      <item>
+         <linkId value="id-4"/>
+         <type value="string"/>
+      </item>
+   </item>
+</Questionnaire>
+2018-12-03 16:44:40.116 [main] INFO  o.h.f.d.h.v.SchematronValidationDstu3QuestionnaireTest [SchematronValidationDstu3QuestionnaireTest.java:118] <OperationOutcome xmlns="http://hl7.org/fhir">
+   <issue>
+      <severity value="error"/>
+      <code value="processing"/>
+      <diagnostics value="[error] in /*:Questionnaire[namespace-uri()='http://hl7.org/fhir'][1]/*:item[namespace-uri()='http://hl7.org/fhir'][1]/*:enableWhen[namespace-uri()='http://hl7.org/fhir'][1] @ Questionnaire que-7: enableWhen must contain either a 'answer' or a 'hasAnswer' element Test=count(f:*[starts-with(local-name(.), 'answer')]|f:hasAnswer) = 1"/>
+      <location value="Questionnaire"/>
+   </issue>
+</OperationOutcome>
+2018-12-03 16:44:40.119 [main] INFO  o.h.f.d.h.v.SchematronValidationDstu3QuestionnaireTest [SchematronValidationDstu3QuestionnaireTest.java:49] <Questionnaire xmlns="http://hl7.org/fhir">
+   <status value="active"/>
+   <item>
+      <linkId value="id-5"/>
+      <type value="group"/>
+      <enableWhen>
+         <question value="q1"/>
+         <answerString value="a value"/>
+      </enableWhen>
+      <item>
+         <linkId value="id-6"/>
+         <type value="string"/>
+      </item>
+   </item>
+</Questionnaire>
+2018-12-03 16:44:40.133 [main] INFO  o.h.f.d.h.v.SchematronValidationDstu3QuestionnaireTest [SchematronValidationDstu3QuestionnaireTest.java:118] <OperationOutcome xmlns="http://hl7.org/fhir">
+   <issue>
+      <severity value="information"/>
+      <code value="informational"/>
+      <diagnostics value="No issues detected during validation"/>
+   </issue>
+</OperationOutcome>
+2018-12-03 16:44:40.134 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static ca.uhn.fhir.context.FhirContext org.hl7.fhir.dstu3.hapi.validation.SchematronValidationDstu3QuestionnaireTest.ourCtx
+2018-12-03 16:44:40.134 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static transient boolean[] org.hl7.fhir.dstu3.hapi.validation.SchematronValidationDstu3QuestionnaireTest.$jacocoData
+2018-12-03 16:44:40.135 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] Tests are running in locale: English (Canada)
+2018-12-03 16:44:40.135 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] Tests are using WINDOWS line endings and ISO-8851-1
+2018-12-03 16:44:40.135 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] Tests are using time zone: GMT-05:00

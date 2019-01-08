@@ -1,0 +1,75 @@
+----------------------------------------------------------------
+Mon Dec 03 20:31:44 GMT+08:00 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0167-740d-85e3-000011e8cb18 
+on database directory memory:/Users/kumarelubandi/WorkSpace/hapi-fhir/hapi-fhir-jpaserver-base/myUnitTestDBDstu2 with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+Loaded from file:/Users/kumarelubandi/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_192-b12
+user.dir=/Users/kumarelubandi/WorkSpace/hapi-fhir/hapi-fhir-jpaserver-base
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.13.6
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Mon Dec 03 20:32:50 GMT+08:00 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 52d66c92-0167-740d-85e3-000011e8cb18 
+on database directory memory:/Users/kumarelubandi/WorkSpace/hapi-fhir/hapi-fhir-jpaserver-base/myUnitTestDBDstu3 with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+Loaded from file:/Users/kumarelubandi/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_192-b12
+user.dir=/Users/kumarelubandi/WorkSpace/hapi-fhir/hapi-fhir-jpaserver-base
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.13.6
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Mon Dec 03 12:34:11 GMT+00:00 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 0e5faaea-0167-740d-85e3-000011e8cb18 
+on database directory memory:/Users/kumarelubandi/WorkSpace/hapi-fhir/hapi-fhir-jpaserver-base/myUnitTestDBR4 with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+Loaded from file:/Users/kumarelubandi/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_192-b12
+user.dir=/Users/kumarelubandi/WorkSpace/hapi-fhir/hapi-fhir-jpaserver-base
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.13.6
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+Mon Dec 03 12:45:39 GMT+00:00 2018 Thread[ScheduledExecutorFactoryBean-1,5,main] (XID = 10511), (SESSIONID = 3), (DATABASE = memory:myUnitTestDBR4), (DRDAID = null), Cleanup action starting
+Mon Dec 03 12:45:42 GMT+00:00 2018 Thread[ScheduledExecutorFactoryBean-1,5,main] (XID = 10511), (SESSIONID = 3), (DATABASE = memory:myUnitTestDBR4), (DRDAID = null), Failed Statement is: null
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+Cleanup action completed
+va.lang.AbstractStringBuilder.ensureCapacityInternal(AbstractStringBuilder.java:124)
+	at java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:448)
+	at java.lang.StringBuffer.append(StringBuffer.java:270)
+	at java.text.MessageFormat.subformat(MessageFormat.java:1335)
+	at java.text.MessageFormat.format(MessageFormat.java:865)
+	at java.text.Format.format(Format.java:157)
+	at java.text.MessageFormat.format(MessageFormat.java:841)
+	at org.apache.derby.iapi.services.i18n.MessageService.formatMessage(Unknown Source)
+	at org.apache.derby.iapi.services.i18n.MessageService.getTextMessage(Unknown Source)
+	at org.apache.derby.iapi.error.StandardException.newWarning(Unknown Source)
+	at org.apache.derby.impl.sql.execute.DeleteResultSet.open(Unknown Source)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.executeStmt(Unknown Source)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeLargeUpdate(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeUpdate(Unknown Source)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:136)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:136)
+	at sun.reflect.GeneratedMethodAccessor109.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.ttddyy.dsproxy.proxy.StatementProxyLogic.performQueryExecutionListener(StatementProxyLogic.java:310)
+	at net.ttddyy.dsproxy.proxy.StatementProxyLogic.access$700(StatementProxyLogic.java:36)
+	at net.ttddyy.dsproxy.proxy.StatementProxyLogic$1.execute(StatementProxyLogic.java:122)
+	at net.ttddyy.dsproxy.listener.MethodExecutionListenerUtils.invoke(MethodExecutionListenerUtils.java:41)
+	at net.ttddyy.dsproxy.proxy.StatementProxyLogic.invoke(StatementProxyLogic.java:119)
+	at net.ttddyy.dsproxy.proxy.jdk.PreparedStatementInvocationHandler.invoke(PreparedStatementInvocationHandler.java:37)
+	at com.sun.proxy.$Proxy173.executeUpdate(Unknown Source)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)
+	at org.hibernate.hql.internal.ast.exec.BasicExecutor.doExecute(BasicExecutor.java:100)
+Cleanup action completed

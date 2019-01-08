@@ -1,0 +1,219 @@
+11:41:39.043 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+
+
+	ranslateClientArgumentIntoQueryArgument
+DateParam[prefix=GREATERTHAN_OR_EQUALS,value=2011-01-02]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+TokenParam[system=sysm,value=val]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+QuantityParam[prefix=GREATERTHAN,value=123,system=foo,units=bar]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+DateParam[prefix=GREATERTHAN_OR_EQUALS,value=2011-01-02]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+InstantType[2012-01-02T12:01:02]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+Mon Jan 02 12:01:02 GMT-05:00 2012
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+null
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+InstantType[2012-01-02T00:01:02]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+InstantType[null]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+InstantType[2012-01-02T00:01:02]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+DateParam[prefix=GREATERTHAN_OR_EQUALS,value=2011-01-02]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+DateParam[prefix=GREATERTHAN_OR_EQUALS,value=2011-01-02]
+ca.uhn.fhir.context.FhirContext@404562c7
+11:41:39.575 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'label' found while parsing
+11:41:39.577 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'coding' found while parsing
+11:41:39.580 [main] INFO  ca.uhn.fhir.rest.client.ClientR4Test [ClientR4Test.java:399] - <Patient xmlns="http://hl7.org/fhir">
+   <id value="123"/>
+   <meta>
+      <versionId value="2333"/>
+      <lastUpdated value="1995-11-15T03:58:08.000-01:00"/>
+      <tag>
+         <system value="http://hl7.org/fhir/tag"/>
+         <code value="http://foo/tagdefinition.html"/>
+         <display value="Some tag"/>
+      </tag>
+   </meta>
+   <identifier>
+      <value value="PRP1660"/>
+   </identifier>
+   <name>
+      <family value="Kramer"/>
+      <given value="Doe"/>
+   </name>
+</Patient>
+11:41:39.668 [main] INFO  ca.uhn.fhir.rest.client.ClientR4Test [ClientR4Test.java:427] - <Patient xmlns="http://hl7.org/fhir">
+   <id value="123"/>
+   <meta>
+      <versionId value="2333"/>
+      <lastUpdated value="1995-11-15T04:58:08.000Z"/>
+      <tag>
+         <system value="http://hl7.org/fhir/tag"/>
+         <code value="http://foo/tagdefinition.html"/>
+         <display value="Some tag"/>
+      </tag>
+   </meta>
+   <identifier>
+      <value value="PRP1660"/>
+   </identifier>
+   <name>
+      <family value="Kramer"/>
+      <given value="Doe"/>
+   </name>
+</Patient>
+
+
+
+contextcontext
+ca.uhn.fhir.context.FhirContext@404562c7
+[Ljava.lang.Object;@70d2de9c
+
+
+	ranslateClientArgumentIntoQueryArgument
+TokenParam[system=urn:foo,value=123]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+ca.uhn.fhir.rest.param.CompositeParam@45c3e0b1
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+DateParam[prefix=GREATERTHAN_OR_EQUALS,value=2011-01-02]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+DateParam[prefix=GREATERTHAN_OR_EQUALS,value=2011-01-02]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+DateParam[prefix=GREATERTHAN_OR_EQUALS,value=2011-01-02]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+DateRangeParam[ge2011-01-01 le2021-01-01]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+StringParam[value=aaa]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+[ca.uhn.fhir.model.api.Include@7d81145a[value=inc1,recurse=false], ca.uhn.fhir.model.api.Include@1828eba4[value=inc2,recurse=true], ca.uhn.fhir.model.api.Include@768955bb[value=inc3,recurse=true]]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+[[StringParam[value=NE,NE], StringParam[value=NE,NE]], [StringParam[value=E$E,exact=true]], [StringParam[value=NE\NE]], [StringParam[value=E|E,exact=true]]]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+StringParam[value=aaa]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+inc1
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+[TokenParam[system=foo,value=bar], TokenParam[system=baz,value=boz]]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+
+contextcontext
+ca.uhn.fhir.context.FhirContext@404562c7
+[Ljava.lang.Object;@657e710b
+
+
+
+contextcontext
+ca.uhn.fhir.context.FhirContext@404562c7
+[Ljava.lang.Object;@f9cb6f1
+
+
+	ranslateClientArgumentIntoQueryArgument
+StringParam[value=BB]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+StringParam[value=AAA]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+null
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+StringParam[value=AAA]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+StringParam[value=BBB]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+DateParam[prefix=GREATERTHAN_OR_EQUALS,value=2011-01-02]
+ca.uhn.fhir.context.FhirContext@404562c7
+
+
+	ranslateClientArgumentIntoQueryArgument
+DateParam[prefix=GREATERTHAN_OR_EQUALS,value=2011-01-02]
+ca.uhn.fhir.context.FhirContext@404562c7
+11:41:40.116 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.client.ClientR4Test.ourCtx
+11:41:40.116 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.client.ClientR4Test.$jacocoData
+11:41:40.117 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: English (Canada)
+11:41:40.117 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:118] - Tests are using UNIX line endings and UTF-8
+11:41:40.117 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+08:00

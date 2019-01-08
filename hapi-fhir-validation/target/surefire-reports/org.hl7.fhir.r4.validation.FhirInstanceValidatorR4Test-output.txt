@@ -1,0 +1,243 @@
+2018-12-03 16:44:56.259 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] Creating new FHIR context for FHIR version [R4]
+2018-12-03 16:44:56.264 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateReferenceWithDisplayValid
+2018-12-03 16:45:01.234 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-resources.xml
+2018-12-03 16:45:04.448 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-types.xml
+2018-12-03 16:45:04.650 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-others.xml
+2018-12-03 16:45:05.332 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] Loading structure definitions from classpath: /org/hl7/fhir/r4/model/extension/extension-definitions.xml
+2018-12-03 16:45:06.279 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:168] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/r4/model/valueset/valuesets.xml
+2018-12-03 16:45:08.038 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:168] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/r4/model/valueset/v2-tables.xml
+2018-12-03 16:45:09.029 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:168] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/r4/model/valueset/v3-codesystems.xml
+2018-12-03 16:45:09.795 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testCompareTimesWithDifferentTimezones
+2018-12-03 16:45:10.803 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:407] {
+  "resourceType": "OperationOutcome",
+  "issue": [
+    {
+      "severity": "warning",
+      "code": "processing",
+      "diagnostics": "A resource should have narrative for robust management [text.div.exists()]",
+      "location": [
+        "Procedure"
+      ]
+    }
+  ]
+}
+2018-12-03 16:45:10.806 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testBase64Valid
+2018-12-03 16:45:10.823 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:377] Encoded: {
+  "resourceType": "Media",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">AA</div>"
+  },
+  "status": "not-done",
+  "content": {
+    "contentType": "application/octet-stream",
+    "data": "AgMEBQYHCAkIBwYFBAMCAQ==",
+    "title": "bbbb syst"
+  }
+}
+2018-12-03 16:45:10.855 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateResourceWithDefaultValuesetBadCode
+2018-12-03 16:45:10.943 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:217] Result 0: ERROR - 0:0 Observation.status - The value provided ('notvalidcode') is not in the value set http://hl7.org/fhir/ValueSet/observation-status (http://hl7.org/fhir/ValueSet/observation-status, and a code is required from this value set) (error message = Unknown code[notvalidcode] in system[null])
+2018-12-03 16:45:10.943 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateEmptyElement
+2018-12-03 16:45:10.949 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:217] Result 0: ERROR - 0:0 Patient.active - primitive types must have a value or must have child extensions
+2018-12-03 16:45:10.949 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:217] Result 1: ERROR - 0:0 Patient.active - All FHIR elements must have a @value or children [hasValue() or (children().count() > id.count())]
+2018-12-03 16:45:10.949 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateRawXmlResourceBadAttributes
+2018-12-03 16:45:10.963 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:779] /f:Patient
+2018-12-03 16:45:10.964 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:780] Undefined element 'foo'
+2018-12-03 16:45:10.964 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateBundleWithNoFullUrl
+2018-12-03 16:45:11.248 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 0: ERROR - /Bundle/entry/resource/id - Error parsing JSON: the primitive value must be a string
+2018-12-03 16:45:11.249 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 1: ERROR - /Bundle/entry/resource/performer - This property must be an Array, not an Object
+2018-12-03 16:45:11.249 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 2: ERROR - /Bundle/entry/resource/id - Error parsing JSON: the primitive value must be a string
+2018-12-03 16:45:11.249 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 3: ERROR - /Bundle/entry/resource/id - Error parsing JSON: the primitive value must be a string
+2018-12-03 16:45:11.249 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 4: ERROR - /Bundle/entry/resource/id - Error parsing JSON: the primitive value must be a string
+2018-12-03 16:45:11.250 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 5: ERROR - /Bundle/entry/resource/id - Error parsing JSON: the primitive value must be a string
+2018-12-03 16:45:11.250 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 6: ERROR - /Bundle/entry/resource/id - Error parsing JSON: the primitive value must be a string
+2018-12-03 16:45:11.250 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 7: ERROR - /Bundle/entry/resource/id - Error parsing JSON: the primitive value must be a string
+2018-12-03 16:45:11.250 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 8: ERROR - /Bundle/entry/resource/id - Error parsing JSON: the primitive value must be a string
+2018-12-03 16:45:11.250 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 9: ERROR - /Bundle/entry/resource/id - Error parsing JSON: the primitive value must be a string
+2018-12-03 16:45:11.250 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 10: ERROR - /Bundle/entry/resource/id - Error parsing JSON: the primitive value must be a string
+2018-12-03 16:45:11.251 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 11: ERROR - /Bundle/entry/resource/content/attachment - This property must be an Object, not a com.google.gson.JsonPrimitive
+2018-12-03 16:45:11.251 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 12: ERROR - /Bundle/entry/resource/content/format - This property must be an Object, not a com.google.gson.JsonPrimitive
+2018-12-03 16:45:11.251 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 13: ERROR - /Bundle/entry/resource - Unrecognised property '@created'
+2018-12-03 16:45:11.251 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 14: ERROR - /Bundle/entry/resource/id - Error parsing JSON: the primitive value must be a string
+2018-12-03 16:45:11.251 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 15: ERROR - /Bundle/entry/resource/id - Error parsing JSON: the primitive value must be a string
+2018-12-03 16:45:11.251 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 16: ERROR - /Bundle/entry/resource/basedOn - This property must be an Array, not an Object
+2018-12-03 16:45:11.252 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 17: ERROR - /Bundle/entry/resource - Unrecognised property '@businessStatus '
+2018-12-03 16:45:11.252 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 18: ERROR - Bundle.entry[1] - Bundle entry missing fullUrl
+2018-12-03 16:45:11.252 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 19: ERROR - Bundle.entry[1].resource.subject - Relative Reference appears inside Bundle whose entry is missing a fullUrl
+2018-12-03 16:45:11.252 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 20: ERROR - Bundle.entry[1] - Bundle entry missing fullUrl
+2018-12-03 16:45:11.252 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 21: ERROR - Bundle.entry[1].resource.requester - Relative Reference appears inside Bundle whose entry is missing a fullUrl
+2018-12-03 16:45:11.253 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 22: ERROR - Bundle.entry[1] - Bundle entry missing fullUrl
+2018-12-03 16:45:11.253 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 23: ERROR - Bundle.entry[1] - Bundle entry missing fullUrl
+2018-12-03 16:45:11.253 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 24: ERROR - Bundle.entry[1].resource.supportingInfo - Relative Reference appears inside Bundle whose entry is missing a fullUrl
+2018-12-03 16:45:11.253 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 25: INFORMATION - Bundle.entry[2].resource.identifier.extension - Unknown extension https://www.caredove.com/FHIR3/StructureDefinition/caredove-healthcardversion
+2018-12-03 16:45:11.254 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 26: WARNING - Bundle.entry[2].resource.identifier.type - Code http://hl7.org/fhir/v2/0203/JHN was not validated because the code system is not present
+2018-12-03 16:45:11.254 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 27: ERROR - Bundle.entry[2].resource.identifier.type.coding - Invalid FHIR Code System http://hl7.org/fhir/v2/0203
+2018-12-03 16:45:11.254 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 28: WARNING - Bundle.entry[2].resource.contact.relationship - No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/patient-contactrelationship (http://hl7.org/fhir/ValueSet/patient-contactrelationship
+2018-12-03 16:45:11.254 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 29: ERROR - Bundle.entry[2] - Bundle entry missing fullUrl
+2018-12-03 16:45:11.255 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 30: ERROR - Bundle.entry[2].resource.generalPractitioner - Relative Reference appears inside Bundle whose entry is missing a fullUrl
+2018-12-03 16:45:11.255 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 31: ERROR - Bundle.entry[3] - Bundle entry missing fullUrl
+2018-12-03 16:45:11.255 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 32: ERROR - Bundle.entry[3].resource.practitioner - Relative Reference appears inside Bundle whose entry is missing a fullUrl
+2018-12-03 16:45:11.255 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 33: ERROR - Bundle.entry[3] - Bundle entry missing fullUrl
+2018-12-03 16:45:11.256 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 34: ERROR - Bundle.entry[3].resource.organization - Relative Reference appears inside Bundle whose entry is missing a fullUrl
+2018-12-03 16:45:11.256 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 35: ERROR - Bundle.entry[3] - Bundle entry missing fullUrl
+2018-12-03 16:45:11.256 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 36: ERROR - Bundle.entry[3].resource.location - Relative Reference appears inside Bundle whose entry is missing a fullUrl
+2018-12-03 16:45:11.256 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 37: WARNING - Bundle.entry[4].resource - A resource should have narrative for robust management [text.div.exists()]
+2018-12-03 16:45:11.256 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 38: WARNING - Bundle.entry[5].resource - A resource should have narrative for robust management [text.div.exists()]
+2018-12-03 16:45:11.256 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 39: ERROR - Bundle.entry[7] - Bundle entry missing fullUrl
+2018-12-03 16:45:11.256 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 40: ERROR - Bundle.entry[7].resource.practitioner - Relative Reference appears inside Bundle whose entry is missing a fullUrl
+2018-12-03 16:45:11.257 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 41: ERROR - Bundle.entry[7] - Bundle entry missing fullUrl
+2018-12-03 16:45:11.257 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 42: ERROR - Bundle.entry[7].resource.organization - Relative Reference appears inside Bundle whose entry is missing a fullUrl
+2018-12-03 16:45:11.257 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 43: ERROR - Bundle.entry[7] - Bundle entry missing fullUrl
+2018-12-03 16:45:11.257 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 44: ERROR - Bundle.entry[7].resource.location - Relative Reference appears inside Bundle whose entry is missing a fullUrl
+2018-12-03 16:45:11.258 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 45: WARNING - Bundle.entry[9].resource - A resource should have narrative for robust management [text.div.exists()]
+2018-12-03 16:45:11.258 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 46: ERROR - Bundle.entry[10].resource.content - Profile http://hl7.org/fhir/StructureDefinition/DocumentReference, Element 'Bundle.entry[10].resource.content.attachment': minimum required = 1, but only found 0
+2018-12-03 16:45:11.258 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 47: ERROR - Bundle.entry[12] - Bundle entry missing fullUrl
+2018-12-03 16:45:11.258 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 48: ERROR - Bundle.entry[12].resource.basedOn - Relative Reference appears inside Bundle whose entry is missing a fullUrl
+2018-12-03 16:45:11.258 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 49: INFORMATION - Bundle.entry[12].resource.code - Binding for path Bundle.entry[12].resource.code has no source, so can't be checked
+2018-12-03 16:45:11.259 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateResourceContainingLoincCode
+2018-12-03 16:45:11.273 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:217] Result 0: WARNING - 0:0 Observation - A resource should have narrative for robust management [text.div.exists()]
+2018-12-03 16:45:11.273 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:217] Result 1: WARNING - 0:0 Observation.code.coding - Unknown code: http://loinc.org / 12345
+2018-12-03 16:45:11.342 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testExtensionUrlWithHl7Url
+2018-12-03 16:45:11.374 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 0: INFORMATION - Patient.extension - Unknown extension http://hl7.org/fhir/ValueSet/v3-ActInvoiceGroupCode
+2018-12-03 16:45:11.375 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testContactPointSystemUrlWorks
+2018-12-03 16:45:11.399 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateReferenceWithIdentifierValid
+2018-12-03 16:45:11.413 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateRawJsonResourceWithUnknownExtensionNotAllowed
+2018-12-03 16:45:11.416 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:728] {
+  "resourceType": "Patient",
+  "id": "1",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">AA</div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v3/ethnicity",
+      "valueCode": "Hispanic or Latino"
+    }
+  ]
+}
+2018-12-03 16:45:11.431 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateRawJsonResource
+2018-12-03 16:45:11.511 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateRawXmlResourceWithPrimitiveContainingOnlyAnExtension
+2018-12-03 16:45:11.541 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 0: INFORMATION - ActivityDefinition.timingTiming.event.extension - Unknown extension http://fhir.org/cql-expression
+2018-12-03 16:45:11.542 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateBundleWithNoType
+2018-12-03 16:45:11.561 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 0: ERROR - Bundle - entry.request mandatory for batch/transaction/history, otherwise prohibited [entry.all(request.exists() = (%resource.type = 'batch' or %resource.type = 'transaction' or %resource.type = 'history'))]
+2018-12-03 16:45:11.562 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 1: ERROR - Bundle - Profile http://hl7.org/fhir/StructureDefinition/Bundle, Element 'Bundle.type': minimum required = 1, but only found 0
+2018-12-03 16:45:11.562 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testInvalidLocalReference
+2018-12-03 16:45:11.578 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 0: INFORMATION - QuestionnaireResponse - No questionnaire is identified, so no validation can be performed against the base questionnaire
+2018-12-03 16:45:11.578 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 1: ERROR - QuestionnaireResponse.subject - Unable to resolve resource '#invalid-ref'
+2018-12-03 16:45:11.579 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 2: ERROR - QuestionnaireResponse.subject - SHALL have a contained resource if a local reference is provided ( (url: invalid-ref; ids: )) [reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))]
+2018-12-03 16:45:11.681 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateRawXmlResource
+2018-12-03 16:45:11.689 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateResourceWithExampleBindingCodeValidationFailingNonLoinc
+2018-12-03 16:45:11.698 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:217] Result 0: WARNING - 0:0 Observation.code.coding - Unknown code: http://acme.org / 9988877
+2018-12-03 16:45:11.698 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateRawJsonResourceWithUnknownExtension
+2018-12-03 16:45:11.700 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:694] {
+  "resourceType": "Patient",
+  "id": "1",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">AA</div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/v3/ethnicity",
+      "valueCode": "Hispanic or Latino"
+    }
+  ]
+}
+2018-12-03 16:45:11.705 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateResourceWithValuesetExpansionBad
+2018-12-03 16:45:11.753 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:217] Result 0: WARNING - 0:0 Patient.identifier.type - Code http://example.com/foo/bar/bar was not validated because the code system is not present
+2018-12-03 16:45:11.754 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateResourceWithExampleBindingCodeValidationPassingNonLoinc
+2018-12-03 16:45:11.766 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateResourceContainingProfileDeclaration
+2018-12-03 16:45:11.780 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 0: ERROR - Observation - Profile http://hl7.org/fhir/StructureDefinition/devicemetricobservation, Element 'Observation.subject': minimum required = 1, but only found 0
+2018-12-03 16:45:11.780 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 1: ERROR - Observation - Profile http://hl7.org/fhir/StructureDefinition/devicemetricobservation, Element 'Observation.encounter': max allowed = 0, but found 1
+2018-12-03 16:45:11.781 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 2: ERROR - Observation - Profile http://hl7.org/fhir/StructureDefinition/devicemetricobservation, Element 'Observation.effectiveDateTime': minimum required = 1, but only found 0
+2018-12-03 16:45:11.781 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 3: ERROR - Observation - Profile http://hl7.org/fhir/StructureDefinition/devicemetricobservation, Element 'Observation.device': minimum required = 1, but only found 0
+2018-12-03 16:45:11.781 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 4: INFORMATION - Observation.code - Binding for path Observation.code has no source, so can't be checked
+2018-12-03 16:45:11.784 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateResourceFailingInvariant
+2018-12-03 16:45:11.794 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateCodeWithTailingSpace
+2018-12-03 16:45:11.798 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:324] Result 0: WARNING - Patient - A resource should have narrative for robust management [text.div.exists()]
+2018-12-03 16:45:11.799 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:324] Result 1: WARNING - Patient.maritalStatus - Code http://foo/AA   was not validated because the code system is not present
+2018-12-03 16:45:11.799 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:324] Result 2: ERROR - Patient.maritalStatus.coding.code - The code 'AA  ' is not valid (whitespace rules)
+2018-12-03 16:45:11.799 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateResourceWithExampleBindingCodeValidationFailing
+2018-12-03 16:45:11.868 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateResourceWithValuesetExpansionGood
+2018-12-03 16:45:11.881 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateRawJsonResourceBadAttributes
+2018-12-03 16:45:11.891 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:660] /Patient
+2018-12-03 16:45:11.891 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:661] Unrecognised property '@foo'
+2018-12-03 16:45:11.891 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateRelatedPerson
+2018-12-03 16:45:11.913 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 0: WARNING - RelatedPerson - A resource should have narrative for robust management [text.div.exists()]
+2018-12-03 16:45:11.914 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 1: INFORMATION - RelatedPerson.relationship - None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype (http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype, and a code is recommended to come from this value set) (codes = http://terminology.hl7.org/CodeSystem/v2-0131#GAGAGAGA)
+2018-12-03 16:45:11.914 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 2: WARNING - RelatedPerson.relationship.coding - Unknown code: http://terminology.hl7.org/CodeSystem/v2-0131 / GAGAGAGA
+2018-12-03 16:45:11.915 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testIsNoTerminologyChecks
+2018-12-03 16:45:11.917 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testMultiplePerformer
+2018-12-03 16:45:11.979 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:217] Result 0: WARNING - 0:0 Observation - A resource should have narrative for robust management [text.div.exists()]
+2018-12-03 16:45:11.979 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:217] Result 1: ERROR - 0:0 Observation - Profile http://hl7.org/fhir/StructureDefinition/Observation, Element 'Observation.status': minimum required = 1, but only found 0
+2018-12-03 16:45:11.979 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:217] Result 2: ERROR - 0:0 Observation - Profile http://hl7.org/fhir/StructureDefinition/Observation, Element 'Observation.code': minimum required = 1, but only found 0
+2018-12-03 16:45:11.980 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:217] Result 3: WARNING - 0:0 Observation.contained[1] - A resource should have narrative for robust management [text.div.exists()]
+2018-12-03 16:45:11.980 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:217] Result 4: WARNING - 0:0 Observation.contained[2] - A resource should have narrative for robust management [text.div.exists()]
+2018-12-03 16:45:11.980 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:217] Result 5: WARNING - 0:0 Observation.performer[1].contained - A resource should have narrative for robust management [text.div.exists()]
+2018-12-03 16:45:11.980 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:217] Result 6: WARNING - 0:0 Observation.performer[2].contained - A resource should have narrative for robust management [text.div.exists()]
+2018-12-03 16:45:11.983 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testBase64Invalid
+2018-12-03 16:45:11.985 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:348] Encoded: {
+  "resourceType": "Media",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">AA</div>"
+  },
+  "status": "not-done",
+  "content": {
+    "contentType": "application/octet-stream",
+    "data": "%%%2@()()",
+    "title": "bbbb syst"
+  }
+}
+2018-12-03 16:45:11.992 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 0: ERROR - Media.content.data - The value "%%%2@()()" is not a valid Base64 value
+2018-12-03 16:45:11.992 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateRawXmlResourceWithEmptyPrimitive
+2018-12-03 16:45:11.999 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 0: ERROR - /f:Patient/f:name/f:given - Element must have some content
+2018-12-03 16:45:11.999 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 1: ERROR - Patient.name.given - primitive types must have a value or must have child extensions
+2018-12-03 16:45:11.999 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 2: ERROR - Patient.name.given - All FHIR elements must have a @value or children [hasValue() or (children().count() > id.count())]
+2018-12-03 16:45:11.999 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateResourceWithExampleBindingCodeValidationPassingLoinc
+2018-12-03 16:45:12.055 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateDoesntEnforceBestPracticesByDefault
+2018-12-03 16:45:12.070 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:217] Result 0: ERROR - 0:0 Observation - All observations should have a subject
+2018-12-03 16:45:12.070 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:217] Result 1: ERROR - 0:0 Observation - All observations should have a performer
+2018-12-03 16:45:12.071 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:217] Result 2: ERROR - 0:0 Observation - All observations should have an effectiveDateTime or an effectivePeriod
+2018-12-03 16:45:12.071 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateProfileWithExtension
+2018-12-03 16:45:12.079 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-resources.xml
+2018-12-03 16:45:15.437 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-types.xml
+2018-12-03 16:45:15.623 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] Loading structure definitions from classpath: /org/hl7/fhir/r4/model/profile/profiles-others.xml
+2018-12-03 16:45:16.159 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:209] Loading structure definitions from classpath: /org/hl7/fhir/r4/model/extension/extension-definitions.xml
+2018-12-03 16:45:16.911 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] Unknown element 'contextType' found while parsing
+2018-12-03 16:45:16.912 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:143] Unknown attribute 'value' found while parsing
+2018-12-03 16:45:16.932 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] Unknown element 'period' found while parsing
+2018-12-03 16:45:17.018 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:168] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/r4/model/valueset/valuesets.xml
+2018-12-03 16:45:18.010 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:168] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/r4/model/valueset/v2-tables.xml
+2018-12-03 16:45:18.658 [main] INFO  o.h.f.r.h.c.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:168] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/r4/model/valueset/v3-codesystems.xml
+2018-12-03 16:45:19.182 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:324] Result 0: WARNING - Consent.category - Error unable to find code system http://loinc.org validating CodeableConcept
+2018-12-03 16:45:19.199 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:324] Result 0: ERROR - Consent.extension[url='http://hl7.org/fhir/StructureDefinition/PruebaExtension'] - The Extension 'http://hl7.org/fhir/StructureDefinition/PruebaExtension' definition allows for the types [string] but found type code
+2018-12-03 16:45:19.200 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:324] Result 1: INFORMATION - Consent.extension.valueCode - Could not verify slice for profile http://hl7.org/fhir/StructureDefinition/PruebaExtension
+2018-12-03 16:45:19.200 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:324] Result 2: ERROR - Consent.extension - Profile http://hl7.org/fhir/StructureDefinition/PruebaExtension, Element 'Consent.extension.valueString[valueString]': minimum required = 1, but only found 0
+2018-12-03 16:45:19.200 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:324] Result 3: WARNING - Consent.category - Error unable to find code system http://loinc.org validating CodeableConcept
+2018-12-03 16:45:19.202 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateResourceWithDefaultValueset
+2018-12-03 16:45:19.207 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:1008] <Observation xmlns="http://hl7.org/fhir">
+   <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">AA</div>
+   </text>
+   <status value="final"/>
+   <code>
+      <text value="No code here!"/>
+   </code>
+</Observation>
+2018-12-03 16:45:19.218 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateResourceContainingProfileDeclarationDoesntResolve
+2018-12-03 16:45:19.230 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 0: WARNING - Observation.meta.profile[0] - StructureDefinition reference "http://foo/structuredefinition/myprofile" could not be resolved
+2018-12-03 16:45:19.237 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testLargeBase64
+2018-12-03 16:45:19.635 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 0: WARNING - DiagnosticReport.code - Code http://loinc.org/1-8 was not validated because the code system is not present
+2018-12-03 16:45:19.636 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateResourceWithExampleBindingCodeValidationPassingLoincWithExpansion
+2018-12-03 16:45:19.666 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:308] Result 0: WARNING - Observation.code.coding - Unknown code: http://loinc.org / 1234
+2018-12-03 16:45:19.667 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:66] Starting test: testValidateRawXmlWithMissingRootNamespace
+2018-12-03 16:45:19.669 [main] INFO  o.h.f.r.v.FhirInstanceValidatorR4Test [FhirInstanceValidatorR4Test.java:860] Patient
+2018-12-03 16:45:19.670 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static org.hl7.fhir.r4.hapi.ctx.DefaultProfileValidationSupport org.hl7.fhir.r4.validation.FhirInstanceValidatorR4Test.myDefaultValidationSupport
+2018-12-03 16:45:19.670 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static ca.uhn.fhir.context.FhirContext org.hl7.fhir.r4.validation.FhirInstanceValidatorR4Test.ourCtx
+2018-12-03 16:45:19.670 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static transient boolean[] org.hl7.fhir.r4.validation.FhirInstanceValidatorR4Test.$jacocoData
+2018-12-03 16:45:19.671 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] Tests are running in locale: 中文 (台灣)
+2018-12-03 16:45:19.671 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:118] Tests are using UNIX line endings and UTF-8
+2018-12-03 16:45:19.671 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] Tests are using time zone: GMT+03:30

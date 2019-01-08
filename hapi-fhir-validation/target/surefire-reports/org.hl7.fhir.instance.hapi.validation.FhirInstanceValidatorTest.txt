@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.hl7.fhir.instance.hapi.validation.FhirInstanceValidatorTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 9.688 s - in org.hl7.fhir.instance.hapi.validation.FhirInstanceValidatorTest

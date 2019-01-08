@@ -1,0 +1,111 @@
+11:41:42.026 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+06:11:42.552 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+06:11:42.553 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in R4 mode
+06:11:42.571 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1435] - Added 1 resource provider(s). Total 1
+06:11:42.571 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.client.LoggingInterceptorTest$DummyProvider
+06:11:42.572 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerProfileProvider
+06:11:42.575 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerCapabilityStatementProvider
+06:11:42.591 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+06:11:42.591 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+06:11:42.593 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@682c423d{HTTP/1.1,[http/1.1]}{0.0.0.0:50602}
+06:11:42.593 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @30323ms
+Starting testLogger
+06:11:42.640 [main] INFO  c.u.f.r.c.i.LoggingInterceptor [LoggingInterceptor.java:78] - Client request: GET http://localhost:50602/Patient/1 HTTP/1.1
+06:11:42.651 [main] INFO  c.u.f.r.c.i.LoggingInterceptor [LoggingInterceptor.java:83] - Client request headers:
+Accept-Charset: utf-8
+Accept: application/fhir+xml;q=1.0, application/fhir+json;q=1.0, application/xml+fhir;q=0.9, application/json+fhir;q=0.9
+User-Agent: HAPI-FHIR/3.6.0-SNAPSHOT (FHIR Client; FHIR 3.5.0/R4; apache)
+Accept-Encoding: gzip
+06:11:42.661 [main] INFO  c.u.f.r.c.i.LoggingInterceptor [LoggingInterceptor.java:123] - Client response: HTTP 200 OK (Patient/1/_history/1) in 9ms
+06:11:42.662 [main] INFO  c.u.f.r.c.i.LoggingInterceptor [LoggingInterceptor.java:139] - Client response headers:
+date: Mon, 07 Jan 2019 06:11:42 GMT
+server: Jetty(9.4.12.v20180830)
+transfer-encoding: chunked
+x-powered-by: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.5.0/R4)
+content-location: http://localhost:50602/Patient/1/_history/1
+etag: W/"1"
+content-type: application/fhir+xml;charset=utf-8
+06:11:42.662 [main] INFO  c.u.f.r.c.i.LoggingInterceptor [LoggingInterceptor.java:156] - Client response body:
+<Patient xmlns="http://hl7.org/fhir"><id value="1"/><meta><versionId value="1"/></meta><identifier><system value="1"/></identifier></Patient>
+Verifying: Client request: GET http://localhost:50602/Patient/1 HTTP/1.1
+Verifying: Client request headers:
+Accept-Charset: utf-8
+Accept: application/fhir+xml;q=1.0, application/fhir+json;q=1.0, application/xml+fhir;q=0.9, application/json+fhir;q=0.9
+User-Agent: HAPI-FHIR/3.6.0-SNAPSHOT (FHIR Client; FHIR 3.5.0/R4; apache)
+Accept-Encoding: gzip
+Verifying: Client response: HTTP 200 OK (Patient/1/_history/1) in 9ms
+Verifying: Client response headers:
+date: Mon, 07 Jan 2019 06:11:42 GMT
+server: Jetty(9.4.12.v20180830)
+transfer-encoding: chunked
+x-powered-by: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.5.0/R4)
+content-location: http://localhost:50602/Patient/1/_history/1
+etag: W/"1"
+content-type: application/fhir+xml;charset=utf-8
+Verifying: Client response body:
+<Patient xmlns="http://hl7.org/fhir"><id value="1"/><meta><versionId value="1"/></meta><identifier><system value="1"/></identifier></Patient>
+Verifying: Client request: GET http://localhost:50602/Patient/1 HTTP/1.1
+Verifying: Client request headers:
+Accept-Charset: utf-8
+Accept: application/fhir+xml;q=1.0, application/fhir+json;q=1.0, application/xml+fhir;q=0.9, application/json+fhir;q=0.9
+User-Agent: HAPI-FHIR/3.6.0-SNAPSHOT (FHIR Client; FHIR 3.5.0/R4; apache)
+Accept-Encoding: gzip
+Verifying: Client response: HTTP 200 OK (Patient/1/_history/1) in 9ms
+Verifying: Client response headers:
+date: Mon, 07 Jan 2019 06:11:42 GMT
+server: Jetty(9.4.12.v20180830)
+transfer-encoding: chunked
+x-powered-by: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.5.0/R4)
+content-location: http://localhost:50602/Patient/1/_history/1
+etag: W/"1"
+content-type: application/fhir+xml;charset=utf-8
+Verifying: Client response body:
+<Patient xmlns="http://hl7.org/fhir"><id value="1"/><meta><versionId value="1"/></meta><identifier><system value="1"/></identifier></Patient>
+Verifying: Client request: GET http://localhost:50602/Patient/1 HTTP/1.1
+Verifying: Client request headers:
+Accept-Charset: utf-8
+Accept: application/fhir+xml;q=1.0, application/fhir+json;q=1.0, application/xml+fhir;q=0.9, application/json+fhir;q=0.9
+User-Agent: HAPI-FHIR/3.6.0-SNAPSHOT (FHIR Client; FHIR 3.5.0/R4; apache)
+Accept-Encoding: gzip
+Verifying: Client response: HTTP 200 OK (Patient/1/_history/1) in 9ms
+Verifying: Client response headers:
+date: Mon, 07 Jan 2019 06:11:42 GMT
+server: Jetty(9.4.12.v20180830)
+transfer-encoding: chunked
+x-powered-by: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.5.0/R4)
+content-location: http://localhost:50602/Patient/1/_history/1
+etag: W/"1"
+content-type: application/fhir+xml;charset=utf-8
+Verifying: Client response body:
+<Patient xmlns="http://hl7.org/fhir"><id value="1"/><meta><versionId value="1"/></meta><identifier><system value="1"/></identifier></Patient>
+Verifying: Client request: GET http://localhost:50602/Patient/1 HTTP/1.1
+Verifying: Client request headers:
+Accept-Charset: utf-8
+Accept: application/fhir+xml;q=1.0, application/fhir+json;q=1.0, application/xml+fhir;q=0.9, application/json+fhir;q=0.9
+User-Agent: HAPI-FHIR/3.6.0-SNAPSHOT (FHIR Client; FHIR 3.5.0/R4; apache)
+Accept-Encoding: gzip
+Verifying: Client response: HTTP 200 OK (Patient/1/_history/1) in 9ms
+Verifying: Client response headers:
+date: Mon, 07 Jan 2019 06:11:42 GMT
+server: Jetty(9.4.12.v20180830)
+transfer-encoding: chunked
+x-powered-by: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.5.0/R4)
+content-location: http://localhost:50602/Patient/1/_history/1
+etag: W/"1"
+content-type: application/fhir+xml;charset=utf-8
+Verifying: Client response body:
+<Patient xmlns="http://hl7.org/fhir"><id value="1"/><meta><versionId value="1"/></meta><identifier><system value="1"/></identifier></Patient>
+Starting testLogger
+06:11:42.713 [main] INFO  c.u.f.r.c.i.LoggingInterceptor [LoggingInterceptor.java:78] - Client request: GET http://localhost:50602/Patient/1 HTTP/1.1
+06:11:42.716 [main] INFO  c.u.f.r.c.i.LoggingInterceptor [LoggingInterceptor.java:123] - Client response: HTTP 200 OK (Patient/1/_history/1) in 2ms
+** Got Message: Client request: GET http://localhost:50602/Patient/1 HTTP/1.1
+** Got Message: Client response: HTTP 200 OK (Patient/1/_history/1) in 2ms
+** Got Message: Client request: GET http://localhost:50602/Patient/1 HTTP/1.1
+** Got Message: Client response: HTTP 200 OK (Patient/1/_history/1) in 2ms
+06:11:42.719 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@682c423d{HTTP/1.1,[http/1.1]}{0.0.0.0:50602}
+06:11:42.730 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.client.LoggingInterceptorTest.ourCtx
+06:11:42.730 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.eclipse.jetty.server.Server ca.uhn.fhir.rest.client.LoggingInterceptorTest.ourServer
+06:11:42.730 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.client.LoggingInterceptorTest.$jacocoData
+06:11:42.731 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: English (Canada)
+06:11:42.731 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:118] - Tests are using UNIX line endings and UTF-8
+06:11:42.731 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+03:30

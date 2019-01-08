@@ -1,0 +1,22 @@
+11:41:31.939 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+
+
+	ranslateClientArgumentIntoQueryArgument
+hello
+ca.uhn.fhir.context.FhirContext@7854a477
+11:41:32.033 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+
+
+	ranslateClientArgumentIntoQueryArgument
+StringParam[value=hello,exact=true]
+ca.uhn.fhir.context.FhirContext@30ec4feb
+11:41:32.136 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+
+
+	ranslateClientArgumentIntoQueryArgument
+StringParam[value=hello]
+ca.uhn.fhir.context.FhirContext@6552f357
+11:41:32.207 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.client.StringClientTest.$jacocoData
+11:41:32.207 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: Deutsch (Deutschland)
+11:41:32.207 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] - Tests are using WINDOWS line endings and ISO-8851-1
+11:41:32.207 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+03:30

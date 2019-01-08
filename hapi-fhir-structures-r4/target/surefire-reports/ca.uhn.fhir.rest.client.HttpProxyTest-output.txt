@@ -1,0 +1,24 @@
+11:41:41.772 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:42.338 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+11:41:42.340 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in R4 mode
+11:41:42.355 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1435] - Added 1 resource provider(s). Total 1
+11:41:42.355 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.client.HttpProxyTest$PatientResourceProvider
+11:41:42.356 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerProfileProvider
+11:41:42.359 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerCapabilityStatementProvider
+11:41:42.366 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+11:41:42.366 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+11:41:42.367 [main] INFO  o.e.j.server.handler.ContextHandler [ContextHandler.java:850] - Started o.e.j.s.ServletContextHandler@58bbb6e7{/rootctx/rcp2,null,AVAILABLE}
+11:41:42.369 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@741888c{HTTP/1.1,[http/1.1]}{0.0.0.0:50601}
+11:41:42.370 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @30110ms
+11:41:42.414 [qtp1304710731-58] INFO  c.uhn.fhir.rest.client.HttpProxyTest [HttpProxyTest.java:133] - [User-Agent, Accept-Charset, Host, Accept-Encoding, Accept, Proxy-Connection]
+11:41:42.414 [qtp1304710731-58] INFO  c.uhn.fhir.rest.client.HttpProxyTest [HttpProxyTest.java:134] - Proxy-Connection: [Keep-Alive]
+11:41:42.414 [qtp1304710731-58] INFO  c.uhn.fhir.rest.client.HttpProxyTest [HttpProxyTest.java:135] - Host: [99.99.99.99:50601]
+11:41:42.415 [qtp1304710731-58] INFO  c.uhn.fhir.rest.client.HttpProxyTest [HttpProxyTest.java:136] - User-Agent: [HAPI-FHIR/3.6.0-SNAPSHOT (FHIR Client; FHIR 3.5.0/R4; apache)]
+11:41:42.417 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@741888c{HTTP/1.1,[http/1.1]}{0.0.0.0:50601}
+11:41:42.418 [main] INFO  o.e.j.server.handler.ContextHandler [ContextHandler.java:1040] - Stopped o.e.j.s.ServletContextHandler@58bbb6e7{/rootctx/rcp2,null,UNAVAILABLE}
+11:41:42.429 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.client.HttpProxyTest.ourCtx
+11:41:42.429 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static javax.servlet.http.HttpServletRequest ca.uhn.fhir.rest.client.HttpProxyTest.ourRequest
+11:41:42.429 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.client.HttpProxyTest.$jacocoData
+11:41:42.430 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: Deutsch (Deutschland)
+11:41:42.430 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] - Tests are using WINDOWS line endings and ISO-8851-1
+11:41:42.430 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+03:30

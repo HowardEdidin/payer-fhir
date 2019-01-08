@@ -1,0 +1,9 @@
+16:41:52.995 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:136] - Multiple repetitions of non-repeatable element 'null' found while parsing
+16:41:53.003 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:143] - Unknown attribute 'null' found while parsing
+16:41:53.004 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'null' found while parsing
+16:41:53.004 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:69] - Resource has contained child resource with no ID
+16:41:53.004 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:157] - Resource has invalid reference: null
+16:41:53.005 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element null - Expected ARRAY and found SCALAR
+16:41:53.128 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:87] - Invalid attribute value "FOO": 
+16:41:53.128 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:87] - Invalid attribute value "null": 
+16:41:53.132 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element null - Expected SCALAR (BOOLEAN) and found SCALAR (STRING)

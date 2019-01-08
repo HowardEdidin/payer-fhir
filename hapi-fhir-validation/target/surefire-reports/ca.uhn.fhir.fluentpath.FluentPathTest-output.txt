@@ -1,0 +1,10 @@
+2018-12-03 16:45:19.852 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] Creating new FHIR context for FHIR version [DSTU3]
+2018-12-03 16:45:19.905 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-resources.xml
+2018-12-03 16:45:21.506 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-types.xml
+2018-12-03 16:45:21.588 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-others.xml
+2018-12-03 16:45:22.091 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/extension/extension-definitions.xml
+2018-12-03 16:45:22.774 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.fluentpath.FluentPathTest.ourCtx
+2018-12-03 16:45:22.775 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static transient boolean[] ca.uhn.fhir.fluentpath.FluentPathTest.$jacocoData
+2018-12-03 16:45:22.775 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] Tests are running in locale: Deutsch (Deutschland)
+2018-12-03 16:45:22.775 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] Tests are using WINDOWS line endings and ISO-8851-1
+2018-12-03 16:45:22.775 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] Tests are using time zone: GMT-05:00

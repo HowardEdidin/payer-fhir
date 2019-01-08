@@ -1,0 +1,55 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1543835380897
+Build-Jdk: 1.8.0_192
+Built-By: kumarelubandi
+Bundle-Description: An open-source implementation of the FHIR specificat
+ ion in Java.
+Bundle-DocURL: http://www.uhn.ca
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: HAPI FHIR - Utilities
+Bundle-SymbolicName: ca.uhn.hapi.fhir.hapi-fhir-utilities
+Bundle-Vendor: University Health Network
+Bundle-Version: 3.6.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.hl7.fhir.exceptions;version="3.6.0",org.hl7.fhir.uti
+ lities;version="3.6.0";uses:="com.google.gson,javax.xml.parsers,javax.x
+ ml.transform,org.hl7.fhir.exceptions,org.w3c.dom.ls,org.xml.sax",org.hl
+ 7.fhir.utilities.xhtml;version="3.6.0";uses:="ca.uhn.fhir.model.api.ann
+ otation,org.hl7.fhir.exceptions,org.hl7.fhir.instance.model.api,org.hl7
+ .fhir.utilities,org.hl7.fhir.utilities.xml,org.w3c.dom,org.xmlpull.v1",
+ org.hl7.fhir.utilities.xls;version="3.6.0";uses:="javax.xml.parsers,jav
+ ax.xml.transform,org.hl7.fhir.exceptions,org.xml.sax",org.hl7.fhir.util
+ ities.cache;version="3.6.0";uses:="com.google.gson,org.hl7.fhir.utiliti
+ es",org.hl7.fhir.utilities.tests;version="3.6.0",org.hl7.fhir.utilities
+ .xml;version="3.6.0";uses:="javax.xml.namespace,javax.xml.parsers,javax
+ .xml.transform,org.hl7.fhir.exceptions,org.hl7.fhir.utilities,org.w3c.d
+ om,org.xml.sax",org.hl7.fhir.utilities.ucum;version="3.6.0";uses:="org.
+ hl7.fhir.exceptions,org.hl7.fhir.utilities.ucum.special,org.xmlpull.v1"
+ ,org.hl7.fhir.utilities.ucum.tests;version="3.6.0";uses:="org.hl7.fhir.
+ exceptions,org.xmlpull.v1",org.hl7.fhir.utilities.ucum.special;version=
+ "3.6.0";uses:="org.hl7.fhir.utilities.ucum",org.hl7.fhir.utilities.json
+ ;version="3.6.0";uses:="com.google.gson",org.hl7.fhir.utilities.graphql
+ ;version="3.6.0";uses:="com.google.gson,org.hl7.fhir.exceptions",org.hl
+ 7.fhir.utilities.validation;version="3.6.0";uses:="org.hl7.fhir.excepti
+ ons",org.fhir.ucum;version="3.6.0";uses:="org.fhir.ucum.special,org.xml
+ pull.v1",org.fhir.ucum.special;version="3.6.0";uses:="org.fhir.ucum"
+Import-Package: ca.uhn.fhir.model.api.annotation;version="[3.6,4)",ca.uh
+ n.fhir.model.primitive;version="[3.6,4)",com.github.rjeschke.txtmark;re
+ solution:=optional,com.google.gson;version="[2.8,3)",javax.imageio,java
+ x.sound.sampled,javax.xml.namespace;resolution:=optional,javax.xml.pars
+ ers,javax.xml.transform,javax.xml.transform.dom,javax.xml.transform.str
+ eam,net.sf.saxon;resolution:=optional,org.apache.commons.codec.binary;v
+ ersion="[1.11,2)",org.apache.commons.io;version="[1.4,2)",org.apache.co
+ mmons.lang3.builder;version="[3.8,4)",org.commonmark.node;resolution:=o
+ ptional,org.commonmark.parser;resolution:=optional,org.commonmark.rende
+ rer.html;resolution:=optional,org.fhir.ucum;version="[3.6,4)",org.fhir.
+ ucum.special;version="[3.6,4)",org.hl7.fhir.exceptions;version="[3.6,4)
+ ",org.hl7.fhir.instance.model.api;version="[3.6,4)",org.hl7.fhir.utilit
+ ies;version="[3.6,4)",org.hl7.fhir.utilities.ucum;version="[3.6,4)",org
+ .hl7.fhir.utilities.ucum.special;version="[3.6,4)",org.hl7.fhir.utiliti
+ es.xhtml;version="[3.6,4)",org.hl7.fhir.utilities.xml;version="[3.6,4)"
+ ,org.w3c.dom,org.w3c.dom.ls,org.xml.sax,org.xmlpull.v1;resolution:=opti
+ onal
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.5.0.201709291849

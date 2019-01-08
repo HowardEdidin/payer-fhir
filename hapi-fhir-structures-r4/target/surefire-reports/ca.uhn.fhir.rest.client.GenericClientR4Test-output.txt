@@ -1,0 +1,131 @@
+11:41:27.013 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:30.306 [main] INFO  c.u.f.r.client.GenericClientR4Test [GenericClientR4Test.java:550] - Encoding conformance
+11:41:30.329 [main] INFO  c.u.f.r.client.GenericClientR4Test [GenericClientR4Test.java:547] - Encoding patient
+11:41:30.336 [main] INFO  c.u.f.r.client.GenericClientR4Test [GenericClientR4Test.java:547] - Encoding patient
+11:41:30.342 [main] INFO  c.u.f.r.client.GenericClientR4Test [GenericClientR4Test.java:550] - Encoding conformance
+11:41:30.347 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:30.547 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:30.550 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:30.615 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:30.615 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:30.619 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:30.620 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:30.623 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:30.623 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:30.630 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:30.630 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:30.634 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:30.635 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:30.638 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:30.638 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:30.641 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:30.641 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:31.676 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:31.682 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:31.684 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:31.685 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:31.696 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:31.697 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:31.723 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:31.724 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:31.727 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:31.728 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:31.733 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:31.733 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:31.744 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:31.745 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:31.748 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:31.749 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:31.753 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:31.753 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:31.756 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:31.756 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:31.759 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:31.760 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+ 
+
+ Generic Client params
+{}
+ca.uhn.fhir.rest.client.impl.GenericClient$OutcomeResponseHandler@7996e288
+ca.uhn.fhir.rest.client.method.HttpPostClientInvocation@5efd7829
+11:41:31.906 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:31.906 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+ 
+
+ Generic Client params
+{}
+ca.uhn.fhir.rest.client.impl.GenericClient$OutcomeResponseHandler@6eff16ac
+ca.uhn.fhir.rest.client.method.HttpPostClientInvocation@33fb7e39
+11:41:32.002 [main] INFO  c.u.f.r.client.GenericClientR4Test [GenericClientR4Test.java:223] - [User-Agent: HAPI-FHIR/3.6.0-SNAPSHOT (FHIR Client; FHIR 3.5.0/R4; apache), Accept-Charset: utf-8, Accept-Encoding: gzip, Accept: application/fhir+xml;q=1.0, application/xml+fhir;q=0.9, Content-Type: application/fhir+xml; charset=UTF-8]
+11:41:32.009 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.009 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:32.011 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.012 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:32.039 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.048 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:32.051 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.052 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+ 
+
+ Generic Client params
+{}
+ca.uhn.fhir.rest.client.impl.GenericClient$OutcomeResponseHandler@57080e26
+ca.uhn.fhir.rest.client.method.HttpPostClientInvocation@60c358d4
+11:41:32.070 [main] INFO  c.u.f.rest.client.impl.GenericClient [GenericClient.java:1388] - Server did not return resource for Prefer-representation, going to fetch: http://foo.com/base/Patient/222/_history/3
+11:41:32.079 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.080 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+ 
+
+ Generic Client params
+{}
+ca.uhn.fhir.rest.client.impl.GenericClient$OutcomeResponseHandler@3037ccad
+ca.uhn.fhir.rest.client.method.HttpPostClientInvocation@566f2f1
+11:41:32.109 [main] INFO  c.u.f.r.client.GenericClientR4Test [GenericClientR4Test.java:184] - [User-Agent: HAPI-FHIR/3.6.0-SNAPSHOT (FHIR Client; FHIR 3.5.0/R4; apache), Accept-Charset: utf-8, Accept-Encoding: gzip, Accept: application/fhir+xml;q=1.0, application/xml+fhir;q=0.9, Content-Type: application/fhir+xml; charset=UTF-8]
+11:41:32.115 [main] INFO  c.u.f.r.client.GenericClientR4Test [GenericClientR4Test.java:2012] - [User-Agent: HAPI-FHIR/3.6.0-SNAPSHOT (FHIR Client; FHIR 3.5.0/R4; apache), Accept-Charset: utf-8, Accept-Encoding: gzip, Accept: application/fhir+xml;q=1.0, application/xml+fhir;q=0.9, Content-Type: application/fhir+xml; charset=UTF-8]
+11:41:32.259 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.259 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:32.268 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.269 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:32.316 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.316 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:32.353 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.353 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:32.434 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.434 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:32.438 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.440 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:32.447 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.448 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:32.450 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.451 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:32.471 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.471 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:32.472 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.473 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:32.474 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.475 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:32.476 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.477 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:32.478 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.479 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:32.482 [main] INFO  c.u.f.r.client.GenericClientR4Test [GenericClientR4Test.java:1465] - 2019-01-07T09:41:32+03:30
+11:41:32.485 [main] INFO  c.u.f.r.client.GenericClientR4Test [GenericClientR4Test.java:598] - Encoding conformance
+11:41:32.507 [main] INFO  c.u.f.r.client.GenericClientR4Test [GenericClientR4Test.java:595] - Encoding patient
+11:41:32.508 [main] INFO  c.u.f.r.client.GenericClientR4Test [GenericClientR4Test.java:595] - Encoding patient
+11:41:32.509 [main] INFO  c.u.f.r.client.GenericClientR4Test [GenericClientR4Test.java:598] - Encoding conformance
+11:41:32.519 [main] INFO  c.u.f.rest.client.impl.GenericClient [GenericClient.java:1388] - Server did not return resource for Prefer-representation, going to fetch: http://foo.com/base/Patient/222/_history/3
+11:41:32.541 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:78] - Found incorrect type for element id - Expected SCALAR (STRING) and found NULL
+11:41:32.542 [main] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'base' found while parsing
+11:41:32.613 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+ 
+
+ Generic Client params
+{}
+ca.uhn.fhir.rest.client.impl.GenericClient$OutcomeResponseHandler@522a3c6d
+ca.uhn.fhir.rest.client.method.HttpPostClientInvocation@20b29cdf
+11:41:32.620 [main] INFO  c.u.f.r.client.GenericClientR4Test [GenericClientR4Test.java:2143] - [User-Agent: HAPI-FHIR/3.6.0-SNAPSHOT (FHIR Client; FHIR 3.5.0/R4; apache), Accept-Charset: utf-8, Accept-Encoding: gzip, Accept: application/fhir+xml;q=1.0, application/fhir+json;q=1.0, application/xml+fhir;q=0.9, application/json+fhir;q=0.9, Content-Type: application/foo]
+11:41:32.684 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.client.GenericClientR4Test.ourCtx
+11:41:32.684 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.client.GenericClientR4Test.$jacocoData
+11:41:32.684 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: English (Canada)
+11:41:32.684 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:118] - Tests are using UNIX line endings and UTF-8
+11:41:32.685 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+03:30

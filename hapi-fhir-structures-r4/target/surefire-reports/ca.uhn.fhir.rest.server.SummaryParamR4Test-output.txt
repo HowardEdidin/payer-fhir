@@ -1,0 +1,113 @@
+11:41:40.892 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+11:41:41.395 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+11:41:41.397 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in R4 mode
+11:41:41.562 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1435] - Added 2 resource provider(s). Total 2
+11:41:41.562 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.SummaryParamR4Test$DummyPatientResourceProvider
+11:41:41.566 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.SummaryParamR4Test$DummyMedicationRequestProvider
+11:41:41.566 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerProfileProvider
+11:41:41.594 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.r4.hapi.rest.server.ServerCapabilityStatementProvider
+11:41:41.615 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+11:41:41.617 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+11:41:41.620 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@1a4f2d66{HTTP/1.1,[http/1.1]}{0.0.0.0:50592}
+11:41:41.620 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @29360ms
+11:41:41.632 [main] INFO  c.u.f.rest.server.SummaryParamR4Test [SummaryParamR4Test.java:60] - <Patient xmlns="http://hl7.org/fhir"><id value="1"/><meta><versionId value="1"/><tag><system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/><code value="SUBSETTED"/><display value="Resource encoded in summary mode"/></tag></meta><name><family value="FAMILY"/></name><maritalStatus><coding><code value="D"/></coding></maritalStatus></Patient>
+11:41:41.649 [main] INFO  c.u.f.rest.server.SummaryParamR4Test [SummaryParamR4Test.java:80] - <div xmlns="http://www.w3.org/1999/xhtml">THE DIV</div>
+11:41:41.653 [main] INFO  c.u.f.rest.server.SummaryParamR4Test [SummaryParamR4Test.java:114] - <Patient xmlns="http://hl7.org/fhir"><id value="1"/><meta><versionId value="1"/><tag><system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/><code value="SUBSETTED"/><display value="Resource encoded in summary mode"/></tag></meta><name><family value="FAMILY"/></name></Patient>
+11:41:41.688 [main] INFO  c.u.f.rest.server.SummaryParamR4Test [SummaryParamR4Test.java:165] - <Bundle xmlns="http://hl7.org/fhir"><id value="149857f9-c33d-4f09-826f-932c4e603aa9"/><meta><lastUpdated value="2019-01-07T09:41:41.654+03:30"/><tag><system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/><code value="SUBSETTED"/><display value="Resource encoded in summary mode"/></tag></meta><type value="searchset"/><total value="1"/><link><relation value="self"/><url value="http://localhost:50592/Patient?_summary=data"/></link><entry><fullUrl value="http://localhost:50592/Patient/1"/><resource><Patient xmlns="http://hl7.org/fhir"><id value="1"/><meta><versionId value="1"/><tag><system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/><code value="SUBSETTED"/><display value="Resource encoded in summary mode"/></tag></meta><name><family value="FAMILY"/></name><maritalStatus><coding><code value="D"/></coding></maritalStatus></Patient></resource><response><status value="201 Created"/><etag value="W/&quot;1&quot;"/></response></entry></Bundle>
+11:41:41.695 [main] INFO  c.u.f.rest.server.SummaryParamR4Test [SummaryParamR4Test.java:197] - <Bundle xmlns="http://hl7.org/fhir"><id value="072cd688-0567-495b-8a5e-c38ebb20930d"/><meta><lastUpdated value="2019-01-07T09:41:41.690+03:30"/><tag><system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/><code value="SUBSETTED"/><display value="Resource encoded in summary mode"/></tag></meta><type value="searchset"/><total value="1"/><link><relation value="self"/><url value="http://localhost:50592/Patient?_summary=text"/></link><entry><fullUrl value="http://localhost:50592/Patient/1"/><resource><Patient xmlns="http://hl7.org/fhir"><id value="1"/><text><div xmlns="http://www.w3.org/1999/xhtml">THE DIV</div></text></Patient></resource><response><status value="201 Created"/><etag value="W/&quot;1&quot;"/></response></entry></Bundle>
+11:41:41.701 [main] INFO  c.u.f.rest.server.SummaryParamR4Test [SummaryParamR4Test.java:247] - <Bundle xmlns="http://hl7.org/fhir"><id value="488ae868-b059-428d-b839-d55533ca3cb9"/><meta><lastUpdated value="2019-01-07T09:41:41.699+03:30"/><tag><system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/><code value="SUBSETTED"/><display value="Resource encoded in summary mode"/></tag></meta><type value="searchset"/><total value="1"/><link><relation value="self"/><url value="http://localhost:50592/Patient?_summary=true"/></link><entry><fullUrl value="http://localhost:50592/Patient/1"/><resource><Patient xmlns="http://hl7.org/fhir"><id value="1"/><meta><versionId value="1"/><tag><system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/><code value="SUBSETTED"/><display value="Resource encoded in summary mode"/></tag></meta><name><family value="FAMILY"/></name></Patient></resource><response><status value="201 Created"/><etag value="W/&quot;1&quot;"/></response></entry></Bundle>
+11:41:41.704 [main] INFO  c.u.f.rest.server.SummaryParamR4Test [SummaryParamR4Test.java:97] - <div xmlns="http://www.w3.org/1999/xhtml">TEXT</div>
+11:41:41.707 [main] INFO  c.u.f.rest.server.SummaryParamR4Test [SummaryParamR4Test.java:132] - <Bundle xmlns="http://hl7.org/fhir">
+   <id value="8ebd3675-47d6-49da-a271-e48e5260d4e7"/>
+   <total value="1"/>
+</Bundle>
+11:41:41.715 [main] INFO  c.u.f.rest.server.SummaryParamR4Test [SummaryParamR4Test.java:181] - <Bundle xmlns="http://hl7.org/fhir"><id value="0f8dbd2e-c806-45f9-9ee5-39aceaa0949a"/><meta><lastUpdated value="2019-01-07T09:41:41.709+03:30"/></meta><type value="searchset"/><total value="1"/><link><relation value="self"/><url value="http://localhost:50592/Patient?_summary=false"/></link><entry><fullUrl value="http://localhost:50592/Patient/1"/><resource><Patient xmlns="http://hl7.org/fhir"><id value="1"/><meta><versionId value="1"/></meta><text><div xmlns="http://www.w3.org/1999/xhtml">THE DIV</div></text><name><family value="FAMILY"/></name><maritalStatus><coding><code value="D"/></coding></maritalStatus></Patient></resource><response><status value="201 Created"/><etag value="W/&quot;1&quot;"/></response></entry></Bundle>
+11:41:41.718 [qtp222064087-55] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: Can not combine _summary=text with other values for _summary
+11:41:41.721 [main] INFO  c.u.f.rest.server.SummaryParamR4Test [SummaryParamR4Test.java:263] - <OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="Can not combine _summary=text with other values for _summary"/></issue></OperationOutcome>
+11:41:41.730 [main] INFO  c.u.f.rest.server.SummaryParamR4Test [SummaryParamR4Test.java:149] - <Bundle xmlns="http://hl7.org/fhir">
+   <id value="50b33ac5-d12b-4794-bb65-d664211ab193"/>
+   <meta>
+      <lastUpdated value="2019-01-07T09:41:41.723+03:30"/>
+      <tag>
+         <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+         <code value="SUBSETTED"/>
+         <display value="Resource encoded in summary mode"/>
+      </tag>
+   </meta>
+   <type value="searchset"/>
+   <total value="1"/>
+   <link>
+      <relation value="self"/>
+      <url value="http://localhost:50592/Patient?_pretty=true&amp;_summary=count%2Cdata"/>
+   </link>
+   <entry>
+      <fullUrl value="http://localhost:50592/Patient/1"/>
+      <resource>
+         <Patient xmlns="http://hl7.org/fhir">
+            <id value="1"/>
+            <meta>
+               <versionId value="1"/>
+               <tag>
+                  <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+                  <code value="SUBSETTED"/>
+                  <display value="Resource encoded in summary mode"/>
+               </tag>
+            </meta>
+            <name>
+               <family value="FAMILY"/>
+            </name>
+            <maritalStatus>
+               <coding>
+                  <code value="D"/>
+               </coding>
+            </maritalStatus>
+         </Patient>
+      </resource>
+      <response>
+         <status value="201 Created"/>
+         <etag value="W/&quot;1&quot;"/>
+      </response>
+   </entry>
+</Bundle>
+11:41:41.737 [main] INFO  c.u.f.rest.server.SummaryParamR4Test [SummaryParamR4Test.java:230] - <Bundle xmlns="http://hl7.org/fhir"><id value="a5a8c574-ac4d-4c38-ae49-9c19103645cf"/><meta><lastUpdated value="2019-01-07T09:41:41.732+03:30"/><tag><system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/><code value="SUBSETTED"/><display value="Resource encoded in summary mode"/></tag></meta><type value="searchset"/><total value="1"/><link><relation value="self"/><url value="http://localhost:50592/Patient?_query=multi&amp;_summary=text"/></link><entry><fullUrl value="http://localhost:50592/Patient/1"/><resource><Patient xmlns="http://hl7.org/fhir"><id value="1"/><text><div xmlns="http://www.w3.org/1999/xhtml">THE DIV</div></text></Patient></resource><response><status value="201 Created"/><etag value="W/&quot;1&quot;"/></response></entry></Bundle>
+11:41:41.747 [main] INFO  c.u.f.rest.server.SummaryParamR4Test [SummaryParamR4Test.java:214] - <Bundle xmlns="http://hl7.org/fhir">
+   <id value="b9c52faf-aa03-4366-9874-561e499704eb"/>
+   <meta>
+      <lastUpdated value="2019-01-07T09:41:41.743+03:30"/>
+      <tag>
+         <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+         <code value="SUBSETTED"/>
+         <display value="Resource encoded in summary mode"/>
+      </tag>
+   </meta>
+   <type value="searchset"/>
+   <total value="1"/>
+   <link>
+      <relation value="self"/>
+      <url value="http://localhost:50592/MedicationRequest?_pretty=true&amp;_summary=text"/>
+   </link>
+   <entry>
+      <fullUrl value="http://localhost:50592/MedicationRequest/999"/>
+      <resource>
+         <MedicationRequest xmlns="http://hl7.org/fhir">
+            <id value="999"/>
+            <text>
+               <div xmlns="http://www.w3.org/1999/xhtml">TEXT</div>
+            </text>
+            <medicationReference>
+               <reference value="Medication/123"/>
+            </medicationReference>
+         </MedicationRequest>
+      </resource>
+   </entry>
+</Bundle>
+11:41:41.750 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@1a4f2d66{HTTP/1.1,[http/1.1]}{0.0.0.0:50592}
+11:41:41.763 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.apache.http.impl.client.CloseableHttpClient ca.uhn.fhir.rest.server.SummaryParamR4Test.ourClient
+11:41:41.763 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.server.SummaryParamR4Test.ourCtx
+11:41:41.764 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.rest.api.SummaryEnum ca.uhn.fhir.rest.server.SummaryParamR4Test.ourLastSummary
+11:41:41.764 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static java.util.List ca.uhn.fhir.rest.server.SummaryParamR4Test.ourLastSummaryList
+11:41:41.764 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.eclipse.jetty.server.Server ca.uhn.fhir.rest.server.SummaryParamR4Test.ourServer
+11:41:41.764 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.server.SummaryParamR4Test.$jacocoData
+11:41:41.764 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: Deutsch (Deutschland)
+11:41:41.764 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] - Tests are using WINDOWS line endings and ISO-8851-1
+11:41:41.764 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT-05:00

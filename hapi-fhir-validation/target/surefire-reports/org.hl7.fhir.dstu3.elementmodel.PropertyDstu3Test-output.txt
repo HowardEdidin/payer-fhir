@@ -1,0 +1,9 @@
+2018-12-03 16:45:13.991 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] Creating new FHIR context for FHIR version [DSTU3]
+2018-12-03 16:45:14.185 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-resources.xml
+2018-12-03 16:45:16.029 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-types.xml
+2018-12-03 16:45:16.189 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-others.xml
+2018-12-03 16:45:16.675 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/extension/extension-definitions.xml
+2018-12-03 16:45:17.316 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-resources.xml
+2018-12-03 16:45:18.497 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-types.xml
+2018-12-03 16:45:18.622 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-others.xml
+2018-12-03 16:45:19.279 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/extension/extension-definitions.xml

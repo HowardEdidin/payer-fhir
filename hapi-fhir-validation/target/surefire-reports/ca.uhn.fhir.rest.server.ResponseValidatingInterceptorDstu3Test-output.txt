@@ -1,0 +1,415 @@
+2018-12-03 16:45:25.155 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] Creating new FHIR context for FHIR version [DSTU3]
+2018-12-03 16:45:25.735 [main] INFO  org.eclipse.jetty.util.log [Log.java:193] Logging initialized @85574ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-12-03 16:45:26.029 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+2018-12-03 16:45:26.133 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] Initializing HAPI FHIR restful server running in DSTU3 mode
+2018-12-03 16:45:26.181 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1435] Added 1 resource provider(s). Total 1
+2018-12-03 16:45:26.181 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.ResponseValidatingInterceptorDstu3Test$PatientProvider
+2018-12-03 16:45:26.343 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] Scanning type for RESTful methods: class org.hl7.fhir.dstu3.hapi.rest.server.ServerProfileProvider
+2018-12-03 16:45:26.350 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] Scanning type for RESTful methods: class org.hl7.fhir.dstu3.hapi.rest.server.ServerCapabilityStatementProvider
+2018-12-03 16:45:26.363 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+2018-12-03 16:45:26.365 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] A FHIR has been lit on this server
+2018-12-03 16:45:26.515 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] Started ServerConnector@d383a49{HTTP/1.1,[http/1.1]}{0.0.0.0:50881}
+2018-12-03 16:45:26.515 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] Started @86354ms
+2018-12-03 16:45:28.025 [qtp267682210-23] WARN  c.u.f.r.s.i.BaseValidatingInterceptor [BaseValidatingInterceptor.java:295] Validator threw an exception during validation
+java.lang.NullPointerException: null
+2018-12-03 16:45:28.117 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:127] Response was:
+HttpResponseProxy{HTTP/1.1 200 OK [Date: Mon, 03 Dec 2018 11:15:27 GMT, X-Powered-By: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3), Last-Modified: Mon, 03 Dec 2018 11:15:28 GMT, Content-Type: application/fhir+xml;charset=utf-8, Transfer-Encoding: chunked, Server: Jetty(9.4.12.v20180830)] org.apache.http.client.entity.DecompressingEntity@c0a5726}
+2018-12-03 16:45:28.117 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:128] Response was:
+<Bundle xmlns="http://hl7.org/fhir"><id value="3fa4c964-c779-4481-b799-666a505051b5"/><meta><lastUpdated value="2018-12-03T19:15:28.003+08:00"/></meta><type value="searchset"/><total value="1"/><link><relation value="self"/><url value="http://localhost:50881/Patient?foo=bar"/></link><entry><fullUrl value="http://localhost:50881/Patient/1"/><resource><Patient xmlns="http://hl7.org/fhir"><id value="1"/><identifier><value value="002"/></identifier><gender value="male"/></Patient></resource></entry></Bundle>
+2018-12-03 16:45:29.703 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:420] Response was:
+HttpResponseProxy{HTTP/1.1 200 OK [Date: Mon, 03 Dec 2018 11:15:28 GMT, X-Powered-By: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3), Last-Modified: Mon, 03 Dec 2018 11:15:28 GMT, Content-Type: application/fhir+xml;charset=utf-8, Transfer-Encoding: chunked, Server: Jetty(9.4.12.v20180830)] org.apache.http.client.entity.DecompressingEntity@1c72c47e}
+2018-12-03 16:45:30.227 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:277] Response was:
+HttpResponseProxy{HTTP/1.1 200 OK [Date: Mon, 03 Dec 2018 11:15:29 GMT, X-Powered-By: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3), Last-Modified: Mon, 03 Dec 2018 11:15:29 GMT, X-FHIR-Response-Validation: {"resourceType":"OperationOutcome","issue":[{"severity":"information","code":"informational","diagnostics":"No issues detected"}]}, Content-Type: application/fhir+xml;charset=utf-8, Transfer-Encoding: chunked, Server: Jetty(9.4.12.v20180830)] org.apache.http.client.entity.DecompressingEntity@38a8c200}
+2018-12-03 16:45:30.528 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:303] Response was:
+HttpResponseProxy{HTTP/1.1 422 Unprocessable Entity [Date: Mon, 03 Dec 2018 11:15:30 GMT, X-Powered-By: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3), Content-Type: application/fhir+xml;charset=utf-8, Transfer-Encoding: chunked, Server: Jetty(9.4.12.v20180830)] ResponseEntityProxy{[Content-Type: application/fhir+xml;charset=utf-8,Chunked: true]}}
+2018-12-03 16:45:30.528 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:304] Response was:
+<OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="[error] in /*:Patient[namespace-uri()='http://hl7.org/fhir'][1]/*:contact[namespace-uri()='http://hl7.org/fhir'][1] @ Patient pat-1: SHALL at least contain a contact's details or a reference to an organization Test=exists(f:name) or exists(f:telecom) or exists(f:address) or exists(f:organization)"/><location value="Patient"/></issue></OperationOutcome>
+2018-12-03 16:45:30.862 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:399] Response was:
+HttpResponseProxy{HTTP/1.1 422 Unprocessable Entity [Date: Mon, 03 Dec 2018 11:15:30 GMT, X-Powered-By: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3), Content-Type: application/fhir+xml;charset=utf-8, Transfer-Encoding: chunked, Server: Jetty(9.4.12.v20180830)] ResponseEntityProxy{[Content-Type: application/fhir+xml;charset=utf-8,Chunked: true]}}
+2018-12-03 16:45:30.862 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:400] Response was:
+<OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="[error] in /*:Patient[namespace-uri()='http://hl7.org/fhir'][1]/*:contact[namespace-uri()='http://hl7.org/fhir'][1] @ Patient pat-1: SHALL at least contain a contact's details or a reference to an organization Test=exists(f:name) or exists(f:telecom) or exists(f:address) or exists(f:organization)"/><location value="Patient"/></issue></OperationOutcome>
+2018-12-03 16:45:30.865 [qtp267682210-24] WARN  c.u.f.r.s.i.BaseValidatingInterceptor [BaseValidatingInterceptor.java:295] Validator threw an exception during validation
+ca.uhn.fhir.rest.server.exceptions.InternalErrorException: null
+2018-12-03 16:45:30.868 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:187] Response was:
+HttpResponseProxy{HTTP/1.1 200 OK [Date: Mon, 03 Dec 2018 11:15:30 GMT, X-Powered-By: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3), Last-Modified: Mon, 03 Dec 2018 11:15:30 GMT, Content-Type: application/fhir+xml;charset=utf-8, Transfer-Encoding: chunked, Server: Jetty(9.4.12.v20180830)] org.apache.http.client.entity.DecompressingEntity@8ffad73}
+2018-12-03 16:45:30.868 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:188] Response was:
+<Bundle xmlns="http://hl7.org/fhir"><id value="4baca7e8-df68-4efe-b209-6c1193409b6e"/><meta><lastUpdated value="2018-12-03T19:15:30.864+08:00"/></meta><type value="searchset"/><total value="1"/><link><relation value="self"/><url value="http://localhost:50881/Patient?foo=bar"/></link><entry><fullUrl value="http://localhost:50881/Patient/1"/><resource><Patient xmlns="http://hl7.org/fhir"><id value="1"/><identifier><value value="002"/></identifier><gender value="male"/></Patient></resource></entry></Bundle>
+2018-12-03 16:45:30.882 [qtp267682210-22] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-resources.xml
+2018-12-03 16:45:32.821 [qtp267682210-22] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-types.xml
+2018-12-03 16:45:32.995 [qtp267682210-22] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-others.xml
+2018-12-03 16:45:33.544 [qtp267682210-22] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/extension/extension-definitions.xml
+2018-12-03 16:45:34.406 [qtp267682210-22] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:175] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/dstu3/model/valueset/valuesets.xml
+2018-12-03 16:45:35.568 [qtp267682210-22] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:175] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/dstu3/model/valueset/v2-tables.xml
+2018-12-03 16:45:36.010 [qtp267682210-22] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:175] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/dstu3/model/valueset/v3-codesystems.xml
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting org/hl7/fhir/r4/formats/XmlParser.
+	at org.jacoco.agent.rt.internal_28bab1d.CoverageTransformer.transform(CoverageTransformer.java:93)
+	at sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:428)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:468)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.hl7.fhir.r4.validation.InstanceValidator.checkPrimitive(InstanceValidator.java:1381)
+	at org.hl7.fhir.r4.validation.InstanceValidator.validateElement(InstanceValidator.java:3574)
+	at org.hl7.fhir.r4.validation.InstanceValidator.start(InstanceValidator.java:2580)
+	at org.hl7.fhir.r4.validation.InstanceValidator.validateResource(InstanceValidator.java:3840)
+	at org.hl7.fhir.r4.validation.InstanceValidator.validate(InstanceValidator.java:653)
+	at org.hl7.fhir.r4.validation.InstanceValidator.validate(InstanceValidator.java:579)
+	at org.hl7.fhir.r4.validation.InstanceValidator.validate(InstanceValidator.java:558)
+	at org.hl7.fhir.dstu3.hapi.validation.FhirInstanceValidator.validate(FhirInstanceValidator.java:265)
+	at org.hl7.fhir.dstu3.hapi.validation.FhirInstanceValidator.validate(FhirInstanceValidator.java:335)
+	at org.hl7.fhir.dstu3.hapi.validation.BaseValidatorBridge.doValidate(BaseValidatorBridge.java:20)
+	at org.hl7.fhir.dstu3.hapi.validation.BaseValidatorBridge.validateResource(BaseValidatorBridge.java:43)
+	at org.hl7.fhir.dstu3.hapi.validation.FhirInstanceValidator.validateResource(FhirInstanceValidator.java:51)
+	at ca.uhn.fhir.validation.FhirValidator.validateWithResult(FhirValidator.java:213)
+	at ca.uhn.fhir.rest.server.interceptor.ResponseValidatingInterceptor.doValidate(ResponseValidatingInterceptor.java:64)
+	at ca.uhn.fhir.rest.server.interceptor.ResponseValidatingInterceptor.doValidate(ResponseValidatingInterceptor.java:40)
+	at ca.uhn.fhir.rest.server.interceptor.BaseValidatingInterceptor.validate(BaseValidatingInterceptor.java:292)
+	at ca.uhn.fhir.rest.server.interceptor.ResponseValidatingInterceptor.outgoingResponse(ResponseValidatingInterceptor.java:75)
+	at ca.uhn.fhir.rest.server.method.BaseResourceReturningMethodBinding.invokeServer(BaseResourceReturningMethodBinding.java:396)
+	at ca.uhn.fhir.rest.server.RestfulServer.handleRequest(RestfulServer.java:970)
+	at ca.uhn.fhir.rest.server.RestfulServer.doGet(RestfulServer.java:331)
+	at ca.uhn.fhir.rest.server.RestfulServer.service(RestfulServer.java:1542)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:865)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:535)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:205)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:503)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:364)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:333)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:310)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:168)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:366)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:765)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:683)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Error while instrumenting org/hl7/fhir/r4/formats/XmlParser.
+	at org.jacoco.agent.rt.internal_28bab1d.core.instr.Instrumenter.instrumentError(Instrumenter.java:175)
+	at org.jacoco.agent.rt.internal_28bab1d.core.instr.Instrumenter.instrument(Instrumenter.java:125)
+	at org.jacoco.agent.rt.internal_28bab1d.CoverageTransformer.transform(CoverageTransformer.java:91)
+	... 56 more
+Caused by: org.jacoco.agent.rt.internal_28bab1d.asm.ClassTooLargeException: Class too large: org/hl7/fhir/r4/formats/XmlParser
+	at org.jacoco.agent.rt.internal_28bab1d.asm.ClassWriter.toByteArray(ClassWriter.java:550)
+	at org.jacoco.agent.rt.internal_28bab1d.core.instr.Instrumenter.instrument(Instrumenter.java:104)
+	at org.jacoco.agent.rt.internal_28bab1d.core.instr.Instrumenter.instrument(Instrumenter.java:123)
+	... 57 more
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting org/hl7/fhir/r4/formats/JsonParser.
+	at org.jacoco.agent.rt.internal_28bab1d.CoverageTransformer.transform(CoverageTransformer.java:93)
+	at sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:428)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:468)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.hl7.fhir.r4.validation.InstanceValidator.checkPrimitive(InstanceValidator.java:1381)
+	at org.hl7.fhir.r4.validation.InstanceValidator.validateElement(InstanceValidator.java:3574)
+	at org.hl7.fhir.r4.validation.InstanceValidator.start(InstanceValidator.java:2580)
+	at org.hl7.fhir.r4.validation.InstanceValidator.validateResource(InstanceValidator.java:3840)
+	at org.hl7.fhir.r4.validation.InstanceValidator.validate(InstanceValidator.java:653)
+	at org.hl7.fhir.r4.validation.InstanceValidator.validate(InstanceValidator.java:579)
+	at org.hl7.fhir.r4.validation.InstanceValidator.validate(InstanceValidator.java:558)
+	at org.hl7.fhir.dstu3.hapi.validation.FhirInstanceValidator.validate(FhirInstanceValidator.java:265)
+	at org.hl7.fhir.dstu3.hapi.validation.FhirInstanceValidator.validate(FhirInstanceValidator.java:335)
+	at org.hl7.fhir.dstu3.hapi.validation.BaseValidatorBridge.doValidate(BaseValidatorBridge.java:20)
+	at org.hl7.fhir.dstu3.hapi.validation.BaseValidatorBridge.validateResource(BaseValidatorBridge.java:43)
+	at org.hl7.fhir.dstu3.hapi.validation.FhirInstanceValidator.validateResource(FhirInstanceValidator.java:51)
+	at ca.uhn.fhir.validation.FhirValidator.validateWithResult(FhirValidator.java:213)
+	at ca.uhn.fhir.rest.server.interceptor.ResponseValidatingInterceptor.doValidate(ResponseValidatingInterceptor.java:64)
+	at ca.uhn.fhir.rest.server.interceptor.ResponseValidatingInterceptor.doValidate(ResponseValidatingInterceptor.java:40)
+	at ca.uhn.fhir.rest.server.interceptor.BaseValidatingInterceptor.validate(BaseValidatingInterceptor.java:292)
+	at ca.uhn.fhir.rest.server.interceptor.ResponseValidatingInterceptor.outgoingResponse(ResponseValidatingInterceptor.java:75)
+	at ca.uhn.fhir.rest.server.method.BaseResourceReturningMethodBinding.invokeServer(BaseResourceReturningMethodBinding.java:396)
+	at ca.uhn.fhir.rest.server.RestfulServer.handleRequest(RestfulServer.java:970)
+	at ca.uhn.fhir.rest.server.RestfulServer.doGet(RestfulServer.java:331)
+	at ca.uhn.fhir.rest.server.RestfulServer.service(RestfulServer.java:1542)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:865)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:535)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:205)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:503)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:364)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:333)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:310)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:168)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:366)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:765)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:683)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Error while instrumenting org/hl7/fhir/r4/formats/JsonParser.
+	at org.jacoco.agent.rt.internal_28bab1d.core.instr.Instrumenter.instrumentError(Instrumenter.java:175)
+	at org.jacoco.agent.rt.internal_28bab1d.core.instr.Instrumenter.instrument(Instrumenter.java:125)
+	at org.jacoco.agent.rt.internal_28bab1d.CoverageTransformer.transform(CoverageTransformer.java:91)
+	... 56 more
+Caused by: org.jacoco.agent.rt.internal_28bab1d.asm.ClassTooLargeException: Class too large: org/hl7/fhir/r4/formats/JsonParser
+	at org.jacoco.agent.rt.internal_28bab1d.asm.ClassWriter.toByteArray(ClassWriter.java:550)
+	at org.jacoco.agent.rt.internal_28bab1d.core.instr.Instrumenter.instrument(Instrumenter.java:104)
+	at org.jacoco.agent.rt.internal_28bab1d.core.instr.Instrumenter.instrument(Instrumenter.java:123)
+	... 57 more
+2018-12-03 16:45:37.970 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:458] <CapabilityStatement xmlns="http://hl7.org/fhir">
+   <status value="active"/>
+   <date value="2018-12-03T19:15:30+08:00"/>
+   <publisher value="Not provided"/>
+   <kind value="instance"/>
+   <software>
+      <name value="HAPI FHIR Server"/>
+      <version value="3.6.0-SNAPSHOT"/>
+   </software>
+   <implementation>
+      <description value="HAPI FHIR"/>
+      <url value="http://localhost:50881/"/>
+   </implementation>
+   <fhirVersion value="3.0.1"/>
+   <acceptUnknown value="extensions"/>
+   <format value="application/fhir+xml"/>
+   <format value="application/fhir+json"/>
+   <rest>
+      <mode value="server"/>
+      <resource>
+         <type value="OperationDefinition"/>
+         <profile>
+            <reference value="http://hl7.org/fhir/StructureDefinition/OperationDefinition"/>
+         </profile>
+         <interaction>
+            <code value="read"/>
+         </interaction>
+      </resource>
+      <resource>
+         <type value="Patient"/>
+         <profile>
+            <reference value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+         </profile>
+         <interaction>
+            <code value="delete"/>
+         </interaction>
+         <interaction>
+            <code value="search-type"/>
+         </interaction>
+         <searchParam>
+            <name value="foo"/>
+            <type value="string"/>
+         </searchParam>
+      </resource>
+      <resource>
+         <type value="StructureDefinition"/>
+         <profile>
+            <reference value="http://hl7.org/fhir/StructureDefinition/StructureDefinition"/>
+         </profile>
+         <interaction>
+            <code value="read"/>
+         </interaction>
+         <interaction>
+            <code value="search-type"/>
+         </interaction>
+      </resource>
+   </rest>
+</CapabilityStatement>
+2018-12-03 16:45:37.971 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:461] Response was:
+HttpResponseProxy{HTTP/1.1 200 OK [Date: Mon, 03 Dec 2018 11:15:30 GMT, X-Powered-By: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3), X-FHIR-Response-Validation: No issues, Content-Type: application/fhir+xml;charset=utf-8, Transfer-Encoding: chunked, Server: Jetty(9.4.12.v20180830)] org.apache.http.client.entity.DecompressingEntity@224c926}
+2018-12-03 16:45:37.971 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:462] Response was:
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+   <status value="active"/>
+   <date value="2018-12-03T19:15:30+08:00"/>
+   <publisher value="Not provided"/>
+   <kind value="instance"/>
+   <software>
+      <name value="HAPI FHIR Server"/>
+      <version value="3.6.0-SNAPSHOT"/>
+   </software>
+   <implementation>
+      <description value="HAPI FHIR"/>
+      <url value="http://localhost:50881/"/>
+   </implementation>
+   <fhirVersion value="3.0.1"/>
+   <acceptUnknown value="extensions"/>
+   <format value="application/fhir+xml"/>
+   <format value="application/fhir+json"/>
+   <rest>
+      <mode value="server"/>
+      <resource>
+         <type value="OperationDefinition"/>
+         <profile>
+            <reference value="http://hl7.org/fhir/StructureDefinition/OperationDefinition"/>
+         </profile>
+         <interaction>
+            <code value="read"/>
+         </interaction>
+      </resource>
+      <resource>
+         <type value="Patient"/>
+         <profile>
+            <reference value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+         </profile>
+         <interaction>
+            <code value="delete"/>
+         </interaction>
+         <interaction>
+            <code value="search-type"/>
+         </interaction>
+         <searchParam>
+            <name value="foo"/>
+            <type value="string"/>
+         </searchParam>
+      </resource>
+      <resource>
+         <type value="StructureDefinition"/>
+         <profile>
+            <reference value="http://hl7.org/fhir/StructureDefinition/StructureDefinition"/>
+         </profile>
+         <interaction>
+            <code value="read"/>
+         </interaction>
+         <interaction>
+            <code value="search-type"/>
+         </interaction>
+      </resource>
+   </rest>
+</CapabilityStatement>
+2018-12-03 16:45:37.979 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:440] Response was:
+HttpResponseProxy{HTTP/1.1 200 OK [Date: Mon, 03 Dec 2018 11:15:37 GMT, X-Powered-By: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3), Content-Type: application/fhir+xml;charset=utf-8, Transfer-Encoding: chunked, Server: Jetty(9.4.12.v20180830)] org.apache.http.client.entity.DecompressingEntity@4ccbe4dc}
+2018-12-03 16:45:37.979 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:441] Response was:
+<CapabilityStatement xmlns="http://hl7.org/fhir"><status value="active"/><date value="2018-12-03T19:15:30+08:00"/><publisher value="Not provided"/><kind value="instance"/><software><name value="HAPI FHIR Server"/><version value="3.6.0-SNAPSHOT"/></software><implementation><description value="HAPI FHIR"/><url value="http://localhost:50881/"/></implementation><fhirVersion value="3.0.1"/><acceptUnknown value="extensions"/><format value="application/fhir+xml"/><format value="application/fhir+json"/><rest><mode value="server"/><resource><type value="OperationDefinition"/><profile><reference value="http://hl7.org/fhir/StructureDefinition/OperationDefinition"/></profile><interaction><code value="read"/></interaction></resource><resource><type value="Patient"/><profile><reference value="http://hl7.org/fhir/StructureDefinition/Patient"/></profile><interaction><code value="delete"/></interaction><interaction><code value="search-type"/></interaction><searchParam><name value="foo"/><type value="string"/></searchParam></resource><resource><type value="StructureDefinition"/><profile><reference value="http://hl7.org/fhir/StructureDefinition/StructureDefinition"/></profile><interaction><code value="read"/></interaction><interaction><code value="search-type"/></interaction></resource></rest></CapabilityStatement>
+2018-12-03 16:45:38.002 [qtp267682210-25] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-resources.xml
+2018-12-03 16:45:39.143 [qtp267682210-25] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-types.xml
+2018-12-03 16:45:39.250 [qtp267682210-25] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-others.xml
+2018-12-03 16:45:39.706 [qtp267682210-25] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/extension/extension-definitions.xml
+2018-12-03 16:45:40.551 [qtp267682210-25] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:175] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/dstu3/model/valueset/valuesets.xml
+2018-12-03 16:45:41.495 [qtp267682210-25] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:175] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/dstu3/model/valueset/v2-tables.xml
+2018-12-03 16:45:42.051 [qtp267682210-25] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:175] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/dstu3/model/valueset/v3-codesystems.xml
+2018-12-03 16:45:43.576 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:239] Response was:
+HttpResponseProxy{HTTP/1.1 200 OK [Date: Mon, 03 Dec 2018 11:15:37 GMT, X-Powered-By: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3), Last-Modified: Mon, 03 Dec 2018 11:15:37 GMT, X-FHIR-Response-Validation: {"resourceType":"OperationOutcome","issue":[{"severity":"error","code":"processing","diagnostics":"SHALL at least contain a contact's details or a reference to an organization [name.exists() or tel..., Content-Type: application/fhir+xml;charset=utf-8, Transfer-Encoding: chunked, Server: Jetty(9.4.12.v20180830)] org.apache.http.client.entity.DecompressingEntity@6802699a}
+2018-12-03 16:45:44.168 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:253] Response was:
+HttpResponseProxy{HTTP/1.1 200 OK [Date: Mon, 03 Dec 2018 11:15:43 GMT, X-Powered-By: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3), Last-Modified: Mon, 03 Dec 2018 11:15:43 GMT, X-FHIR-Response-Validation: {"resourceType":"OperationOutcome","issue":[{"severity":"error","code":"processing","diagnostics"..., Content-Type: application/fhir+xml;charset=utf-8, Transfer-Encoding: chunked, Server: Jetty(9.4.12.v20180830)] org.apache.http.client.entity.DecompressingEntity@55b25ae3}
+2018-12-03 16:45:44.173 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:207] Response was:
+HttpResponseProxy{HTTP/1.1 204 No Content [Date: Mon, 03 Dec 2018 11:15:44 GMT, X-Powered-By: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3), ETag: W/"2", Content-Location: http://localhost:50881/Patient/123/_history/2, Content-Encoding: gzip, Server: Jetty(9.4.12.v20180830)]}
+2018-12-03 16:45:44.176 [qtp267682210-25] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-resources.xml
+2018-12-03 16:45:45.476 [qtp267682210-25] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-types.xml
+2018-12-03 16:45:45.560 [qtp267682210-25] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-others.xml
+2018-12-03 16:45:45.878 [qtp267682210-25] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/extension/extension-definitions.xml
+2018-12-03 16:45:46.602 [qtp267682210-25] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:175] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/dstu3/model/valueset/valuesets.xml
+2018-12-03 16:45:47.319 [qtp267682210-25] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:175] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/dstu3/model/valueset/v2-tables.xml
+2018-12-03 16:45:48.135 [qtp267682210-25] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:175] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/dstu3/model/valueset/v3-codesystems.xml
+2018-12-03 16:45:48.377 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:374] Response was:
+HttpResponseProxy{HTTP/1.1 422 Unprocessable Entity [Date: Mon, 03 Dec 2018 11:15:44 GMT, X-Powered-By: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3), X-FHIR-Response-Validation: :0 WARNING No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/v2-0131 (http://hl7.org/fhir/ValueSet/v2-0131 (Bundle.entry.resource.contact.relationship), Content-Type: application/fhir+xml;charset=utf-8, Transfer-Encoding: chunked, Server: Jetty(9.4.12.v20180830)] ResponseEntityProxy{[Content-Type: application/fhir+xml;charset=utf-8,Chunked: true]}}
+2018-12-03 16:45:48.377 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:375] Response was:
+<OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="SHALL at least contain a contact's details or a reference to an organization [name.exists() or telecom.exists() or address.exists() or organization.exists()]"/><location value="Bundle.entry.resource.contact"/></issue><issue><severity value="warning"/><code value="processing"/><diagnostics value="No code provided, and a code should be provided from the value set http://hl7.org/fhir/ValueSet/v2-0131 (http://hl7.org/fhir/ValueSet/v2-0131"/><location value="Bundle.entry.resource.contact.relationship"/></issue></OperationOutcome>
+2018-12-03 16:45:48.380 [qtp267682210-24] ERROR c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:134] Failure during REST processing
+ca.uhn.fhir.rest.server.exceptions.InternalErrorException: FOO
+	at ca.uhn.fhir.validation.FhirValidator.validateWithResult(FhirValidator.java:213)
+	at ca.uhn.fhir.rest.server.interceptor.ResponseValidatingInterceptor.doValidate(ResponseValidatingInterceptor.java:64)
+	at ca.uhn.fhir.rest.server.interceptor.ResponseValidatingInterceptor.doValidate(ResponseValidatingInterceptor.java:40)
+	at ca.uhn.fhir.rest.server.interceptor.BaseValidatingInterceptor.validate(BaseValidatingInterceptor.java:292)
+	at ca.uhn.fhir.rest.server.interceptor.ResponseValidatingInterceptor.outgoingResponse(ResponseValidatingInterceptor.java:75)
+	at ca.uhn.fhir.rest.server.method.BaseResourceReturningMethodBinding.invokeServer(BaseResourceReturningMethodBinding.java:396)
+	at ca.uhn.fhir.rest.server.RestfulServer.handleRequest(RestfulServer.java:970)
+	at ca.uhn.fhir.rest.server.RestfulServer.doGet(RestfulServer.java:331)
+	at ca.uhn.fhir.rest.server.RestfulServer.service(RestfulServer.java:1542)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:865)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:535)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:205)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:503)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:364)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:333)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:310)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:168)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:366)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:765)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:683)
+	at java.lang.Thread.run(Thread.java:748)
+2018-12-03 16:45:48.382 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:157] Response was:
+HttpResponseProxy{HTTP/1.1 500 Server Error [Date: Mon, 03 Dec 2018 11:15:48 GMT, X-Powered-By: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3), Content-Type: application/fhir+xml;charset=utf-8, Transfer-Encoding: chunked, Server: Jetty(9.4.12.v20180830)] ResponseEntityProxy{[Content-Type: application/fhir+xml;charset=utf-8,Chunked: true]}}
+2018-12-03 16:45:48.382 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:158] Response was:
+<OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="FOO"/></issue></OperationOutcome>
+2018-12-03 16:45:48.654 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:348] Response was:
+HttpResponseProxy{HTTP/1.1 200 OK [Date: Mon, 03 Dec 2018 11:15:48 GMT, X-Powered-By: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3), Last-Modified: Mon, 03 Dec 2018 11:15:48 GMT, X-FHIR-Response-Validation: NO ISSUES, Content-Type: application/fhir+xml;charset=utf-8, Transfer-Encoding: chunked, Server: Jetty(9.4.12.v20180830)] org.apache.http.client.entity.DecompressingEntity@1f25f36c}
+2018-12-03 16:45:48.658 [qtp267682210-22] ERROR c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:134] Failure during REST processing
+ca.uhn.fhir.rest.server.exceptions.InternalErrorException: SOME MESSAGE
+	at ca.uhn.fhir.rest.server.interceptor.BaseValidatingInterceptor.validate(BaseValidatingInterceptor.java:301)
+	at ca.uhn.fhir.rest.server.interceptor.ResponseValidatingInterceptor.outgoingResponse(ResponseValidatingInterceptor.java:75)
+	at ca.uhn.fhir.rest.server.method.BaseResourceReturningMethodBinding.invokeServer(BaseResourceReturningMethodBinding.java:396)
+	at ca.uhn.fhir.rest.server.RestfulServer.handleRequest(RestfulServer.java:970)
+	at ca.uhn.fhir.rest.server.RestfulServer.doGet(RestfulServer.java:331)
+	at ca.uhn.fhir.rest.server.RestfulServer.service(RestfulServer.java:1542)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:865)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:535)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:205)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:503)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:364)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:333)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:310)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:168)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:366)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:765)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:683)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: SOME MESSAGE
+	at ca.uhn.fhir.validation.FhirValidator.validateWithResult(FhirValidator.java:213)
+	at ca.uhn.fhir.rest.server.interceptor.ResponseValidatingInterceptor.doValidate(ResponseValidatingInterceptor.java:64)
+	at ca.uhn.fhir.rest.server.interceptor.ResponseValidatingInterceptor.doValidate(ResponseValidatingInterceptor.java:40)
+	at ca.uhn.fhir.rest.server.interceptor.BaseValidatingInterceptor.validate(BaseValidatingInterceptor.java:292)
+	... 26 common frames omitted
+2018-12-03 16:45:48.659 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:97] Response was:
+HttpResponseProxy{HTTP/1.1 500 Server Error [Date: Mon, 03 Dec 2018 11:15:48 GMT, X-Powered-By: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3), Content-Type: application/fhir+xml;charset=utf-8, Transfer-Encoding: chunked, Server: Jetty(9.4.12.v20180830)] ResponseEntityProxy{[Content-Type: application/fhir+xml;charset=utf-8,Chunked: true]}}
+2018-12-03 16:45:48.659 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:98] Response was:
+<OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="SOME MESSAGE"/></issue></OperationOutcome>
+2018-12-03 16:45:48.803 [main] INFO  c.u.f.r.s.ResponseValidatingInterceptorDstu3Test [ResponseValidatingInterceptorDstu3Test.java:324] Response was:
+HttpResponseProxy{HTTP/1.1 200 OK [Date: Mon, 03 Dec 2018 11:15:48 GMT, X-Powered-By: HAPI FHIR 3.6.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3), Last-Modified: Mon, 03 Dec 2018 11:15:48 GMT, Content-Type: application/fhir+xml;charset=utf-8, Transfer-Encoding: chunked, Server: Jetty(9.4.12.v20180830)] org.apache.http.client.entity.DecompressingEntity@20ecf396}
+2018-12-03 16:45:48.812 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] Stopped ServerConnector@d383a49{HTTP/1.1,[http/1.1]}{0.0.0.0:50881}
+2018-12-03 16:45:48.833 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: public static org.hl7.fhir.instance.model.api.IBaseResource ca.uhn.fhir.rest.server.ResponseValidatingInterceptorDstu3Test.myReturnResource
+2018-12-03 16:45:48.833 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static org.apache.http.impl.client.CloseableHttpClient ca.uhn.fhir.rest.server.ResponseValidatingInterceptorDstu3Test.ourClient
+2018-12-03 16:45:48.833 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.server.ResponseValidatingInterceptorDstu3Test.ourCtx
+2018-12-03 16:45:48.833 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static org.eclipse.jetty.server.Server ca.uhn.fhir.rest.server.ResponseValidatingInterceptorDstu3Test.ourServer
+2018-12-03 16:45:48.833 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static ca.uhn.fhir.rest.server.RestfulServer ca.uhn.fhir.rest.server.ResponseValidatingInterceptorDstu3Test.ourServlet
+2018-12-03 16:45:48.834 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.server.ResponseValidatingInterceptorDstu3Test.$jacocoData
+2018-12-03 16:45:48.834 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] Tests are running in locale: Deutsch (Deutschland)
+2018-12-03 16:45:48.834 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] Tests are using WINDOWS line endings and ISO-8851-1
+2018-12-03 16:45:48.834 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] Tests are using time zone: GMT-05:00

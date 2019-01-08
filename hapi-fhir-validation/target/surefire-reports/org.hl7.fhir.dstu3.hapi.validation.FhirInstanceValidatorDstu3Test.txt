@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.hl7.fhir.dstu3.hapi.validation.FhirInstanceValidatorDstu3Test
+-------------------------------------------------------------------------------
+Tests run: 44, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 63.301 s - in org.hl7.fhir.dstu3.hapi.validation.FhirInstanceValidatorDstu3Test

@@ -1,0 +1,40 @@
+2018-12-03 16:44:41.757 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] Creating new FHIR context for FHIR version [DSTU3]
+2018-12-03 16:44:41.770 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-resources.xml
+2018-12-03 16:44:47.900 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-types.xml
+2018-12-03 16:44:48.068 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-others.xml
+2018-12-03 16:44:48.781 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/extension/extension-definitions.xml
+2018-12-03 16:44:50.046 [main] INFO  o.h.f.d.h.v.StructureMapTest [StructureMapTest.java:293] <StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="null-Coding"/>
+   <url value="http://opencimi.org/structuremap/testtransform-Coding"/>
+   <name value="Profile for Coding for TestStructureToCoding"/>
+   <status value="draft"/>
+   <experimental value="false"/>
+   <description value="Generated automatically from the mapping by the Java Reference Implementation"/>
+   <fhirVersion value="3.0.1"/>
+   <kind value="complex-type"/>
+   <abstract value="false"/>
+   <type value="Coding"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Coding"/>
+   <derivation value="constraint"/>
+   <differential>
+      <element>
+         <path value="Coding"/>
+      </element>
+      <element>
+         <path value="Coding.system"/>
+      </element>
+      <element>
+         <path value="Coding.extension"/>
+      </element>
+      <element>
+         <path value="Coding.extension.url"/>
+      </element>
+      <element>
+         <path value="Coding.extension.value[x]"/>
+         <type>
+            <code value="code"/>
+         </type>
+         <fixedString value="v"/>
+      </element>
+   </differential>
+</StructureDefinition>

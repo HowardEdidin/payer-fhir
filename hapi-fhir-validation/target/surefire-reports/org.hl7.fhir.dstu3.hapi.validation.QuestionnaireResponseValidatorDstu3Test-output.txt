@@ -1,0 +1,113 @@
+2018-12-03 16:44:53.962 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] Creating new FHIR context for FHIR version [DSTU3]
+2018-12-03 16:44:54.219 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:400] <Questionnaire xmlns="http://hl7.org/fhir">
+   <item>
+      <linkId value="link1"/>
+      <type value="open-choice"/>
+      <options>
+         <reference value="http://somevalueset"/>
+      </options>
+      <item>
+         <linkId value="link11"/>
+         <type value="text"/>
+      </item>
+   </item>
+</Questionnaire>
+2018-12-03 16:44:54.868 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:411] <QuestionnaireResponse xmlns="http://hl7.org/fhir">
+   <questionnaire>
+      <reference value="http://example.com/Questionnaire/q1"/>
+   </questionnaire>
+   <status value="in-progress"/>
+   <item>
+      <linkId value="link1"/>
+      <answer>
+         <item>
+            <linkId value="link11"/>
+         </item>
+      </answer>
+   </item>
+</QuestionnaireResponse>
+2018-12-03 16:44:55.342 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-resources.xml
+2018-12-03 16:44:56.900 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-types.xml
+2018-12-03 16:44:57.034 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/profile/profiles-others.xml
+2018-12-03 16:44:57.685 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:210] Loading structure definitions from classpath: /org/hl7/fhir/dstu3/model/extension/extension-definitions.xml
+2018-12-03 16:45:02.117 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:175] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/dstu3/model/valueset/valuesets.xml
+2018-12-03 16:45:03.748 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:175] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/dstu3/model/valueset/v2-tables.xml
+2018-12-03 16:45:04.855 [main] INFO  o.h.f.d.h.v.DefaultProfileValidationSupport [DefaultProfileValidationSupport.java:175] Loading CodeSystem/ValueSet from classpath: /org/hl7/fhir/dstu3/model/valueset/v3-codesystems.xml
+2018-12-03 16:45:05.408 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:415] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:45:05.756 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:303] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - No response found for required item link0 - QuestionnaireResponse'}
+2018-12-03 16:45:06.188 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:282] ValidationResult{messageCount=1, isSuccessful=false, description='FATAL - Definition for item link0 does not contain a type - QuestionnaireResponse.item'}
+2018-12-03 16:45:06.530 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:262] ValidationResult{messageCount=2, isSuccessful=false, description='ERROR - No LinkId, so can't be validated - QuestionnaireResponse'}
+2018-12-03 16:45:06.563 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:344] <Questionnaire xmlns="http://hl7.org/fhir">
+   <item>
+      <linkId value="link1"/>
+      <type value="choice"/>
+      <options>
+         <reference value="http://somevalueset"/>
+      </options>
+      <item>
+         <linkId value="link11"/>
+         <type value="text"/>
+      </item>
+   </item>
+</Questionnaire>
+2018-12-03 16:45:06.564 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:355] <QuestionnaireResponse xmlns="http://hl7.org/fhir">
+   <questionnaire>
+      <reference value="http://example.com/Questionnaire/q1"/>
+   </questionnaire>
+   <status value="in-progress"/>
+   <item>
+      <linkId value="link1"/>
+      <answer>
+         <item>
+            <linkId value="link11"/>
+         </item>
+      </answer>
+   </item>
+</QuestionnaireResponse>
+2018-12-03 16:45:07.141 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:359] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:45:07.515 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:593] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - The value provided (http://codesystems.com/system::code1) is not in the options value set in the questionnaire - QuestionnaireResponse.item.answer'}
+2018-12-03 16:45:07.520 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:605] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - The value provided (null::code1) is not in the options value set in the questionnaire - QuestionnaireResponse.item.answer'}
+2018-12-03 16:45:07.524 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:615] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - The value provided (null::code1) is not in the options value set in the questionnaire - QuestionnaireResponse.item.answer'}
+2018-12-03 16:45:07.614 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:624] ValidationResult{messageCount=1, isSuccessful=true, description='INFORMATION - Code http://system/null was not validated because the code system is not present - QuestionnaireResponse.item.answer'}
+2018-12-03 16:45:07.632 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:635] ValidationResult{messageCount=1, isSuccessful=true, description='INFORMATION - Cannot validate integer answer option because no option list is provided - QuestionnaireResponse.item.answer'}
+2018-12-03 16:45:07.636 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:646] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:45:07.639 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:656] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - No response answer found for required item link0 - QuestionnaireResponse.item'}
+2018-12-03 16:45:08.157 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:511] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:45:08.380 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:675] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - LinkId "link1" not found in questionnaire - QuestionnaireResponse'}
+2018-12-03 16:45:08.685 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:693] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - LinkId "link1" not found in questionnaire - QuestionnaireResponse'}
+2018-12-03 16:45:08.687 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:438] <Questionnaire xmlns="http://hl7.org/fhir">
+   <item>
+      <linkId value="link1"/>
+      <type value="text"/>
+      <item>
+         <linkId value="link11"/>
+         <type value="text"/>
+      </item>
+   </item>
+</Questionnaire>
+2018-12-03 16:45:08.687 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:449] <QuestionnaireResponse xmlns="http://hl7.org/fhir">
+   <questionnaire>
+      <reference value="http://example.com/Questionnaire/q1"/>
+   </questionnaire>
+   <status value="in-progress"/>
+   <item>
+      <linkId value="link1"/>
+      <answer>
+         <item>
+            <linkId value="link11"/>
+         </item>
+      </answer>
+   </item>
+</QuestionnaireResponse>
+2018-12-03 16:45:08.910 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:453] ValidationResult{messageCount=0, isSuccessful=true, description='No issues'}
+2018-12-03 16:45:10.274 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:231] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - The value provided (http://codesystems.com/system::code1) is not in the options value set in the questionnaire - QuestionnaireResponse.item.answer'}
+2018-12-03 16:45:10.278 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:241] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - The value provided (http://codesystems.com/system2::code3) is not in the options value set in the questionnaire - QuestionnaireResponse.item.answer'}
+2018-12-03 16:45:10.374 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:181] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - Answer value must be of type boolean - QuestionnaireResponse.item.answer.valueString'}
+2018-12-03 16:45:10.592 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:532] ValidationResult{messageCount=1, isSuccessful=true, description='WARNING - No response answer found for required item link0 - QuestionnaireResponse.item'}
+2018-12-03 16:45:10.597 [main] INFO  o.h.f.d.h.v.QuestionnaireResponseValidatorDstu3Test [QuestionnaireResponseValidatorDstu3Test.java:539] ValidationResult{messageCount=1, isSuccessful=false, description='ERROR - No response answer found for required item link0 - QuestionnaireResponse.item'}
+2018-12-03 16:45:13.963 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static org.hl7.fhir.dstu3.hapi.validation.DefaultProfileValidationSupport org.hl7.fhir.dstu3.hapi.validation.QuestionnaireResponseValidatorDstu3Test.myDefaultValidationSupport
+2018-12-03 16:45:13.963 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static ca.uhn.fhir.context.FhirContext org.hl7.fhir.dstu3.hapi.validation.QuestionnaireResponseValidatorDstu3Test.ourCtx
+2018-12-03 16:45:13.963 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] Clearing value of field: private static transient boolean[] org.hl7.fhir.dstu3.hapi.validation.QuestionnaireResponseValidatorDstu3Test.$jacocoData
+2018-12-03 16:45:13.964 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] Tests are running in locale: Deutsch (Deutschland)
+2018-12-03 16:45:13.964 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:118] Tests are using UNIX line endings and UTF-8
+2018-12-03 16:45:13.964 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] Tests are using time zone: GMT+00:00

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.hl7.fhir.r4.model.IdTypeR4Test
+-------------------------------------------------------------------------------
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.08 s - in org.hl7.fhir.r4.model.IdTypeR4Test

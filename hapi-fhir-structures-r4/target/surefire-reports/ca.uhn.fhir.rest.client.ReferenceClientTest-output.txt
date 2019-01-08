@@ -1,0 +1,28 @@
+06:11:43.514 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+
+
+	ranslateClientArgumentIntoQueryArgument
+ReferenceParam[value=Organization/123]
+ca.uhn.fhir.context.FhirContext@1e54c2ef
+06:11:43.603 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+
+
+	ranslateClientArgumentIntoQueryArgument
+ReferenceParam[chain=chain,value=Organization/123]
+ca.uhn.fhir.context.FhirContext@7da79661
+06:11:43.670 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+
+
+	ranslateClientArgumentIntoQueryArgument
+ReferenceParam[chain=chain,value=123]
+ca.uhn.fhir.context.FhirContext@b34457d
+06:11:43.722 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [R4]
+
+
+	ranslateClientArgumentIntoQueryArgument
+ReferenceParam[value=123]
+ca.uhn.fhir.context.FhirContext@5cd8dae8
+06:11:43.766 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.client.ReferenceClientTest.$jacocoData
+06:11:43.767 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: 中文 (台灣)
+06:11:43.767 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:114] - Tests are using WINDOWS line endings and ISO-8851-1
+06:11:43.767 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+03:30

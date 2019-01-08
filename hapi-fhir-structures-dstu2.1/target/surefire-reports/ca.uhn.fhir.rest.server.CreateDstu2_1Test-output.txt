@@ -1,0 +1,78 @@
+16:42:07.614 [main] INFO  ca.uhn.fhir.context.FhirContext [FhirContext.java:171] - Creating new FHIR context for FHIR version [DSTU2_1]
+16:42:08.119 [main] INFO  org.eclipse.jetty.server.Server [Server.java:371] - jetty-9.4.12.v20180830; built: 2018-08-30T13:59:14.071Z; git: 27208684755d94a92186989f695db2d7b21ebc51; jvm 1.8.0_192-b12
+16:42:08.121 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1061] - Initializing HAPI FHIR restful server running in DSTU2_1 mode
+16:42:08.157 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1435] - Added 1 resource provider(s). Total 1
+16:42:08.157 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.CreateDstu2_1Test$PatientProvider
+16:42:08.162 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.dstu2016may.hapi.rest.server.ServerProfileProvider
+16:42:08.163 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class org.hl7.fhir.dstu2016may.hapi.rest.server.ServerConformanceProvider
+16:42:08.173 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:365] - Scanning type for RESTful methods: class ca.uhn.fhir.rest.server.PageProvider
+16:42:08.173 [main] INFO  c.uhn.fhir.rest.server.RestfulServer [RestfulServer.java:1114] - A FHIR has been lit on this server
+16:42:08.174 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:292] - Started ServerConnector@164652f3{HTTP/1.1,[http/1.1]}{0.0.0.0:50710}
+16:42:08.174 [main] INFO  org.eclipse.jetty.server.Server [Server.java:408] - Started @18270ms
+16:42:08.339 [main] INFO  c.u.f.rest.server.CreateDstu2_1Test [CreateDstu2_1Test.java:99] - Response was:
+{"resourceType":"Patient","id":"1","gender":"male"}
+16:42:08.342 [qtp818965490-32] WARN  c.u.fhir.parser.LenientErrorHandler [LenientErrorHandler.java:150] - Unknown element 'status' found while parsing
+16:42:08.344 [main] INFO  c.u.f.rest.server.CreateDstu2_1Test [CreateDstu2_1Test.java:77] - Response was:
+{"resourceType":"Patient","id":"1"}
+16:42:08.351 [qtp818965490-35] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: Failed to parse request body as XML resource. Error was: com.ctc.wstx.exc.WstxUnexpectedCharException: Unexpected character 'F' (code 70) in prolog; expected '<'
+ at [row,col {unknown-source}]: [1,1]
+16:42:08.353 [main] INFO  c.u.f.rest.server.CreateDstu2_1Test [CreateDstu2_1Test.java:119] - Response was:
+<OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="Failed to parse request body as XML resource. Error was: com.ctc.wstx.exc.WstxUnexpectedCharException: Unexpected character 'F' (code 70) in prolog; expected '&lt;'&#xa; at [row,col {unknown-source}]: [1,1]"/></issue></OperationOutcome>
+16:42:08.369 [main] INFO  c.u.f.rest.server.CreateDstu2_1Test [CreateDstu2_1Test.java:193] - Response was:
+<Bundle xmlns="http://hl7.org/fhir">
+   <id value="345fec3b-47da-4c83-8e67-c3d9a2e0f08e"/>
+   <meta>
+      <lastUpdated value="2018-12-03T06:12:08.361-05:00"/>
+   </meta>
+   <type value="searchset"/>
+   <total value="2"/>
+   <link>
+      <relation value="self"/>
+      <url value="http://localhost:50710/Patient?_format=xml&amp;_pretty=true"/>
+   </link>
+   <entry>
+      <fullUrl value="http://localhost:50710/Patient/0"/>
+      <resource>
+         <Patient xmlns="http://hl7.org/fhir">
+            <id value="0"/>
+            <meta>
+               <profile value="http://example.com/StructureDefinition/patient_with_extensions"/>
+            </meta>
+            <modifierExtension url="http://example.com/ext/date">
+               <valueDate value="2011-01-01"/>
+            </modifierExtension>
+         </Patient>
+      </resource>
+   </entry>
+   <entry>
+      <fullUrl value="http://localhost:50710/Patient/1"/>
+      <resource>
+         <Patient xmlns="http://hl7.org/fhir">
+            <id value="1"/>
+            <name>
+               <family value="The Family"/>
+            </name>
+         </Patient>
+      </resource>
+   </entry>
+</Bundle>
+16:42:08.372 [qtp818965490-35] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: Failed to parse request body as XML resource. Error was: com.ctc.wstx.exc.WstxUnexpectedCharException: Unexpected character '{' (code 123) in prolog; expected '<'
+ at [row,col {unknown-source}]: [1,1]
+16:42:08.374 [main] INFO  c.u.f.rest.server.CreateDstu2_1Test [CreateDstu2_1Test.java:138] - Response was:
+<OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="Failed to parse request body as XML resource. Error was: com.ctc.wstx.exc.WstxUnexpectedCharException: Unexpected character '{' (code 123) in prolog; expected '&lt;'&#xa; at [row,col {unknown-source}]: [1,1]"/></issue></OperationOutcome>
+16:42:08.375 [qtp818965490-37] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: Failed to parse request body as XML resource. Error was: com.ctc.wstx.exc.WstxUnexpectedCharException: Unexpected character '{' (code 123) in prolog; expected '<'
+ at [row,col {unknown-source}]: [1,1]
+16:42:08.377 [main] INFO  c.u.f.rest.server.CreateDstu2_1Test [CreateDstu2_1Test.java:157] - Response was:
+<OperationOutcome xmlns="http://hl7.org/fhir"><issue><severity value="error"/><code value="processing"/><diagnostics value="Failed to parse request body as XML resource. Error was: com.ctc.wstx.exc.WstxUnexpectedCharException: Unexpected character '{' (code 123) in prolog; expected '&lt;'&#xa; at [row,col {unknown-source}]: [1,1]"/></issue></OperationOutcome>
+16:42:08.379 [qtp818965490-35] WARN  c.u.f.r.s.i.ExceptionHandlingInterceptor [ExceptionHandlingInterceptor.java:141] - Failure during REST processing: ca.uhn.fhir.rest.server.exceptions.InvalidRequestException: Failed to parse request body as JSON resource. Error was: Invalid JSON content detected, missing required element: 'resourceType'
+16:42:08.381 [main] INFO  c.u.f.rest.server.CreateDstu2_1Test [CreateDstu2_1Test.java:176] - Response was:
+{"resourceType":"OperationOutcome","issue":[{"severity":"error","code":"processing","diagnostics":"Failed to parse request body as JSON resource. Error was: Invalid JSON content detected, missing required element: 'resourceType'"}]}
+16:42:08.383 [main] INFO  o.e.jetty.server.AbstractConnector [AbstractConnector.java:341] - Stopped ServerConnector@164652f3{HTTP/1.1,[http/1.1]}{0.0.0.0:50710}
+16:42:08.394 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.apache.http.impl.client.CloseableHttpClient ca.uhn.fhir.rest.server.CreateDstu2_1Test.ourClient
+16:42:08.395 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static ca.uhn.fhir.context.FhirContext ca.uhn.fhir.rest.server.CreateDstu2_1Test.ourCtx
+16:42:08.395 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static org.eclipse.jetty.server.Server ca.uhn.fhir.rest.server.CreateDstu2_1Test.ourServer
+16:42:08.395 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: public static org.hl7.fhir.instance.model.api.IBaseOperationOutcome ca.uhn.fhir.rest.server.CreateDstu2_1Test.ourReturnOo
+16:42:08.395 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:70] - Clearing value of field: private static transient boolean[] ca.uhn.fhir.rest.server.CreateDstu2_1Test.$jacocoData
+16:42:08.395 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:112] - Tests are running in locale: Deutsch (Deutschland)
+16:42:08.396 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:118] - Tests are using UNIX line endings and UTF-8
+16:42:08.396 [main] INFO  ca.uhn.fhir.util.TestUtil [TestUtil.java:125] - Tests are using time zone: GMT+00:00
