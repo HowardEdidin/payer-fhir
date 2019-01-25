@@ -29,7 +29,7 @@ import javax.net.ssl.HttpsURLConnection;
 @SuppressWarnings("ConstantConditions")
 public class ClientAuthorizationInterceptor extends AuthorizationInterceptor {
   static final org.slf4j.Logger ourLog = LoggerFactory.getLogger(ClientAuthorizationInterceptor.class);
-  String introspectUrl = "https://54.227.173.76:8443/auth/realms/ClientFhirServer/protocol/openid-connect/token/introspect";
+  String introspectUrl = "https://18.222.7.99:8443/auth/realms/ProviderCredentials/protocol/openid-connect/token/introspect";
 
   @Override
   public List<IAuthRule> buildRuleList(RequestDetails theRequestDetails) {
