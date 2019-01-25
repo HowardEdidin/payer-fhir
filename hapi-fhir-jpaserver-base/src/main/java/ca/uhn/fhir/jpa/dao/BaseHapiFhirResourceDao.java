@@ -69,8 +69,29 @@ import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 import javax.servlet.http.HttpServletResponse;
 import java.util.*;
+import org.hl7.fhir.dstu3.model.ClaimResponse;
+import org.hl7.fhir.dstu3.model.Claim;
+import org.hl7.fhir.dstu3.model.Bundle.BundleEntryComponent;
+import org.hl7.fhir.dstu3.model.Bundle;
+import org.json.JSONObject;
+import org.json.JSONArray;
+import ca.uhn.fhir.context.FhirContext;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+
 
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.json.JSONException;
 
 @Transactional(propagation = Propagation.REQUIRED)
 public abstract class BaseHapiFhirResourceDao<T extends IBaseResource> extends BaseHapiFhirDao<T> implements IFhirResourceDao<T> {
@@ -89,10 +110,14 @@ public abstract class BaseHapiFhirResourceDao<T extends IBaseResource> extends B
 	private String myResourceName;
 	private Class<T> myResourceType;
 	private String mySecondaryPrimaryKeyParamName;
+	private static FhirContext ourCtx = FhirContext.forDstu3();;
 	@Autowired
 	private ISearchParamRegistry mySearchParamRegistry;
 	@Autowired
 	private IReindexController myReindexController;
+
+	@Autowired
+	private TransactionProcessor.ITransactionProcessorVersionAdapter<Bundle, BundleEntryComponent> myVersionAdapter;
 
 	@Override
 	public void addTag(IIdType theId, TagTypeEnum theTagType, String theScheme, String theTerm, String theLabel) {
@@ -126,21 +151,48 @@ public abstract class BaseHapiFhirResourceDao<T extends IBaseResource> extends B
 
 	@Override
 	public DaoMethodOutcome create(final T theResource) {
+		System.out.println("\n129------Crrrretete");
 		return create(theResource, null, true, null);
 	}
 
 	@Override
 	public DaoMethodOutcome create(final T theResource, RequestDetails theRequestDetails) {
-		return create(theResource, null, true, theRequestDetails);
+		System.out.println("\n135------Crrrretete");
+                System.out.println(theRequestDetails);
+                 System.out.println(theRequestDetails.getId());
+            try {
+                System.out.println(theRequestDetails.getInputStream());
+                BufferedReader inputReader = new BufferedReader(new InputStreamReader(theRequestDetails.getInputStream(), "UTF-8"));
+                String inputline =null;
+                StringBuilder inputBuilder = new StringBuilder();
+                    while((inputline=inputReader.readLine())!= null){
+                        System.out.println("inputline");
+                        System.out.println(inputline);
+                            inputBuilder.append(inputline);
+                    }
+	    		    
+                 System.out.println(inputBuilder.toString());
+            } catch (IOException ex) {
+                Logger.getLogger(BaseHapiFhirResourceDao.class.getName()).log(Level.SEVERE, null, ex);
+            }
+		System.out.println(theRequestDetails.getParameters().keySet());
+		System.out.println(theResource.getClass().toString());
+		System.out.println(theResource.getClass().toString().equals("class org.hl7.fhir.dstu3.model.Claim"));
+		DaoMethodOutcome createdRes = create(theResource, null, true, theRequestDetails);
+		
+		return createdRes;
 	}
 
 	@Override
 	public DaoMethodOutcome create(final T theResource, String theIfNoneExist) {
+		System.out.println("\n141------Crrrretete");
 		return create(theResource, theIfNoneExist, null);
 	}
 
 	@Override
 	public DaoMethodOutcome create(T theResource, String theIfNoneExist, boolean thePerformIndexing, RequestDetails theRequestDetails) {
+		System.out.println("\n147------Crrrretete");
+		
 		if (isNotBlank(theResource.getIdElement().getIdPart())) {
 			if (getContext().getVersion().getVersion().isOlderThan(FhirVersionEnum.DSTU3)) {
 				String message = getContext().getLocalizer().getMessage(BaseHapiFhirResourceDao.class, "failedToCreateWithClientAssignedId", theResource.getIdElement().getIdPart());
@@ -397,13 +449,19 @@ public abstract class BaseHapiFhirResourceDao<T extends IBaseResource> extends B
 			}
 			createForcedIdIfNeeded(entity, theResource.getIdElement());
 		}
-
+	    
+                 
 		// Notify interceptors
 		if (theRequest != null) {
+                    try {
+                        System.out.println(theRequest.getInputStream().toString());
+                    } catch (IOException ex) {
+                        Logger.getLogger(BaseHapiFhirResourceDao.class.getName()).log(Level.SEVERE, null, ex);
+                    }
 			ActionRequestDetails requestDetails = new ActionRequestDetails(theRequest, getContext(), theResource);
 			notifyInterceptors(RestOperationTypeEnum.CREATE, requestDetails);
 		}
-
+                System.out.println(theResource.getIdElement());
 		// Notify JPA interceptors
 		if (theRequest != null) {
 			theRequest.getRequestOperationCallback().resourcePreCreate(theResource);
@@ -444,7 +502,195 @@ public abstract class BaseHapiFhirResourceDao<T extends IBaseResource> extends B
 		if (!thePerformIndexing) {
 			outcome.setId(theResource.getIdElement());
 		}
+//		System.out.println("\n Res Type : "+ myResourceType);
+		if(theResource.getClass().toString().equals("class org.hl7.fhir.dstu3.model.Claim")) {
 
+                    
+//			ClaimResponse  claimResponse = new ClaimResponse();
+//			claimResponse.setStatus(claimResponse.getStatus().fromCode("entered-in-error"));
+//			claimResponse = claimResponse.setRequest(theResource.getIdElement().);
+                    try {
+                        
+                        IBaseResource baseResource =  toResource(updatedEntity, false);
+                        IDomainResource iDResource = (IDomainResource) baseResource;
+//                        System.out.println("Contained ::::");
+//                        System.out.println(iDResource.getContained());
+           
+                        String objString = getContext().newJsonParser().encodeResourceToString(iDResource);
+//                        System.out.println(objString);
+//                        System.out.println("Authorization Header :");
+//                        System.out.println(theRequest.getHeader("Authorization"));
+//                        
+                        JSONObject resourceObj = new JSONObject(objString);
+//                        System.out.println(resourceObj.get("contaicd ned"));
+//                        System.out.println(resourceObj.get("contained").getClass());
+                        ObjectMapper oMapper = new ObjectMapper();
+                        JSONObject jsonObj = new JSONObject();
+//                        final String authorization = theRequest.getHeader("Authorization");
+                        String cqlName = null ;
+//                      HyperbaricOxygenTherapy
+//                      AdultLiverTransplantation
+
+                        JSONObject cqlMapper = new JSONObject();
+                        
+                        cqlMapper.put("99183", "HyperbaricOxygenTherapy");
+                        cqlMapper.put("0FY00Z0", "AdultLiverTransplantation");
+                        cqlMapper.put("0FY00Z1", "AdultLiverTransplantation");
+                        cqlMapper.put("0FY00Z2", "AdultLiverTransplantation");
+                        if(resourceObj.has("procedure")){
+                            JSONArray procedureArray = oMapper.convertValue(resourceObj.get("procedure"), JSONArray.class);
+                            for (int i = 0, size = procedureArray.length(); i < size; i++)
+                            {
+                                if(cqlName == null){
+                                    JSONObject procedureObj = procedureArray.getJSONObject(i);
+                                    if(procedureObj.has("procedureCodeableConcept")){
+                                       JSONObject procedureCodeableConcept = oMapper.convertValue(procedureObj.get("procedureCodeableConcept"), JSONObject.class);
+                                       if(procedureCodeableConcept.has("coding")){
+                                           JSONArray procedureCode = oMapper.convertValue(procedureCodeableConcept.get("coding"), JSONArray.class);
+                                           for (int j = 0; j < procedureCode.length(); j++)
+                                            {
+                                                JSONObject codeObj = procedureCode.getJSONObject(j);
+                                                if(cqlMapper.has(codeObj.getString("code"))){
+                                                    cqlName = cqlMapper.getString(codeObj.getString("code"));
+                                                    break;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            System.out.println(" CQL :");
+                            System.out.println(cqlName);
+                            
+                        }
+                        if(resourceObj.has("contained") && cqlName != null ){
+                            JSONArray resourceArray = oMapper.convertValue(resourceObj.get("contained"), JSONArray.class);
+    //                        JSONArray resourcesList = resourceObj.get("contained");
+
+                            JSONObject reqJson = new JSONObject();
+                            JSONObject patientFhir = new JSONObject();
+
+                            patientFhir.put("resourceType","Bundle");
+
+                            patientFhir.put("type","collection");
+                            if(resourceObj.has("patient")){
+                                JSONObject patientObj = oMapper.convertValue(resourceObj.get("patient"), JSONObject.class);
+                                System.out.println("patientObj.split");
+                                System.out.println(patientObj.getString("reference").split("#"));
+                                String[] patientDetails = patientObj.getString("reference").split("#");
+                                if(patientDetails.length > 1){
+                                    patientFhir.put("id",patientDetails[1]);
+                                }
+                                else if(patientDetails.length == 1){
+                                    patientFhir.put("id",patientDetails[0]);
+                                }
+                            }
+                            JSONArray entries = new JSONArray();
+                            for (int i = 0, size = resourceArray.length(); i < size; i++)
+                            {
+                              JSONObject res = resourceArray.getJSONObject(i);
+
+                                try {
+                                    
+                                    JSONObject containedRes = new JSONObject();
+                                    containedRes.put("resource", res);
+                                    entries.put(containedRes);
+                                } catch (JSONException ex) {
+                                    Logger.getLogger(BaseHapiFhirResourceDao.class.getName()).log(Level.SEVERE, null, ex);
+                                }
+                            };
+                            
+                            patientFhir.put("entry",entries);
+                            reqJson.put("cql",cqlName);
+                            reqJson.put("patientFhir",patientFhir);
+                            reqJson.put("request_for", "decision");
+                            if(resourceObj.has("use")){
+                                JSONObject useObj = oMapper.convertValue(resourceObj.get("use"), JSONObject.class);
+                                if(useObj.getString("code").equals("preauthorization")){
+                                    reqJson.put("request_for", "priorauthdecision");
+                                }
+
+                            }
+                            
+                            CloseableHttpClient client = HttpClients.createDefault();
+                            // Get the token and drop the "Bearer"
+                            
+                            String token = null;
+
+                            StringBuilder sb = new StringBuilder();
+                            JSONObject responseObj = new JSONObject();
+                            URL url = new URL("http://localhost:4200/execute_cql");
+                            Gson gsonObj = new Gson();
+                            String jsonStr = reqJson.toString();
+                            System.out.println("ReqJSON Strinngng :::::::::");
+                            System.out.println(jsonStr);
+                            byte[] postDataBytes = jsonStr.getBytes("UTF-8");
+                            HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+                            conn.setRequestMethod("POST");
+                            conn.setRequestProperty("Content-Type", "application/json");
+                            conn.setRequestProperty("Accept","application/json");
+//                            if(authorization!= null) {
+//                                    conn.setRequestProperty("Authorization",authorization);
+//
+//                            }
+//                            else {
+//                                    System.out.println("\n\n\\n\n\n\\n\n\n\n\nEXceptionnnnnn NO HEADER");
+//                            }
+
+                            conn.setDoOutput(true);
+                            conn.getOutputStream().write(postDataBytes);
+                            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
+                            String line =null;
+                            while((line=in.readLine())!= null){
+                              sb.append(line);
+                            }
+                             jsonObj = new JSONObject(sb.toString());
+
+                        }
+
+                       
+                        
+                        Bundle bundle = new Bundle();
+                        BundleEntryComponent entryComponent = bundle.addEntry();
+                        JSONObject claimResJson = new JSONObject();
+                        claimResJson.put("resourceType","ClaimResponse");
+                        claimResJson.put("status","draft");
+//                        JSONObject outCome = new JSONObject();
+//                        outCome.put("code", "error");
+//                        if(jsonObj.has("Coverage")){
+//                            if((boolean)jsonObj.get("Coverage")){
+//                                outCome.put("code", "complete");
+//                            }
+//                        }
+                        
+//                        claimResJson.put("outcome",outCome);
+                        JSONObject claimResRequest = new JSONObject();
+                        claimResRequest.put("reference","Claim/"+theResource.getIdElement().getIdPart());
+                        claimResJson.put("request",claimResRequest);
+                        
+                        ClaimResponse  claimResponse = ourCtx.newJsonParser().parseResource(ClaimResponse.class, claimResJson.toString());
+                        claimResponse.getOutcome().addCoding().setCode("error");
+//                        jsonObj.put("Coverage",true);
+                        if(jsonObj.has("Coverage")){
+                            if((boolean)jsonObj.get("Coverage")){
+                                claimResponse.getOutcome().addCoding().setCode("complete");
+                                
+                            }
+                        }
+                        
+                        entryComponent.setResource(claimResponse);
+                        IBaseResource res = myVersionAdapter.getResource(entryComponent);
+                        IFhirResourceDao resDao = getDaoOrThrowException(ClaimResponse.class);
+                        resDao.create(res);
+                    }
+                    catch(Exception ex) {
+                            ex.printStackTrace();
+                    }
+
+
+
+                    
+		}
 		String msg = getContext().getLocalizer().getMessage(BaseHapiFhirResourceDao.class, "successfulCreate", outcome.getId(), w.getMillisAndRestart());
 		outcome.setOperationOutcome(createInfoOperationOutcome(msg));
 
