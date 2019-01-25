@@ -534,9 +534,11 @@ public abstract class BaseHapiFhirResourceDao<T extends IBaseResource> extends B
                         JSONObject cqlMapper = new JSONObject();
                         
                         cqlMapper.put("99183", "HyperbaricOxygenTherapy");
+			cqlMapper.put("15273", "HyperbaricOxygenTherapy");
                         cqlMapper.put("0FY00Z0", "AdultLiverTransplantation");
                         cqlMapper.put("0FY00Z1", "AdultLiverTransplantation");
                         cqlMapper.put("0FY00Z2", "AdultLiverTransplantation");
+			    
                         if(resourceObj.has("procedure")){
                             JSONArray procedureArray = oMapper.convertValue(resourceObj.get("procedure"), JSONArray.class);
                             for (int i = 0, size = procedureArray.length(); i < size; i++)
