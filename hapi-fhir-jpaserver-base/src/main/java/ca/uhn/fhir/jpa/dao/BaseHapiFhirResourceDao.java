@@ -559,8 +559,8 @@ public abstract class BaseHapiFhirResourceDao<T extends IBaseResource> extends B
                                     }
                                 }
                             }
-                            System.out.println(" CQL :");
-                            System.out.println(cqlName);
+//                            System.out.println(" CQL :");
+//                            System.out.println(cqlName);
                             
                         }
                         if(resourceObj.has("contained") && cqlName != null ){
@@ -575,8 +575,8 @@ public abstract class BaseHapiFhirResourceDao<T extends IBaseResource> extends B
                             patientFhir.put("type","collection");
                             if(resourceObj.has("patient")){
                                 JSONObject patientObj = oMapper.convertValue(resourceObj.get("patient"), JSONObject.class);
-                                System.out.println("patientObj.split");
-                                System.out.println(patientObj.getString("reference").split("#"));
+//                                System.out.println("patientObj.split");
+//                                System.out.println(patientObj.getString("reference").split("#"));
                                 String[] patientDetails = patientObj.getString("reference").split("#");
                                 if(patientDetails.length > 1){
                                     patientFhir.put("id",patientDetails[1]);
@@ -622,8 +622,8 @@ public abstract class BaseHapiFhirResourceDao<T extends IBaseResource> extends B
                             URL url = new URL("http://localhost:4200/execute_cql");
                             Gson gsonObj = new Gson();
                             String jsonStr = reqJson.toString();
-                            System.out.println("ReqJSON Strinngng :::::::::");
-                            System.out.println(jsonStr);
+//                            System.out.println("ReqJSON Strinngng :::::::::");
+//                            System.out.println(jsonStr);
                             byte[] postDataBytes = jsonStr.getBytes("UTF-8");
                             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
                             conn.setRequestMethod("POST");
@@ -672,9 +672,15 @@ public abstract class BaseHapiFhirResourceDao<T extends IBaseResource> extends B
                         claimResponse.getOutcome().addCoding().setCode("error");
 //                        jsonObj.put("Coverage",true);
                         if(jsonObj.has("Coverage")){
-                            if((boolean)jsonObj.get("Coverage")){
+                             System.out.println(" Coverage JSON :");
+                            System.out.println(jsonObj);
+                            
+                            if(jsonObj.get("Coverage").toString().equals("true")){
                                 claimResponse.getOutcome().addCoding().setCode("complete");
                                 
+                            }
+                            else{
+                                claimResponse.setDisposition(jsonObj.get("Coverage").toString());
                             }
                         }
                         
