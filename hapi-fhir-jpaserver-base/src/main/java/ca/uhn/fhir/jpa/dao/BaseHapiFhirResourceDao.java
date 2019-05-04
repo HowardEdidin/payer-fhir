@@ -646,7 +646,13 @@ public abstract class BaseHapiFhirResourceDao<T extends IBaseResource> extends B
                             while((line=in.readLine())!= null){
                               sb.append(line);
                             }
+                            try{
                              jsonObj = new JSONObject(sb.toString());
+                            }
+                            catch(Exception ex){
+                                jsonObj = new JSONObject();
+                        
+                            }
 
                         }
 

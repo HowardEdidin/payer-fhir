@@ -7,23 +7,45 @@ import ca.uhn.fhir.rest.api.RestOperationTypeEnum;
 import ca.uhn.fhir.rest.server.IRestfulServerDefaults;
 import ca.uhn.fhir.rest.server.interceptor.IServerInterceptor;
 import ca.uhn.fhir.rest.server.interceptor.IServerOperationInterceptor;
+import ca.uhn.fhir.parser.IParser;
 import ca.uhn.fhir.util.UrlUtil;
 import org.apache.commons.lang3.Validate;
 import org.hl7.fhir.instance.model.api.IBaseResource;
 import org.hl7.fhir.instance.model.api.IIdType;
-
+import org.json.JSONObject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.*;
 import java.util.function.BiFunction;
 import java.util.stream.Collectors;
-
+import java.net.HttpURLConnection;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.entity.StringEntity;
+import org.json.JSONException;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.CloseableHttpClient;
 import static org.apache.commons.lang3.StringUtils.isBlank;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
+// import org.json.simple.parser.*;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+//import org.hl7.fhir.instance.model.ClaimResponse;
 
 /*
  * #%L
@@ -417,11 +439,225 @@ public abstract class RequestDetails {
 
 		@Override
 		public void resourceCreated(IBaseResource theResource) {
-			for (IServerInterceptor next : getInterceptors()) {
-				if (next instanceof IServerOperationInterceptor) {
-					((IServerOperationInterceptor) next).resourceCreated(RequestDetails.this, theResource);
-				}
+			System.out.println("-----------Resource Created -------");
+			System.out.println(theResource.getClass().getMethods());
+			
+//			ClaimResponse cr =  new ClaimResponse();
+			FhirContext fhirContext = FhirContext.forDstu3();
+			final IParser iParser = fhirContext.newJsonParser();
+			String resourceJson = iParser.encodeResourceToString(theResource);
+			
+//			Gson g = new Gson();
+//			System.out.println("ResOURCE JSON :"+resourceJson);
+			
+			try {
+//				String requestBody = new String(RequestDetails.this.loadRequestContents(), Constants.CHARSET_UTF8);
+//				System.out.println(requestBody);
+				JSONObject resourceJsonObj = new JSONObject(resourceJson);
+				JSONObject newResource = new JSONObject();
+				newResource.put("resourceType","Patient");
+				newResource.put("req_contents",resourceJsonObj);
+				newResource.put("id",theResource.getIdElement().getIdPart());
+				System.out.println("Body Resource  : "+newResource);
+				
+				CloseableHttpClient client = HttpClients.createDefault();
+				HttpPost httpPost = new HttpPost("http://localhost:8090/fhir/Patient");
+				StringEntity entity = new StringEntity(newResource.toString());
+				httpPost.setEntity(entity);
+				httpPost.setHeader("Accept", "application/json");
+				httpPost.setHeader("Content-type", "application/json");
+				CloseableHttpResponse response = client.execute(httpPost);
+				client.close();
 			}
+			catch(JSONException json_ex) {
+		    	 json_ex.printStackTrace();
+		      } 
+			catch(Exception ex) {
+				ex.printStackTrace();
+			}
+			//		    String json = "{"id":1,"name":"John"}";
+//		    String json = "{"id":1,"name":"John"}";
+		/*
+            StringEntity entity = new StringEntity(requestBody);
+            httpPost.setEntity(entity);
+            httpPost.setHeader("Accept", "application/json");
+            httpPost.setHeader("Content-type", "application/json");
+            CloseableHttpResponse response = client.execute(httpPos$
+            client.close();
+            */
+//		    HttpPost httpPost = new HttpPost("http://localhost:8090/fhir/Patient/2");
+		    
+//			params = UrlUtil.parseQueryStrings(theRequest.getQueryString(), requestBody);
+		      /*
+		      String clientId = "app-login";
+		      CloseableHttpClient client = HttpClients.createDefault();
+		      HttpPost httpPost = new HttpPost("https://54.227.173.76:8443/auth/realms/ClientFhirServer/protocol/openid-connect/token");
+		      List<NameValuePair> params = new ArrayList<NameValuePair>();
+		      params.add(new BasicNameValuePair("client_id", "app-login"));
+		      params.add(new BasicNameValuePair("username","john"));
+		      params.add(new BasicNameValuePair("password", "john123"));
+		      params.add(new BasicNameValuePair("grant_type", "password"));
+		      try {
+		        httpPost.setEntity(new UrlEncodedFormEntity(params));
+		      } catch (UnsupportedEncodingException e) {
+		        e.printStackTrace();
+		      }
+//		      System.out.println("introspectUrl::");
+//		      System.out.println(introspectUrl);
+		      JsonObject tokenResponse;
+		      
+		      
+		      // Map<String,Object> params = new LinkedHashMap<>();
+		      try {
+		        CloseableHttpResponse response = client.execute(httpPost);
+		        String jsonString = EntityUtils.toString(response.getEntity());
+		        
+		        tokenResponse = new JsonParser().parse(jsonString).getAsJsonObject();
+		        client.close();
+		      }
+		      catch (IOException e) {
+//		        System.out.println("\n\n\\n\n\n\\n\n\n\n\nEXceptionnnnnn");
+		        e.printStackTrace();
+		        tokenResponse = null;
+		      }
+		      System.out.println("===tokenResponse==");
+		      System.out.println(tokenResponse);
+		      JSONObject reqJson = new JSONObject();
+		      StringBuilder sb = new StringBuilder();
+		      try {
+			      URL url = new URL("http://localhost:8080/payer_fhir/baseDstu3/ClaimResponse");
+			        Gson gsonObj = new Gson();
+			        String json_string = "{\n" + 
+			        		"  \"resourceType\": \"Claim\",\n" + 
+			        		"  \"id\": \"100150\",\n" + 
+			        		"  \"text\": {\n" + 
+			        		"    \"status\": \"generated\",\n" + 
+			        		"    \"div\": \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\">A human-readable rendering of the Oral Health Claim</div>\"\n" + 
+			        		"  },\n" + 
+			        		"  \"identifier\": [\n" + 
+			        		"    {\n" + 
+			        		"      \"system\": \"http://happyvalley.com/claim\",\n" + 
+			        		"      \"value\": \"12345\"\n" + 
+			        		"    }\n" + 
+			        		"  ],\n" + 
+			        		"  \"status\": \"active\",\n" + 
+			        		"  \"type\": {\n" + 
+			        		"    \"coding\": [\n" + 
+			        		"      {\n" + 
+			        		"        \"system\": \"http://terminology.hl7.org/CodeSystem/claim-type\",\n" + 
+			        		"        \"code\": \"oral\"\n" + 
+			        		"      }\n" + 
+			        		"    ]\n" + 
+			        		"  },\n" + 
+			        		"  \"use\": {\"code\":\"claim\"},\n" + 
+			        		"  \"patient\": {\n" + 
+			        		"    \"reference\": \"Patient/1\"\n" + 
+			        		"  },\n" + 
+			        		"  \"created\": \"2014-08-16\",\n" + 
+			        		"\n" + 
+			        		"  \"priority\": {\n" + 
+			        		"    \"coding\": [\n" + 
+			        		"      {\n" + 
+			        		"        \"code\": \"normal\"\n" + 
+			        		"      }\n" + 
+			        		"    ]\n" + 
+			        		"  },\n" + 
+			        		"  \"payee\": {\n" + 
+			        		"    \"type\": {\n" + 
+			        		"      \"coding\": [\n" + 
+			        		"        {\n" + 
+			        		"          \"code\": \"provider\"\n" + 
+			        		"        }\n" + 
+			        		"      ]\n" + 
+			        		"    }\n" + 
+			        		"  },\n" + 
+			        		"  \n" + 
+			        		"  \"diagnosis\": [\n" + 
+			        		"    {\n" + 
+			        		"      \"sequence\": 1,\n" + 
+			        		"      \"diagnosisCodeableConcept\": {\n" + 
+			        		"        \"coding\": [\n" + 
+			        		"          {\n" + 
+			        		"            \"code\": \"123456\"\n" + 
+			        		"          }\n" + 
+			        		"        ]\n" + 
+			        		"      }\n" + 
+			        		"    }\n" + 
+			        		"  ],\n" + 
+			        		"  \"insurance\": [\n" + 
+			        		"    {\n" + 
+			        		"      \"sequence\": 1,\n" + 
+			        		"      \"focal\": true,\n" + 
+			        		"      \"identifier\": {\n" + 
+			        		"        \"system\": \"http://happyvalley.com/claim\",\n" + 
+			        		"        \"value\": \"12345\"\n" + 
+			        		"      }\n" + 
+			        		"      \n" + 
+			        		"    }\n" + 
+			        		"  ],\n" + 
+			        		"  \"item\": [\n" + 
+			        		"    {\n" + 
+			        		"      \"sequence\": 1,\n" + 
+			        		"      \"careTeamSequence\": [\n" + 
+			        		"        1\n" + 
+			        		"      ],\n" + 
+			        		"      \"productOrService\": {\n" + 
+			        		"        \"coding\": [\n" + 
+			        		"          {\n" + 
+			        		"            \"code\": \"1200\"\n" + 
+			        		"          }\n" + 
+			        		"        ]\n" + 
+			        		"      },\n" + 
+			        		"      \"servicedDate\": \"2014-08-16\",\n" + 
+			        		"      \"unitPrice\": {\n" + 
+			        		"        \"value\": 135.57,\n" + 
+			        		"        \"currency\": \"USD\"\n" + 
+			        		"      },\n" + 
+			        		"      \"net\": {\n" + 
+			        		"        \"value\": 135.57,\n" + 
+			        		"        \"currency\": \"USD\"\n" + 
+			        		"      }\n" + 
+			        		"    }\n" + 
+			        		"  ]\n" + 
+			        		"}";
+			        
+//			        reqJson.put("request_for", "requirements");
+			        reqJson = new JSONObject(json_string);
+			        String jsonStr = reqJson.toString();
+			        System.out.println(jsonStr);
+			        byte[] postDataBytes = jsonStr.getBytes("UTF-8");
+			
+			        HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+			        conn.setRequestMethod("POST");
+			        conn.setRequestProperty("Content-Type", "application/json");
+			        conn.setRequestProperty("Accept","application/json");
+			        conn.setRequestProperty("Authorization","Bearer "+tokenResponse.get("access_token").toString());
+			        conn.setDoOutput(true);
+			        conn.getOutputStream().write(postDataBytes);
+			        BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
+			        String line =null;
+			        while((line=in.readLine())!= null){
+			          sb.append(line);
+			        }
+				*/
+					for (IServerInterceptor next : getInterceptors()) {
+						if (next instanceof IServerOperationInterceptor) {
+							((IServerOperationInterceptor) next).resourceCreated(RequestDetails.this, theResource);
+						}
+					}
+				/*	
+					System.out.println("----------fhirResponse");
+					System.out.println(sb.toString());
+		      }
+		      catch (Exception exception) {
+			        System.out.println("\n\n\\n\n\n\\n\n\n\n\nEXceptionnnnnn");
+			        exception.printStackTrace();
+			    }
+			    */
+			   
+			
+			
+			
 		}
 
 		@Override
