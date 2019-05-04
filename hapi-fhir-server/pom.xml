@@ -12,14 +12,23 @@
 	<packaging>jar</packaging>
 
 	<name>HAPI FHIR - Server Framework</name>
-
+	<properties>
+  <!-- Use the latest version whenever possible. -->
+	  <jackson.version>2.4.4</jackson.version>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>ca.uhn.hapi.fhir</groupId>
 			<artifactId>hapi-fhir-base</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-
+		<!-- At least one "structures" JAR must also be included -->
+		<dependency>
+			<groupId>ca.uhn.hapi.fhir</groupId>
+			<artifactId>hapi-fhir-structures-dstu3</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
@@ -30,7 +39,16 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
+		<dependency>
+    			<groupId>org.json</groupId>
+    			<artifactId>json</artifactId>
+    			<version>20090211</version>
+		</dependency>	
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+			    <artifactId>jackson-databind</artifactId>
+			    <version>${jackson.version}</version>
+		  </dependency>	
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpcore</artifactId>
