@@ -443,7 +443,7 @@ public abstract class RequestDetails {
 		
 		
 		public void submitDocs(IBaseResource i) {
-			System.out.println("in submit diocss");
+			System.out.println("in submit docss method");
 			Communication com = (Communication)i;
 			System.out.println(com.getId());
 			List<Reference> refs = com.getAbout();
