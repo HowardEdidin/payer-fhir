@@ -57,7 +57,7 @@ public class FhirServerConfig extends BaseJavaConfigR4 {
 	public DataSource dataSource() {
 		BasicDataSource retVal = new BasicDataSource();
 		retVal.setDriver(new org.apache.derby.jdbc.EmbeddedDriver());
-		retVal.setUrl("jdbc:derby:directory:target/jpaserver_derby_files;create=true");
+		retVal.setUrl("jdbc:derby:directory:target/payer_fhir_derby_files;create=true");
 		retVal.setUsername("");
 		retVal.setPassword("");
 		return retVal;
@@ -86,7 +86,7 @@ public class FhirServerConfig extends BaseJavaConfigR4 {
 		extraProperties.put("hibernate.cache.use_minimal_puts", "false");
 		extraProperties.put("hibernate.search.model_mapping", LuceneSearchMappingFactory.class.getName());
 		extraProperties.put("hibernate.search.default.directory_provider", "filesystem");
-		extraProperties.put("hibernate.search.default.indexBase", "target/lucenefiles");
+		extraProperties.put("hibernate.search.default.indexBase", "target/payer_fhir_lucenefiles");
 		extraProperties.put("hibernate.search.lucene_version", "LUCENE_CURRENT");
 //		extraProperties.put("hibernate.search.default.worker.execution", "async");
 		return extraProperties;
