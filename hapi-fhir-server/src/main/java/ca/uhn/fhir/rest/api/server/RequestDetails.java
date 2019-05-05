@@ -46,6 +46,10 @@ import org.apache.http.util.EntityUtils;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 //import org.hl7.fhir.instance.model.ClaimResponse;
+import org.hl7.fhir.r4.model.Claim;
+import org.hl7.fhir.r4.model.Communication;
+import org.hl7.fhir.r4.model.Reference;
+
 
 /*
  * #%L
@@ -436,14 +440,31 @@ public abstract class RequestDetails {
 			}
 			return getServer().getInterceptors();
 		}
+		
+		
+		public void submitDocs(IBaseResource i) {
+			System.out.println("in submit diocss");
+			Communication com = (Communication)i;
+			System.out.println(com.getId());
+			List<Reference> refs = com.getAbout();
+			for (Iterator iterator = refs.iterator(); iterator.hasNext();) {
+				Reference reference = (Reference) iterator.next();
+				IBaseResource bas = reference.getResource();
+				if  (bas instanceof Claim) {
+					Claim new_name = (Claim) bas;
+					System.out.println(new_name.getId());
+				}
+
+			}
+		}
 
 		@Override
 		public void resourceCreated(IBaseResource theResource) {
 			System.out.println("-----------Resource Created -------");
 			System.out.println(theResource.getClass().getMethods());
-			
+			this.submitDocs(theResource);
 //			ClaimResponse cr =  new ClaimResponse();
-			FhirContext fhirContext = FhirContext.forDstu3();
+			FhirContext fhirContext = FhirContext.forR4();
 			final IParser iParser = fhirContext.newJsonParser();
 			String resourceJson = iParser.encodeResourceToString(theResource);
 			
